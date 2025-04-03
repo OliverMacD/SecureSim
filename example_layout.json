@@ -1,10 +1,43 @@
 {
   "nodes": [
-    { "id": "tank1", "type": "Tank", "name": "Main Tank", "max_capacity": 1000, "initial_capacity": 900 },
-    { "id": "pump1", "type": "Pump", "name": "Pump A", "flow_rate": 50, "source": "tank1" },
-    { "id": "splitter1", "type": "Splitter", "name": "Splitter A" },
-    { "id": "tank2", "type": "Tank", "name": "Output Tank 1", "max_capacity": 500, "initial_capacity": 0 },
-    { "id": "tank3", "type": "Tank", "name": "Output Tank 2", "max_capacity": 500, "initial_capacity": 0 }
+    {
+      "id": "tank1",
+      "type": "Tank",
+      "name": "Main Tank",
+      "max_capacity": 1000,
+      "initial_capacity": 900,
+      "position": [0, 0]
+    },
+    {
+      "id": "pump1",
+      "type": "Pump",
+      "name": "Pump A",
+      "flow_rate": 50,
+      "source": "tank1",
+      "position": [2, 0]
+    },
+    {
+      "id": "splitter1",
+      "type": "Splitter",
+      "name": "Splitter A",
+      "position": [4, 0]
+    },
+    {
+      "id": "tank2",
+      "type": "Tank",
+      "name": "Output Tank 1",
+      "max_capacity": 500,
+      "initial_capacity": 0,
+      "position": [6, 1]
+    },
+    {
+      "id": "tank3",
+      "type": "Tank",
+      "name": "Output Tank 2",
+      "max_capacity": 500,
+      "initial_capacity": 0,
+      "position": [6, -1]
+    }
   ],
   "edges": [
     { "id": "line1", "name": "Line 1", "source": "pump1", "target": "splitter1" },

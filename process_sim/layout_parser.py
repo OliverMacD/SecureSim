@@ -41,22 +41,29 @@ def load_layout(json_path):
         node_id = node["id"]
         node_type = node["type"]
         name = node["name"]
+        position = node.get("position")  # Optional 2D position
 
         if node_type == "Tank":
             max_capacity = node.get("max_capacity", 1000)
             initial_capacity = node.get("initial_capacity", 0)
             tank = Tank(node_id, name, max_capacity)
             tank.current_volume = initial_capacity
+            if position:
+                tank.position = position
             graph.nodes[node_id] = tank
 
         elif node_type == "Pump":
             flow_rate = node.get("flow_rate", 10)
             pump = Pump(node_id, name, flow_rate)
             pump.source_id = node.get("source")  # We'll resolve this later
+            if position:
+                pump.position = position
             graph.nodes[node_id] = pump
 
         elif node_type == "Splitter":
             splitter = Splitter(node_id, name)
+            if position:
+                splitter.position = position
             graph.nodes[node_id] = splitter
 
     # Second pass: create lines and connect nodes
