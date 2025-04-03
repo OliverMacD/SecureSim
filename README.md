@@ -59,6 +59,7 @@ secure-sim/
 ├── defenses/              # Logging, authentication, anomaly detection
 ├── tests/                 # Test cases and unit tests
 ├── data/                  # Logs, system outputs, detection results
+├── servers/               # ModBus & MQTT Server initializers
 ├── docs/                  # Docs for system features
 ├── main.py                # Entry point to start the full simulation
 ├── README.md              # Project documentation
