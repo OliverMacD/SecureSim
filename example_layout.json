@@ -14,7 +14,8 @@
       "name": "Pump A",
       "flow_rate": 50,
       "source": "tank1",
-      "position": [2, 0]
+      "position": [2, 0],
+      "is_open": true
     },
     {
       "id": "splitter1",

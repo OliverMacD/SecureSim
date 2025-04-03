@@ -41,7 +41,7 @@ def load_layout(json_path):
         node_id = node["id"]
         node_type = node["type"]
         name = node["name"]
-        position = node.get("position")  # Optional 2D position
+        position = node.get("position")
 
         if node_type == "Tank":
             max_capacity = node.get("max_capacity", 1000)
@@ -54,8 +54,9 @@ def load_layout(json_path):
 
         elif node_type == "Pump":
             flow_rate = node.get("flow_rate", 10)
-            pump = Pump(node_id, name, flow_rate)
-            pump.source_id = node.get("source")  # We'll resolve this later
+            is_open = node.get("is_open", True)  # Default to True if not provided
+            pump = Pump(node_id, name, flow_rate, is_open=is_open)
+            pump.source_id = node.get("source")
             if position:
                 pump.position = position
             graph.nodes[node_id] = pump
@@ -81,7 +82,6 @@ def load_layout(json_path):
         line.source = source
         line.target = target
 
-        # Register connections
         if isinstance(source, Tank):
             source.add_output(line)
         elif isinstance(source, Pump):
