@@ -1,26 +1,17 @@
 # server/mqtt_server.py
 
 import asyncio
-from hbmqtt.broker import Broker
+import logging
+from mqttools.broker import Broker
 
-config = {
-    'listeners': {
-        'default': {
-            'type': 'tcp',
-            'bind': 'localhost:1883'
-        }
-    },
-    'sys_interval': 10,
-    'auth': {
-        'allow-anonymous': True
-    }
-}
+# Optional: Configure logging
+logging.basicConfig(level=logging.INFO)
 
-broker = Broker(config)
+async def main():
+    print("[MQTT] Starting MQTT broker on localhost:1883...")
+    broker = Broker(('localhost', 1883))
 
-async def run_broker():
-    print("[MQTT] Starting real MQTT broker on localhost:1883...")
-    await broker.start()
+    await broker.serve_forever()
 
-if __name__ == "__main__":
-    asyncio.run(run_broker())
+if __name__ == '__main__':
+    asyncio.run(main())
