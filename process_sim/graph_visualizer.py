@@ -51,6 +51,8 @@ def render_live_graph(graph, interval=1.0):
                 label += f"Rate: {node.rate}\n"
             if hasattr(node, "current_volume"):
                 label += f"Vol: {node.current_volume:.1f}/{node.max_capacity:.1f}"
+            if hasattr(node, "is_open"):
+                label += f"State: {node.is_open}"
 
             labels[node_id] = label
 

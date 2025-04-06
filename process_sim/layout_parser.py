@@ -1,5 +1,3 @@
-# process_sim/layout_parser.py
-
 import json
 from process_sim.tank import Tank
 from process_sim.pump import Pump
@@ -7,10 +5,13 @@ from process_sim.splitter import Splitter
 from process_sim.line import Line
 from process_sim.interfaces.mqtt_interface import MQTTInterface
 
+
 class ProcessGraph:
     def __init__(self):
         self.nodes = {}
         self.lines = {}
+        self.plc_configs = []
+        self.scada_config = None
 
     def update(self):
         for node in self.nodes.values():
@@ -30,6 +31,7 @@ class ProcessGraph:
                 line.publish()
             except Exception as e:
                 print(f"[ERROR] Failed to publish line {line.id} ({line.name}): {e}")
+
 
 def load_layout(json_path):
     with open(json_path, 'r') as f:
@@ -101,5 +103,11 @@ def load_layout(json_path):
             source_node = graph.nodes.get(node.source_id)
             if source_node:
                 node.source = source_node
+
+    # Load PLC configurations
+    graph.plc_configs = layout.get("plcs", [])
+
+    # Load SCADA configuration
+    graph.scada_config = layout.get("scada", {})
 
     return graph

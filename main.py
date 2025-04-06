@@ -70,7 +70,7 @@ def main():
         return
 
     print("[MAIN] Starting simulation...")
-    sim_thread = SimulationThread(graph, interval=1.0, debug=False)
+    sim_thread = SimulationThread(graph, interval=1.0, debug=True)
     sim_thread.start()
 
     # Launch Streamlit in background

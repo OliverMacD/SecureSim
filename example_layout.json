@@ -64,6 +64,44 @@
           "mqtt_topic": "device/pump1/data",
           "plc_input_register": 1
         }
+      ],
+      "actions": [
+        {
+          "name": "Auto Stop Pump if Tank Empty",
+          "trigger": {
+            "register": 0,
+            "condition": "==",
+            "value": 0
+          },
+          "effect": {
+            "target": "pump1",
+            "action": "close"
+          }
+        },
+        {
+          "name": "Open Pump if Tank1 > 500",
+          "trigger": {
+            "register": 0,
+            "condition": ">",
+            "value": 500
+          },
+          "effect": {
+            "target": "pump1",
+            "action": "open"
+          }
+        },
+        {
+          "name": "Close Pump if Tank1 < 100",
+          "trigger": {
+            "register": 0,
+            "condition": "<",
+            "value": 100
+          },
+          "effect": {
+            "target": "pump1",
+            "action": "close"
+          }
+        }
       ]
     },
     {
@@ -83,6 +121,21 @@
           "mqtt_topic": "device/tank3/data",
           "plc_input_register": 1
         }
+      ],
+      "actions": [
+        {
+          "name": "Alert if Tank2 Overfilled",
+          "trigger": {
+            "register": 0,
+            "condition": ">",
+            "value": 500
+          },
+          "effect": {
+            "target": "scada",
+            "action": "alert",
+            "message": "Tank 2 Overfilled"
+          }
+        }
       ]
     }
   ],
@@ -93,7 +146,22 @@
       "tank1": 0,
       "tank2": 1,
       "tank3": 2,
-      "pump1": 10
-    }
+      "pump1": 10,
+      "emergency_stop": 99
+    },
+    "actions": [
+      {
+        "name": "Shut Down All Pumps on Emergency",
+        "trigger": {
+          "register": 99,
+          "condition": "==",
+          "value": 1
+        },
+        "effect": {
+          "target": ["pump1"],
+          "action": "close"
+        }
+      }
+    ]
   }
 }
