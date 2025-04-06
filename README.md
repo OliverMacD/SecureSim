@@ -81,7 +81,7 @@ secure-sim/
    ```
 
 3. **Access the UI**:
-   - Open your browser and go to the local Streamlit server address (usually http://localhost:8501).
+   - Open your browser and go to the local Streamlit server address (usually http://127.0.0.1:8501).
 
 ---
 

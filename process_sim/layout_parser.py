@@ -5,6 +5,7 @@ from process_sim.tank import Tank
 from process_sim.pump import Pump
 from process_sim.splitter import Splitter
 from process_sim.line import Line
+from process_sim.interfaces.mqtt_interface import MQTTInterface
 
 class ProcessGraph:
     def __init__(self):
@@ -41,12 +42,14 @@ def load_layout(json_path):
         node_id = node["id"]
         node_type = node["type"]
         name = node["name"]
-        position = node.get("position")  # Optional 2D position
+        position = node.get("position")
+
+        mqtt_interface = MQTTInterface(client_id=f"{node_type.lower()}_{node_id}")
 
         if node_type == "Tank":
             max_capacity = node.get("max_capacity", 1000)
             initial_capacity = node.get("initial_capacity", 0)
-            tank = Tank(node_id, name, max_capacity)
+            tank = Tank(node_id, name, max_capacity, mqtt_interface=mqtt_interface)
             tank.current_volume = initial_capacity
             if position:
                 tank.position = position
@@ -54,8 +57,9 @@ def load_layout(json_path):
 
         elif node_type == "Pump":
             flow_rate = node.get("flow_rate", 10)
-            pump = Pump(node_id, name, flow_rate)
-            pump.source_id = node.get("source")  # We'll resolve this later
+            is_open = node.get("is_open", True)
+            pump = Pump(node_id, name, flow_rate, mqtt_interface=mqtt_interface, is_open=is_open)
+            pump.source_id = node.get("source")
             if position:
                 pump.position = position
             graph.nodes[node_id] = pump
@@ -81,7 +85,6 @@ def load_layout(json_path):
         line.source = source
         line.target = target
 
-        # Register connections
         if isinstance(source, Tank):
             source.add_output(line)
         elif isinstance(source, Pump):
