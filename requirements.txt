@@ -1,5 +1,7 @@
 altair==5.5.0
+argparse-addons==0.12.0
 attrs==25.3.0
+bitstruct==8.20.0
 blinker==1.9.0
 cachetools==5.5.2
 certifi==2025.1.31
@@ -12,7 +14,9 @@ docopt==0.6.2
 fonttools==4.56.0
 gitdb==4.0.12
 GitPython==3.1.44
+gmqtt==0.7.0
 hbmqtt==0.9.6
+humanfriendly==10.0
 idna==3.10
 Jinja2==3.1.6
 jsonschema==4.23.0
@@ -21,6 +25,7 @@ kiwisolver==1.4.8
 MarkupSafe==3.0.2
 matplotlib==3.10.1
 modbus-tcp-server==0.6
+mqttools==0.50.0
 narwhals==1.33.0
 networkx==3.4.2
 numpy==2.2.4
@@ -35,6 +40,7 @@ pyarrow==19.0.1
 pydeck==0.9.1
 pymodbus==3.8.6
 pyparsing==3.2.3
+pyreadline3==3.5.4
 python-dateutil==2.9.0.post0
 pytz==2025.2
 PyYAML==6.0.2
@@ -46,6 +52,7 @@ setuptools==75.8.0
 six==1.17.0
 smmap==5.0.2
 streamlit==1.44.1
+streamlit-autorefresh==1.0.1
 tenacity==9.1.2
 toml==0.10.2
 tornado==6.4.2
@@ -56,3 +63,4 @@ urllib3==2.3.0
 watchdog==6.0.0
 websockets==15.0.1
 wheel==0.45.1
+windows-curses==2.4.1
