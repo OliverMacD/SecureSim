@@ -1,37 +1,42 @@
+# broker_test.py
+
+import asyncio
 import time
-import paho.mqtt.client as mqtt
-from paho.mqtt.properties import Properties
-from paho.mqtt.packettypes import PacketTypes
-import warnings
+from gmqtt import Client as MQTTClient
 
-# Suppress DeprecationWarning
-warnings.filterwarnings("ignore", category=DeprecationWarning)
+connected = asyncio.Event()
+received_messages = []
 
-# Create client with MQTT v5
-client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, client_id="mqtt_v5_test", protocol=mqtt.MQTTv5)
+def on_connect(client, flags, rc, properties):
+    print(f"[TEST] Connected with code: {rc}")
+    client.subscribe("test/topic")
 
-# Define callbacks
-def on_connect(client, userdata, flags, reason_code, properties):
-    print(f"Connected with reason code: {reason_code}")
-    client.publish("test/topic", "Hello MQTT v5!")
+def on_disconnect(client, packet, exc=None):
+    print(f"[TEST] Disconnected")
 
-def on_disconnect(client, userdata, reason_code, properties=None):
-    print(f"Disconnected with reason code: {reason_code}")
+def on_message(client, topic, payload, qos, properties):
+    print(f"[TEST] Received message on {topic}: {payload.decode()}")
+    received_messages.append(payload.decode())
 
-# Assign callbacks
-client.on_connect = on_connect
-client.on_disconnect = on_disconnect
+async def main():
+    client = MQTTClient("mqtt_v5_test")
+    client.on_connect = on_connect
+    client.on_disconnect = on_disconnect
+    client.on_message = on_message
 
-# Set MQTT v5 CONNECT properties
-props = Properties(PacketTypes.CONNECT)
-props.SessionExpiryInterval = 60  # Optional
+    await client.connect("127.0.0.1", 1883)
 
-# Connect and start loop
-client.connect("localhost", 1883, keepalive=60, clean_start=mqtt.MQTT_CLEAN_START_FIRST_ONLY, properties=props)
-client.loop_start()
+    try:
+        await asyncio.sleep(1)
+        client.publish("test/topic", "222")
+        await asyncio.sleep(2)
+        client.publish("test/topic", "333")
+        await asyncio.sleep(2)
+    finally:
+        await client.disconnect()
 
-# Let it run for a bit
-time.sleep(2)
-
-client.disconnect()
-client.loop_stop()
+if __name__ == '__main__':
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print("\n[TEST] Keyboard interrupt received. Exiting cleanly.")

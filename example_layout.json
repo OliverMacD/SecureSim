@@ -15,7 +15,7 @@
       "flow_rate": 50,
       "source": "tank1",
       "position": [2, 0],
-      "is_open": true
+      "is_open": false
     },
     {
       "id": "splitter1",
@@ -49,7 +49,7 @@
   "plcs": [
     {
       "id": "plc1",
-      "ip": "localhost",
+      "ip": "127.0.0.1",
       "port": 5100,
       "devices": [
         {
@@ -68,7 +68,7 @@
     },
     {
       "id": "plc2",
-      "ip": "localhost",
+      "ip": "127.0.0.1",
       "port": 5101,
       "devices": [
         {
@@ -87,7 +87,7 @@
     }
   ],
   "scada": {
-    "ip": "localhost",
+    "ip": "127.0.0.1",
     "port": 5200,
     "register_map": {
       "tank1": 0,

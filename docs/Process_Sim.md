@@ -35,7 +35,7 @@ from process_sim import (
 )
 
 # Initialize MQTT
-init_mqtt(broker="localhost", port=1883)
+init_mqtt(broker="127.0.0.1", port=1883)
 
 # Load graph layout
 graph = load_layout("example_layout.json")

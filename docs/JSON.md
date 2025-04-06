@@ -136,7 +136,7 @@ Defines Modbus PLCs managing a subset of devices.
 ```json
 {
   "id": "plc1",
-  "ip": "localhost",
+  "ip": "127.0.0.1",
   "port": 5100,
   "devices": [
     {
@@ -168,7 +168,7 @@ Top-level SCADA controller register map.
 
 ```json
 "scada": {
-  "ip": "localhost",
+  "ip": "127.0.0.1",
   "port": 5200,
   "register_map": {
     "tank1": 0,

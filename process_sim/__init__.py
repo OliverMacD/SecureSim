@@ -20,8 +20,5 @@ from .simulation_runner import SimulationThread
 
 # MQTT interface
 from .interfaces.mqtt_interface import (
-    publish_mqtt,
-    subscribe_mqtt,
-    init_mqtt,
-    simulate_mqtt_message
+    MQTTInterface
 )

@@ -1,7 +1,6 @@
 # process_sim/splitter.py
 
 from process_sim.base import ProcessComponent
-from process_sim.interfaces.mqtt_interface import publish_mqtt
 
 class Splitter(ProcessComponent):
     def __init__(self, id, name):
@@ -23,4 +22,5 @@ class Splitter(ProcessComponent):
         pass
 
     def publish(self):
-        publish_mqtt(f"splitter/{self.id}/status", f"{len(self.outputs)} outputs")
+        # Passive
+        pass
