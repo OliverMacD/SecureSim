@@ -174,8 +174,11 @@ cython_debug/
 .pypirc
 
 # Ignore all .vscode/ files
-.vscode/*      # Maybe .vscode/**/* instead - see comments
+.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Draw.io
+*.drawio.bkp
