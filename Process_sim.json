@@ -1,0 +1,491 @@
+{
+  "nodes": [
+    {
+      "id": "tank1",
+      "type": "Tank",
+      "name": "Waste Water",
+      "max_capacity": 1000,
+      "initial_capacity": 400,
+      "position": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "tank2",
+      "type": "Tank",
+      "name": "Mixing Tank",
+      "max_capacity": 1000,
+      "initial_capacity": 100,
+      "position": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": "tank3",
+      "type": "Tank",
+      "name": "Chemical B",
+      "max_capacity": 1000,
+      "initial_capacity": 1000,
+      "position": [
+        3,
+        8
+      ]
+    },
+    {
+      "id": "tank4",
+      "type": "Tank",
+      "name": "Chemical A",
+      "max_capacity": 1000,
+      "initial_capacity": 1000,
+      "position": [
+        5,
+        8
+      ]
+    },
+    {
+      "id": "tank5",
+      "type": "Tank",
+      "name": "Storage Tank 1",
+      "max_capacity": 1000,
+      "initial_capacity": 100,
+      "position": [
+        10,
+        2
+      ]
+    },
+    {
+      "id": "tank6",
+      "type": "Tank",
+      "name": "Storage Tank 2",
+      "max_capacity": 1000,
+      "initial_capacity": 100,
+      "position": [
+        10,
+        6
+      ]
+    },
+    {
+      "id": "pump1",
+      "type": "Pump",
+      "name": "Waste Water Pump",
+      "flow_rate": 50,
+      "source": "tank1",
+      "position": [
+        2,
+        4
+      ],
+      "is_open": false
+    },
+    {
+      "id": "pump2",
+      "type": "Pump",
+      "name": "Chemical A Pump",
+      "flow_rate": 50,
+      "source": "tank1",
+      "position": [
+        3,
+        6
+      ],
+      "is_open": false
+    },
+    {
+      "id": "pump3",
+      "type": "Pump",
+      "name": "Chemical B Pump",
+      "flow_rate": 50,
+      "source": "tank1",
+      "position": [
+        5,
+        6
+      ],
+      "is_open": false
+    },
+    {
+      "id": "pump4",
+      "type": "Pump",
+      "name": "Mixer Pump",
+      "flow_rate": 50,
+      "source": "tank1",
+      "position": [
+        6,
+        4
+      ],
+      "is_open": false
+    },
+    {
+      "id": "pump5",
+      "type": "Pump",
+      "name": "Storage 1 Pump",
+      "flow_rate": 50,
+      "source": "tank1",
+      "position": [
+        12,
+        2
+      ],
+      "is_open": false
+    },
+    {
+      "id": "pump6",
+      "type": "Pump",
+      "name": "Storage 2 Pump",
+      "flow_rate": 50,
+      "source": "tank1",
+      "position": [
+        12,
+        6
+      ],
+      "is_open": false
+    },
+    {
+      "id": "splitter1",
+      "type": "Splitter",
+      "name": "Splitter A",
+      "position": [
+        8,
+        4
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "line1",
+      "name": "Waste Water to Pump",
+      "source": "tank1",
+      "target": "pump1"
+    },
+    {
+      "id": "line2",
+      "name": "WW to Treatment Tank",
+      "source": "pump1",
+      "target": "tank2"
+    },
+    {
+      "id": "line3",
+      "name": "Chem A to Pump",
+      "source": "tank3",
+      "target": "pump2"
+    },
+    {
+      "id": "line4",
+      "name": "Chem B to Pump",
+      "source": "tank4",
+      "target": "pump3"
+    },
+    {
+      "id": "line5",
+      "name": "Chem A to Tank",
+      "source": "pump2",
+      "target": "tank2"
+    },
+    {
+      "id": "line6",
+      "name": "Chem B to Tank",
+      "source": "pump3",
+      "target": "tank2"
+    },
+    {
+      "id": "line7",
+      "name": "Treated Water to Pump",
+      "source": "tank2",
+      "target": "pump4"
+    },
+    {
+      "id": "line8",
+      "name": "Treated Water to Tanks",
+      "source": "pump4",
+      "target": "splitter1"
+    },
+    {
+      "id": "line9",
+      "name": "Treated A Input",
+      "source": "splitter1",
+      "target": "tank5"
+    },
+    {
+      "id": "line10",
+      "name": "Treated B Input",
+      "source": "splitter1",
+      "target": "tank6"
+    },
+    {
+      "id": "line11",
+      "name": "Used A to Pump",
+      "source": "tank5",
+      "target": "pump5"
+    },
+    {
+      "id": "line12",
+      "name": "Used B to Pump",
+      "source": "tank6",
+      "target": "pump6"
+    },
+    {
+      "id": "line13",
+      "name": "Used A to Waste Tank",
+      "source": "pump5",
+      "target": "tank1"
+    },
+    {
+      "id": "line14",
+      "name": "Used B to Waste Tank",
+      "source": "pump6",
+      "target": "tank1"
+    }
+  ],
+  "plcs": [
+    {
+      "id": "plc1",
+      "ip": "127.0.0.1",
+      "port": 5100,
+      "devices": [
+        {
+          "id": "tank1",
+          "type": "Tank",
+          "mqtt_topic": "tank/tank1/volume",
+          "plc_input_register": 0
+        },
+        {
+          "id": "pump1",
+          "type": "Pump",
+          "mqtt_topic": "pump/pump1/state",
+          "plc_input_register": 1
+        }
+      ],
+      "actions": [
+        {
+          "name": "Open P1 if T1 > 500",
+          "trigger": {
+            "register": 0,
+            "condition": ">",
+            "value": 500
+          },
+          "effect": {
+            "target": "pump1",
+            "action": "open"
+          }
+        },
+        {
+          "name": "Close P1 if T1 <= 500",
+          "trigger": {
+            "register": 0,
+            "condition": "<=",
+            "value": 500
+          },
+          "effect": {
+            "target": "pump1",
+            "action": "close"
+          }
+        }
+      ]
+    },
+    {
+      "id": "plc2",
+      "ip": "127.0.0.1",
+      "port": 5101,
+      "devices": [
+        {
+          "id": "tank3",
+          "type": "Tank",
+          "mqtt_topic": "tank/tank3/volume",
+          "plc_input_register": 0
+        },
+        {
+          "id": "tank4",
+          "type": "Tank",
+          "mqtt_topic": "tank/tank4/volume",
+          "plc_input_register": 1
+        },
+        {
+          "id": "pump2",
+          "type": "Pump",
+          "mqtt_topic": "pump/pump2/state",
+          "plc_input_register": 2
+        },
+        {
+          "id": "pump3",
+          "type": "Pump",
+          "mqtt_topic": "pump/pump3/state",
+          "plc_input_register": 3
+        },
+        {
+          "id": "tank2",
+          "type": "Tank",
+          "mqtt_topic": "tank/tank2/volume",
+          "plc_input_register": 4
+        },
+        {
+          "id": "pump4",
+          "type": "Pump",
+          "mqtt_topic": "pump/pump4/state",
+          "plc_input_register": 5
+        }
+      ],
+      "actions": [
+        {
+          "name": "Open P2 if T2 not full",
+          "trigger": {
+            "register": 4,
+            "condition": "<",
+            "value": 1000
+          },
+          "effect": {
+            "target": "pump2",
+            "action": "open"
+          }
+        },
+        {
+          "name": "Close P2 if T2 full",
+          "trigger": {
+            "register": 4,
+            "condition": ">=",
+            "value": 1000
+          },
+          "effect": {
+            "target": "pump2",
+            "action": "close"
+          }
+        },
+        {
+          "name": "Open P3 if T2 not full",
+          "trigger": {
+            "register": 4,
+            "condition": "<",
+            "value": 1000
+          },
+          "effect": {
+            "target": "pump3",
+            "action": "open"
+          }
+        },
+        {
+          "name": "Close P3 if T2 full",
+          "trigger": {
+            "register": 4,
+            "condition": ">=",
+            "value": 1000
+          },
+          "effect": {
+            "target": "pump3",
+            "action": "close"
+          }
+        },
+        {
+          "name": "Open P4 if T2 full",
+          "trigger": {
+            "register": 4,
+            "condition": ">=",
+            "value": 1000
+          },
+          "effect": {
+            "target": "pump4",
+            "action": "open"
+          }
+        },
+        {
+          "name": "Close P4 if T2 not full",
+          "trigger": {
+            "register": 4,
+            "condition": "<",
+            "value": 1000
+          },
+          "effect": {
+            "target": "pump4",
+            "action": "close"
+          }
+        }
+      ]
+    },
+    {
+      "id": "plc4",
+      "ip": "127.0.0.1",
+      "port": 5103,
+      "devices": [
+        {
+          "id": "splitter1",
+          "type": "Splitter",
+          "mqtt_topic": "splitter/splitter1/state",
+          "plc_input_register": 0
+        },
+        {
+          "id": "tank5",
+          "type": "Tank",
+          "mqtt_topic": "tank/tank5/volume",
+          "plc_input_register": 1
+        },
+        {
+          "id": "tank6",
+          "type": "Tank",
+          "mqtt_topic": "tank/tank6/volume",
+          "plc_input_register": 2
+        },
+        {
+          "id": "pump5",
+          "type": "Pump",
+          "mqtt_topic": "pump/pump5/state",
+          "plc_input_register": 3
+        },
+        {
+          "id": "pump6",
+          "type": "Pump",
+          "mqtt_topic": "pump/pump6/state",
+          "plc_input_register": 4
+        }
+      ],
+      "actions": [
+        {
+          "name": "Open P5 if T5 > 250",
+          "trigger": {
+            "register": 1,
+            "condition": ">",
+            "value": 250
+          },
+          "effect": {
+            "target": "pump5",
+            "action": "open"
+          }
+        },
+        {
+          "name": "Open P6 if T6 > 250",
+          "trigger": {
+            "register": 2,
+            "condition": ">",
+            "value": 250
+          },
+          "effect": {
+            "target": "pump6",
+            "action": "open"
+          }
+        }
+      ]
+    }
+  ],
+  "scada": {
+    "ip": "127.0.0.1",
+    "port": 5200,
+    "register_map": {
+      "tank1": 0,
+      "tank2": 1,
+      "tank3": 2,
+      "pump1": 10,
+      "emergency_stop": 99
+    },
+    "actions": [
+      {
+        "name": "Shut Down All Pumps on Emergency",
+        "trigger": {
+          "register": 99,
+          "condition": "==",
+          "value": 1
+        },
+        "effect": {
+          "target": [
+            "pump1"
+          ],
+          "action": "close"
+        }
+      }
+    ]
+  }
+}
