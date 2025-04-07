@@ -11,7 +11,12 @@ This document defines the JSON format used to describe a complete fluid process 
 
 ## 🧠 Overview
 
-The `layout_parser.load_layout()` function in `process_sim` reads this JSON structure to build a complete simulation graph. It supports visual simulation, MQTT-based telemetry, and integration with PLC/SCADA systems.
+The `layout_parser.load_layout()` function reads this JSON structure to build a simulation graph. The format supports:
+
+- Visual system modeling
+- MQTT telemetry and control
+- Modbus-based PLC/SCADA simulation
+- Security testing via false data injection, DoS, and replay
 
 ---
 
@@ -26,18 +31,21 @@ The `layout_parser.load_layout()` function in `process_sim` reads this JSON stru
 }
 ```
 
-Each key is explained in detail below.
+Each section is described below.
 
 ---
 
 ## 🔵 Nodes
 
-Defines all components in the system. Supported types:
+Defines all fluid-handling components.
+
+### Supported Types
+
 - `Tank`
 - `Pump`
 - `Splitter`
 
-### 🧪 Example
+### 🧪 Tank Example
 
 ```json
 {
@@ -50,20 +58,18 @@ Defines all components in the system. Supported types:
 }
 ```
 
-### 🔍 Tank Attributes
-
-| Field             | Type     | Required | Description |
-|------------------|----------|----------|-------------|
-| `id`             | string   | ✅       | Unique ID of the tank |
-| `type`           | `"Tank"` | ✅       | Must be `"Tank"` |
-| `name`           | string   | ✅       | Human-readable name |
-| `max_capacity`   | number   | ✅       | Maximum storage |
-| `initial_capacity` | number | ❌       | Starting fluid volume (default: 0) |
-| `position`       | [x, y]   | ❌       | Coordinates for visualization |
+| Field              | Type     | Required | Description |
+|-------------------|----------|----------|-------------|
+| `id`              | string   | ✅       | Unique identifier |
+| `type`            | `"Tank"` | ✅       | Component type |
+| `name`            | string   | ✅       | Label for UI |
+| `max_capacity`    | number   | ✅       | Full volume |
+| `initial_capacity`| number   | ❌       | Start value (default: 0) |
+| `position`        | [x, y]   | ❌       | UI layout only |
 
 ---
 
-### 🔧 Pump Attributes
+### ⚙️ Pump Example
 
 ```json
 {
@@ -79,14 +85,15 @@ Defines all components in the system. Supported types:
 
 | Field       | Type     | Required | Description |
 |------------|----------|----------|-------------|
-| `type`     | `"Pump"` | ✅       | Must be `"Pump"` |
-| `flow_rate`| number   | ✅       | Rate of fluid transfer |
-| `source`   | string   | ✅       | ID of source tank |
-| `is_open`  | bool     | ❌       | Initial state (default: `true`) |
+| `type`     | `"Pump"` | ✅       | Component type |
+| `source`   | string   | ✅       | ID of input tank |
+| `flow_rate`| number   | ✅       | Units per update |
+| `is_open`  | boolean  | ❌       | Initial state |
+| `position` | [x, y]   | ❌       | UI layout only |
 
 ---
 
-### 🔀 Splitter Attributes
+### 🔀 Splitter Example
 
 ```json
 {
@@ -97,17 +104,18 @@ Defines all components in the system. Supported types:
 }
 ```
 
-| Field   | Type     | Required | Description |
-|--------|----------|----------|-------------|
-| `type` | `"Splitter"` | ✅ | Distributes flow evenly to multiple outputs |
+| Field   | Type       | Required | Description |
+|--------|------------|----------|-------------|
+| `type` | `"Splitter"`| ✅      | Evenly divides flow |
+| `position` | [x, y]   | ❌      | Visual layout only |
 
 ---
 
 ## ➰ Edges
 
-Define directional flow lines between components.
+Define connections between nodes using `source` and `target` references.
 
-### 🔗 Example
+### 🔗 Edge Example
 
 ```json
 {
@@ -120,18 +128,18 @@ Define directional flow lines between components.
 
 | Field     | Type   | Required | Description |
 |----------|--------|----------|-------------|
-| `id`     | string | ✅       | Unique ID of the line |
-| `name`   | string | ✅       | Name for label |
-| `source` | string | ✅       | ID of source node |
-| `target` | string | ✅       | ID of target node |
+| `id`     | string | ✅       | Unique identifier |
+| `name`   | string | ✅       | Label for diagram |
+| `source` | string | ✅       | Upstream node ID |
+| `target` | string | ✅       | Downstream node ID |
 
 ---
 
 ## 🧩 PLCs
 
-Defines Modbus PLCs managing a subset of devices.
+Each PLC handles a subset of the system and supports automated logic.
 
-### 🧾 Example
+### Example
 
 ```json
 {
@@ -142,29 +150,48 @@ Defines Modbus PLCs managing a subset of devices.
     {
       "id": "tank1",
       "type": "Tank",
-      "mqtt_topic": "device/tank1/data",
+      "mqtt_topic": "tank/tank1/volume",
       "plc_input_register": 0
+    }
+  ],
+  "actions": [
+    {
+      "name": "Close if Tank1 Empty",
+      "trigger": { "register": 0, "condition": "==", "value": 0 },
+      "effect": { "target": "pump1", "action": "close" }
     }
   ]
 }
 ```
 
-| Field               | Type     | Description |
-|--------------------|----------|-------------|
-| `id`               | string   | Unique PLC ID |
-| `ip`               | string   | PLC host IP |
-| `port`             | int      | Port number for Modbus |
-| `devices`          | list     | Devices handled by this PLC |
+### 🔍 PLC Device Fields
 
-Each device maps an MQTT stream to a register.
+| Field              | Type     | Description |
+|-------------------|----------|-------------|
+| `id`              | string   | Component ID |
+| `type`            | string   | `"Tank"`, `"Pump"`, etc |
+| `mqtt_topic`      | string   | MQTT topic for state |
+| `plc_input_register` | int  | Register number |
+
+### ⚡ PLC Action Fields
+
+| Field      | Type | Description |
+|-----------|------|-------------|
+| `trigger` | dict | Condition on a register |
+| `effect`  | dict | What to do (e.g. open/close a pump) |
+
+> PLC actions are evaluated every simulation tick.
 
 ---
 
-## 🖥️ SCADA Configuration
+## 🖥️ SCADA
 
-Top-level SCADA controller register map.
+Top-level controller that can:
+- Mirror system state
+- Respond to emergency registers
+- Interface with HMI or attacks
 
-### ⚙️ Example
+### SCADA Example
 
 ```json
 "scada": {
@@ -172,50 +199,60 @@ Top-level SCADA controller register map.
   "port": 5200,
   "register_map": {
     "tank1": 0,
-    "tank2": 1,
-    "tank3": 2,
-    "pump1": 10
-  }
+    "pump1": 10,
+    "emergency_stop": 99
+  },
+  "actions": [
+    {
+      "name": "Emergency Shutdown",
+      "trigger": { "register": 99, "condition": "==", "value": 1 },
+      "effect": { "target": ["pump1"], "action": "close" }
+    }
+  ]
 }
 ```
 
-| Field         | Type     | Description |
-|--------------|----------|-------------|
-| `ip`         | string   | Host IP of SCADA Modbus listener |
-| `port`       | int      | Modbus port |
-| `register_map` | dict   | Maps component ID to register |
+| Field         | Type  | Description |
+|---------------|-------|-------------|
+| `ip`          | string| Modbus IP for HMI |
+| `port`        | int   | Modbus port |
+| `register_map`| dict  | Maps device ID → register |
+| `actions`     | list  | Emergency rules (like PLCs) |
 
 ---
 
-## 📌 Layout Loading in Python
+## 🔂 MQTT Integration
+
+Each device includes a `mqtt_topic` for publishing values and listening to set commands:
+
+| Type | Topic Format | Description |
+|------|--------------|-------------|
+| Tank | `tank/{id}/volume` | Volume state |
+| Pump | `pump/{id}/state`, `pump/{id}/rate` | State or rate |
+| Set  | `set/tank/{id}/max_capacity` | Writable config |
+
+---
+
+## 📌 Using in Code
 
 ```python
-from process_sim import load_layout
-
+from process_sim.layout_parser import load_layout
 graph = load_layout("path/to/layout.json")
 ```
 
-The resulting `ProcessGraph` object contains:
-- `graph.nodes`: all Tank, Pump, Splitter objects
-- `graph.lines`: all Line objects
+You can access:
+- `graph.nodes`: all components
+- `graph.lines`: all connections
+- `graph.plc_configs`: full PLC list
+- `graph.scada_config`: top-level SCADA dictionary
 
 ---
 
-## ✅ Validation Tips
+## ✅ Best Practices
 
-- All `id`s must be unique.
-- Every `source` and `target` in `edges` must refer to an existing node.
-- Pumps must declare `source`, while lines define the `target`.
+- Keep `id` fields globally unique.
+- Use MQTT for real-time controls; use Modbus for HMI and attack testing.
+- Prefer numeric register indexes below 100.
+- Use `actions` to encode safety and logic rules.
 
 ---
-
-## 📬 Need Help?
-
-If you're unsure whether your layout is valid, try loading it in Python and catching exceptions:
-
-```python
-try:
-    graph = load_layout("layout.json")
-except Exception as e:
-    print("Layout error:", e)
-```

@@ -63,7 +63,7 @@ def main():
     # Step 4: Load layout and start simulation
     print("[MAIN] Loading layout...")
     try:
-        graph = load_layout("example_layout.json")
+        graph = load_layout("Process_sim.json")
     except Exception as e:
         logging.error(f"[MAIN] Failed to load layout: {e}")
         mqtt_process.terminate()
