@@ -10,8 +10,8 @@ import time
 import logging
 
 from process_sim.graph_visualizer import render_live_graph
-from control_logic.plc import PLC
-from control_logic.scada import SCADA
+from control_logic.plc_modbus import ModbusPLC
+from control_logic.scada_modbus import ModbusSCADA
 from process_sim.interfaces.mqtt_interface import MQTTInterface
 
 
@@ -26,9 +26,9 @@ class SimulationThread(threading.Thread):
         # Init MQTT shared instance
         self.mqtt = MQTTInterface(client_id="sim_control")
 
-        # Create SCADA and PLC objects
-        self.plcs = [PLC(plc_config, graph, self.mqtt) for plc_config in graph.plc_configs]
-        self.scada = SCADA(graph.scada_config, graph, self.mqtt) if graph.scada_config else None
+        # Use Modbus-enhanced control logic
+        self.plcs = [ModbusPLC(plc_config, graph, self.mqtt) for plc_config in graph.plc_configs]
+        self.scada = ModbusSCADA(graph.scada_config, graph, self.mqtt) if graph.scada_config else None
 
     def run(self):
         self.running = True
