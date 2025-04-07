@@ -55,13 +55,13 @@
         {
           "id": "tank1",
           "type": "Tank",
-          "mqtt_topic": "device/tank1/data",
+          "mqtt_topic": "tank/tank1/volume",
           "plc_input_register": 0
         },
         {
           "id": "pump1",
           "type": "Pump",
-          "mqtt_topic": "device/pump1/data",
+          "mqtt_topic": "pump/pump1/state",
           "plc_input_register": 1
         }
       ],
@@ -112,13 +112,13 @@
         {
           "id": "tank2",
           "type": "Tank",
-          "mqtt_topic": "device/tank2/data",
+          "mqtt_topic": "tank/tank2/volume",
           "plc_input_register": 0
         },
         {
           "id": "tank3",
           "type": "Tank",
-          "mqtt_topic": "device/tank3/data",
+          "mqtt_topic": "tank/tank3/volume",
           "plc_input_register": 1
         }
       ],
