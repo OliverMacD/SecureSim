@@ -1,50 +1,17 @@
-# secure-sim: Industrial Control System Simulation
+# 🔐 SecureSim
 
-This project simulates a simplified **Industrial Control System (ICS)** in Python, designed for educational purposes in cybersecurity. It includes a modeled process, simulated devices (PLCs, RTUs, and SCADA), realistic cyberattacks, and integrated defenses. The system is fully software-based with no physical hardware requirements.
-
----
-
-## 🚀 Project Overview
-
-The **secure-sim** project provides a modular simulation of a basic industrial process (TBD), emulating real-world ICS architecture. It includes:
-
-- **Process Modeling**: Simulated sensors, actuators, and control logic.
-- **Cybersecurity Features**: Demonstration of attacks and countermeasures.
-- **Interactive UI**: A web-based dashboard for monitoring, attack execution, and defense toggling.
-- **Modular Code Structure**: All devices and components are built as independent, concurrent Python processes.
+**SecureSim** is a modular simulation platform for modeling Industrial Control Systems (ICS) using Python. Designed for **education, prototyping, and cybersecurity research**, SecureSim models a realistic fluid-based process system with support for **PLCs, SCADA, MQTT, Modbus, cyberattacks**, and a live UI.
 
 ---
 
-## 🧠 Simulated Architecture
+## 🚀 Features
 
-- **PLC Devices**: Contain control logic for managing actuators based on sensor data.
-- **SCADA Server**: Collects and displays system state, sends commands to PLCs, and logs data.
-- **All devices (PLCs & SCADA)** run as **independent processes**.
-- **Streamlit UI**: Central user interface for real-time system monitoring and security management.
-
----
-
-## 🔐 Simulated Attacks
-
-Three common ICS attacks are implemented in the simulation:
-
-- **Replay Attack**: Records legitimate data and replays it to hide anomalies.
-- **False Data Injection**: Sends fake sensor or actuator data to disrupt system behavior.
-- **Denial of Service (DoS)**: Overwhelms the system with traffic to degrade performance or disable components.
-
-Each attack can be launched and stopped through the Streamlit UI.
-
----
-
-## 🛡️ Security Defenses
-
-The following defenses are implemented:
-
-- **Logging and Auditing**: All device communications and key events are logged to files in the `data/` folder.
-- **Authentication**: Basic command authentication is supported for controlling devices.
-- **Anomaly Detection**: Monitors system data for deviations from expected behavior.
-
-All defenses can be enabled or disabled dynamically through the UI.
+- 🏭 **Process Simulation** — Model tanks, pumps, splitters, and fluid flow
+- ⚙️ **PLCs & SCADA** — Custom logic via register-based rules and Modbus
+- 📡 **MQTT + Modbus** — Realistic communication stack for sensors and control
+- 🛡️ **Attack & Defense** — Built-in support for replay, DoS, and FDI attacks
+- 🖥️ **Streamlit UI** — Real-time system monitoring and security toggles (Probably will be Flask as streamlit is struggling)
+- 📈 **Graph Visualization** — Live network view of the entire system
 
 ---
 
@@ -52,60 +19,129 @@ All defenses can be enabled or disabled dynamically through the UI.
 
 ```
 secure-sim/
-├── process_sim/           # Simulated plant and environment models
-├── control_logic/         # PLCs and SCADA logic/ devices
-├── scada_ui/              # Streamlit UI for monitoring and control
-├── attacks/               # Attack modules (Replay, FDI, DoS)
-├── defenses/              # Logging, authentication, anomaly detection
-├── tests/                 # Test cases and unit tests
-├── data/                  # Logs, system outputs, detection results
-├── servers/               # ModBus & MQTT Server initializers
-├── docs/                  # Docs for system features
-├── main.py                # Entry point to start the full simulation
-├── README.md              # Project documentation
-└── requirements.txt       # Python dependencies
+├── main.py                   # Launches the simulation and UI
+├── Process_sim.json          # System layout and logic
+│
+├── process_sim/              # Core simulation engine
+│   ├── base.py, tank.py, pump.py, splitter.py, line.py
+│   ├── layout_parser.py, simulation_runner.py
+│   ├── graph_visualizer.py
+│   └── interfaces/mqtt_interface.py
+│
+├── control_logic/            # PLCs, SCADA, and action engine
+│   ├── plc.py, plc_modbus.py
+│   ├── scada.py, scada_modbus.py
+│   └── action_engine.py
+│
+├── servers/                  # Communication servers
+│   ├── mqtt_server.py
+│   └── modbus_server.py
+│
+├── scada_ui/                 # Streamlit dashboard
+├── attacks/                  # Attack modules
+├── defenses/                 # Logging, auth, detection
+├── tests/                    # MQTT + pump test scripts
+├── docs/                     # Sphinx documentation source
+├── data/                     # Logging and system outputs
+├── requirements.txt          # Python dependencies
+└── README.md                 # This file
 ```
 
 ---
 
-## 🧪 How to Run
+## 📚 Documentation
 
-1. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+Full system documentation is built with **Sphinx**.
 
-2. **Start the simulation**:
-   ```bash
-   python main.py
-   ```
+### 🔧 Build it manually:
 
-3. **Access the UI**:
-   - Open your browser and go to the local Streamlit server address (usually http://127.0.0.1:8501).
+```bash
+cd docs
+sphinx-build -b html source build/html
+```
+
+Then open `build/html/index.html` in a browser.
 
 ---
 
-## 📊 Visualization
+## 🧪 Running the Simulation
 
-- Live plots and logs of sensor data, actuator states, and attack/defense status.
-- System metrics visualized using `matplotlib` or `plotly`.
-- All outputs stored to the `data/` folder for future analysis.
+### 1. Install Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Start the Simulation
+
+```bash
+python main.py
+```
+
+### 3. Open the Dashboard
+
+Visit: [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 📓 Deliverables
+## 🧠 Process Overview
 
-- Source code (Python 3)
-- Final written report (with visualizations and logs)
-- Group presentation (7–10 minutes)
-- Individual reflection paper (1 page max)
+The system models a **water treatment plant**:
+
+| Stage              | Description                                |
+|-------------------|--------------------------------------------|
+| Waste Collection  | Tank 1 holds incoming wastewater           |
+| Chemical Treatment| Pumps draw from Tanks 3 & 4 into Tank 2    |
+| Clean Output      | Tank 2 drains into Splitter, → Tanks 5 & 6 |
+| Overflow Return   | Overfilled Tanks 5/6 pump back to Tank 1   |
+| Emergency Stop    | SCADA closes all pumps if register 99 == 1 |
+
+📖 Details: [`docs/process_overview.rst`](docs/source/process_overview.rst)
 
 ---
 
-## 🛠 Technologies
+## 🔒 Security Features
 
-- Python 3
-- Streamlit (UI)
-- threading / multiprocessing (device simulation)
-- logging module (defense & audit)
-- matplotlib / plotly (visualization)
+| Attack                 | Description                             |
+|------------------------|-----------------------------------------|
+| Replay Attack          | Repeats recorded data to mask changes   |
+| False Data Injection   | Modifies sensor or control values       |
+| Denial of Service      | Overloads communication channels        |
+
+| Defense                | Description                             |
+|------------------------|-----------------------------------------|
+| Anomaly Detection      | Flags abnormal behavior patterns        |
+| Logging & Auditing     | System events saved to `/data`          |
+| Command Authentication | Verifies actions before execution       |
+
+---
+
+## 🔬 Testing
+
+Run included test scripts to verify comms:
+
+```bash
+python tests/mqtt_broker_test.py
+python tests/pump_control_test.py
+```
+
+---
+
+## 🛠 Extending SecureSim
+
+You can easily add new:
+- Component types (by extending `ProcessComponent`)
+- PLC actions (via `plc_modbus.py`)
+- SCADA logic (via `scada_modbus.py`)
+- UI panels (in `scada_ui/`)
+
+---
+
+## 🧠 Built With
+
+- Python 3.9+
+- gmqtt
+- Sphinx
+- Streamlit (Again, TBD)
+- networkx + matplotlib
+- Custom Modbus server
