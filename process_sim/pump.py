@@ -19,6 +19,7 @@ class Pump(ProcessComponent):
     def handle_set_rate(self, msg):
         try:
             self.rate = float(msg)
+            print(f"[Pump {self.id}] Rate set to: {self.rate}")
         except ValueError:
             print(f"[Pump {self.id}] Invalid rate value: {msg}")
 
@@ -34,29 +35,42 @@ class Pump(ProcessComponent):
 
         # Confirm new state over MQTT
         self.mqtt.publish(f"state/pump/{self.id}/state", "open" if self.is_open else "closed")
-        print(f"[Pump {self.id}] State set to {self.is_open}")
+        print(f"[Pump {self.id}] State set to {'open' if self.is_open else 'closed'}")
 
-    # Graph connection
-    def set_connection(self, source_tank, line):
+    def set_connection(self, source_tank, target_tank):
         self.source = source_tank
-        self.target = line
+        self.target = target_tank
 
-    # Logic loop
     def update(self):
-        if self.is_open and self.source and self.source.current_volume >= self.rate:
-            self.source.current_volume -= self.rate
-            self.target.transfer(self.rate)
+        if self.is_open and self.source and self.target:
+            # Check if the target tank has enough capacity
+            if hasattr(self.target, "current_volume") and hasattr(self.target, "max_capacity"):
+                available_capacity = self.target.max_capacity - self.target.current_volume
+                if available_capacity <= 0:
+                    print(f"[Pump {self.id}] Target tank {self.target.id} is full. Stopping transfer.")
+                    self.is_open = False
+                    self.mqtt.publish(f"state/pump/{self.id}/state", "closed")
+                    return
+
+            # Transfer fluid
+            transfer_amount = min(self.rate, self.source.current_volume)
+            self.source.current_volume -= transfer_amount
+            self.target.receive(transfer_amount)
+            print(f"[Pump {self.id}] Transferred {transfer_amount} units from {self.source.id} to {self.target.id}.")
         elif self.is_open and self.source and self.source.current_volume > 0:
             # Transfer remaining volume if less than rate
-            self.target.transfer(self.source.current_volume)
+            transfer_amount = self.source.current_volume
             self.source.current_volume = 0
+            self.target.receive(transfer_amount)
+            print(f"[Pump {self.id}] Transferred remaining {transfer_amount} units from {self.source.id} to {self.target.id}.")
+        else:
+            print(f"[Pump {self.id}] No transfer occurred. Either pump is closed or source/target is not set.")
 
     def publish(self):
         self.mqtt.publish(f"pump/{self.id}/rate", self.rate)
         self.mqtt.publish(f"pump/{self.id}/state", "open" if self.is_open else "closed")
         print(f"[Pump {self.id}] Published rate: {self.rate}, state: {'open' if self.is_open else 'closed'}")
 
-    # Optional local API
     def get_rate(self):
         return self.rate
 
