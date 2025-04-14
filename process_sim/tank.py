@@ -28,7 +28,13 @@ class Tank(ProcessComponent):
         self.outputs.append(line)
 
     def receive(self, amount):
+        overflow = max(0, self.current_volume + amount - self.max_capacity)
         self.current_volume = min(self.current_volume + amount, self.max_capacity)
+
+        if overflow > 0:
+            # Log overflow event
+            self.mqtt.publish(f"tank/{self.id}/overflow", overflow)
+            print(f"[Tank {self.id}] Overflow detected: {overflow} units lost.")
 
     def output(self):
         return self.current_volume  # This would normally control flow
@@ -41,4 +47,3 @@ class Tank(ProcessComponent):
         self.mqtt.publish(f"tank/{self.id}/volume", self.current_volume)
         self.mqtt.publish(f"tank/{self.id}/max_capacity", self.max_capacity)
         print(f"[Tank {self.id}] Published volume: {self.current_volume}, max_capacity: {self.max_capacity}")
-        pass
