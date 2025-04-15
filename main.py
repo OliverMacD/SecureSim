@@ -8,15 +8,15 @@ import socket
 import subprocess
 import threading
 
-def launch_streamlit():
-    """Launch the Streamlit Dashboard in a separate subprocess."""
+def launch_flask():
+    """Launch the Flask Dashboard in a separate subprocess."""
     dashboard_path = os.path.join(os.path.dirname(__file__), "scada_ui", "Dashboard.py")
     subprocess.Popen(
-        [sys.executable, "-m", "streamlit", "run", dashboard_path],
+        ["python", "scada_ui/app.py"],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.STDOUT
     )
-    print("[MAIN] Streamlit dashboard launched at http://localhost:8501")
+    print("[MAIN] Flask dashboard launched at http://localhost:5000")
 
 def start_mqtt_server():
     """Start the MQTT server as a subprocess."""
@@ -74,8 +74,8 @@ def main():
     sim_thread.start()
 
     # Launch Streamlit in background
-    print("[MAIN] Launching Streamlit dashboard...")
-    threading.Thread(target=launch_streamlit, daemon=True).start()
+    print("[MAIN] Launching Flask dashboard...")
+    threading.Thread(target=launch_flask, daemon=True).start()
 
     try:
         while True:
