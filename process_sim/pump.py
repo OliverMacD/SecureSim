@@ -46,6 +46,7 @@ class Pump(ProcessComponent):
         """
         try:
             self.rate = float(msg)
+            print(f"[Pump {self.id}] Rate set to: {self.rate}")
         except ValueError:
             print(f"[Pump {self.id}] Invalid rate value: {msg}")
 
@@ -66,7 +67,7 @@ class Pump(ProcessComponent):
             return
 
         self.mqtt.publish(f"state/pump/{self.id}/state", "open" if self.is_open else "closed")
-        print(f"[Pump {self.id}] State set to {self.is_open}")
+        print(f"[Pump {self.id}] State set to {'open' if self.is_open else 'closed'}")
 
     def set_connection(self, source_tank, line):
         """
@@ -77,7 +78,7 @@ class Pump(ProcessComponent):
             line (Line): Output line where fluid is transferred.
         """
         self.source = source_tank
-        self.target = line
+        self.target = target_tank
 
     def update(self):
         """
@@ -88,8 +89,12 @@ class Pump(ProcessComponent):
             self.target.transfer(self.rate)
         elif self.is_open and self.source and self.source.current_volume > 0:
             # Transfer remaining volume if less than rate
-            self.target.transfer(self.source.current_volume)
+            transfer_amount = self.source.current_volume
             self.source.current_volume = 0
+            self.target.receive(transfer_amount)
+            print(f"[Pump {self.id}] Transferred remaining {transfer_amount} units from {self.source.id} to {self.target.id}.")
+        else:
+            print(f"[Pump {self.id}] No transfer occurred. Either pump is closed or source/target is not set.")
 
     def publish(self):
         """
@@ -99,7 +104,6 @@ class Pump(ProcessComponent):
         self.mqtt.publish(f"pump/{self.id}/state", "open" if self.is_open else "closed")
         print(f"[Pump {self.id}] Published rate: {self.rate}, state: {'open' if self.is_open else 'closed'}")
 
-    # Optional local API
     def get_rate(self):
         """Returns the current flow rate."""
         return self.rate

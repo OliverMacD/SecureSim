@@ -62,7 +62,13 @@ class Tank(ProcessComponent):
         Args:
             amount (float): Volume to add.
         """
+        overflow = max(0, self.current_volume + amount - self.max_capacity)
         self.current_volume = min(self.current_volume + amount, self.max_capacity)
+
+        if overflow > 0:
+            # Log overflow event
+            self.mqtt.publish(f"tank/{self.id}/overflow", overflow)
+            print(f"[Tank {self.id}] Overflow detected: {overflow} units lost.")
 
     def output(self):
         """
