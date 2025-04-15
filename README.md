@@ -51,7 +51,7 @@ secure-sim/
 
 ## 📚 Documentation
 
-Full system documentation is built with **Sphinx**.
+Full system documentation is built with **Sphinx** and can be accessed at [https://olivermacd.github.io/SecureSim/](https://olivermacd.github.io/SecureSim/).
 
 ### 🔧 Build it manually:
 
@@ -80,7 +80,7 @@ python main.py
 
 ### 3. Open the Dashboard
 
-Visit: [http://localhost:8501](http://localhost:8501)
+Visit: [http://localhost:8501](http://localhost:5000)
 
 ---
 

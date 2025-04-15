@@ -1,3 +1,16 @@
+"""
+Main Entry Point for Process Simulation
+
+This script launches and manages the simulation environment. It starts the MQTT broker,
+loads the system layout, runs the simulation loop, and launches the Flask-based dashboard.
+
+Functions:
+    launch_flask() - Launches the Flask dashboard in a background thread.
+    start_mqtt_server() - Starts the MQTT broker as a subprocess.
+    wait_for_broker() - Waits for the MQTT broker to become available.
+    main() - Orchestrates the full simulation launch sequence.
+"""
+
 from process_sim.layout_parser import load_layout
 from process_sim.simulation_runner import SimulationThread
 import os
@@ -9,8 +22,11 @@ import subprocess
 import threading
 
 def launch_flask():
-    """Launch the Flask Dashboard in a separate subprocess."""
-    dashboard_path = os.path.join(os.path.dirname(__file__), "scada_ui", "Dashboard.py")
+    """
+    Launch the Flask dashboard UI in a background subprocess.
+
+    Assumes Flask app is located at `scada_ui/app.py`.
+    """
     subprocess.Popen(
         ["python", "scada_ui/app.py"],
         stdout=subprocess.DEVNULL,
@@ -19,7 +35,12 @@ def launch_flask():
     print("[MAIN] Flask dashboard launched at http://localhost:5000")
 
 def start_mqtt_server():
-    """Start the MQTT server as a subprocess."""
+    """
+    Start the MQTT broker as a subprocess.
+
+    Returns:
+        subprocess.Popen: The running MQTT broker process, or None on failure.
+    """
     try:
         process = subprocess.Popen(
             ["python", "servers/mqtt_server.py"],
@@ -32,7 +53,17 @@ def start_mqtt_server():
         return None
 
 def wait_for_broker(host="127.0.0.1", port=1883, timeout=5.0):
-    """Wait for the MQTT broker to be ready."""
+    """
+    Blocks until the MQTT broker is reachable or timeout is exceeded.
+
+    Args:
+        host (str): Broker host address.
+        port (int): Broker port.
+        timeout (float): Max time to wait in seconds.
+
+    Returns:
+        bool: True if broker becomes available, False if timed out.
+    """
     start = time.time()
     while time.time() - start < timeout:
         try:
@@ -45,6 +76,15 @@ def wait_for_broker(host="127.0.0.1", port=1883, timeout=5.0):
     return False
 
 def main():
+    """
+    Main simulation launcher. This function:
+      1. Starts the MQTT broker
+      2. Waits for the broker to be ready
+      3. Loads the process layout
+      4. Starts the simulation engine
+      5. Launches the Flask dashboard
+      6. Waits for keyboard interrupt to shut down
+    """
     logging.basicConfig(level=logging.INFO)
 
     # Step 1: Start MQTT Broker subprocess
@@ -60,7 +100,7 @@ def main():
         mqtt_process.terminate()
         return
 
-    # Step 4: Load layout and start simulation
+    # Step 3: Load layout and start simulation
     print("[MAIN] Loading layout...")
     try:
         graph = load_layout("Process_sim.json")
@@ -73,10 +113,11 @@ def main():
     sim_thread = SimulationThread(graph, interval=1.0, debug=True)
     sim_thread.start()
 
-    # Launch Streamlit in background
+    # Step 4: Launch Flask dashboard
     print("[MAIN] Launching Flask dashboard...")
     threading.Thread(target=launch_flask, daemon=True).start()
 
+    # Step 5: Wait for shutdown
     try:
         while True:
             time.sleep(0.1)
