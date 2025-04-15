@@ -21,12 +21,14 @@ def api_state():
     # Create a mapping of pumps and tanks to their current state via Modbus
     state = {}
 
+    # Add pump states to the state dictionary
     for pump_id, pump in pumps.items():
-        pump_state = get_modbus_state(f"pump/{pump_id}/state")  # Custom function to get pump state via Modbus
-        state[pump_id] = {'state': pump_state, 'rate': pump['flow_rate']}
+        pump_state = get_modbus_state(f"pump/{pump_id}/state")  # Fetch the state using MQTT
+        state[pump_id] = {'name': pump['name'], 'state': pump_state, 'rate': pump['flow_rate']}
 
+    # Add tank states to the state dictionary
     for tank_id, tank in tanks.items():
-        tank_state = get_modbus_state(f"tank/{tank_id}/volume")  # Custom function to get tank volume via Modbus
-        state[tank_id] = {'volume': tank_state}
+        tank_state = get_modbus_state(f"tank/{tank_id}/volume")  # Fetch the volume using MQTT
+        state[tank_id] = {'name': tank['name'], 'volume': tank_state}
 
     return jsonify(state)
