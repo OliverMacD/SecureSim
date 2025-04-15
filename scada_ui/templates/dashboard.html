@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCADA Dashboard</title>
+    <style>
+        .dashboard-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        table {
+            width: 45%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        #graph-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 90%;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        async function fetchData() {
+            const res = await fetch('/api/state');
+            const data = await res.json();
+
+            const pumpTable = document.getElementById("pump-table-body");
+            const tankTable = document.getElementById("tank-table-body");
+            pumpTable.innerHTML = "";
+            tankTable.innerHTML = "";
+
+            // Get the pump names and IDs from the JSON file
+            const pumpNames = {
+                'pump1': 'Waste Water Pump',
+                'pump2': 'Chemical A Pump',
+                'pump3': 'Chemical B Pump',
+                'pump4': 'Mixer Pump',
+                'pump5': 'Storage 1 Pump',
+                'pump6': 'Storage 2 Pump'
+            };
+
+            // Loop through pumps and display pump data
+            for (const [id, info] of Object.entries(data)) {
+                if (id.startsWith("pump")) {
+                    const pumpName = pumpNames[id] || "Unknown Pump";  // Retrieve the pump name
+
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td>${id}</td>  <!-- Display the pump ID here -->
+                        <td>${pumpName}</td>  <!-- Display the pump name here -->
+                        <td>${info.state}</td>
+                        <td>${info.rate}</td>
+                    `;
+                    pumpTable.appendChild(row);
+                } else if (id.startsWith("tank")) {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td>${id}</td>  <!-- Display the tank ID here -->
+                        <td>${info.name}</td>  <!-- Display the tank name here -->
+                        <td>${info.volume}</td>
+                    `;
+                    tankTable.appendChild(row);
+                }
+            }
+        }
+
+        setInterval(fetchData, 2000);  // Fetch every 2 seconds
+        window.onload = fetchData;  // Fetch data when the page loads
+    </script>
+</head>
+<body>
+    <h1 style="text-align:center;">SCADA Live Dashboard</h1>
+    <div class="dashboard-container">
+        <table>
+            <thead>
+                <tr><th>Pump ID</th><th>Pump Name</th><th>State</th><th>Rate</th></tr>
+            </thead>
+            <tbody id="pump-table-body"></tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr><th>Tank ID</th><th>Tank Name</th><th>Volume</th></tr>
+            </thead>
+            <tbody id="tank-table-body"></tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2 style="text-align:center;">System Layout</h2>
+        <img id="graph-image" src="/static/graph.png" alt="Process Graph Layout">
+    </div>
+</body>
+</html>

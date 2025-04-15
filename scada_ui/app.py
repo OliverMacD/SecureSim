@@ -1,40 +1,19 @@
-# Add the root directory of the project to the Python path
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from flask import Flask, render_template
-import io
-import base64
-import matplotlib.pyplot as plt
-from process_sim.graph_visualizer import render_process_graph
+from flask import Flask
+from scada_ui.routes.dashboard import dashboard_bp
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__)
+    app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
-@app.route("/")
-def home():
-    # Render the graph as an image
-    graph_image = render_graph_as_image()
-    return render_template("index.html", graph_image=graph_image)
+    # Register routes
+    app.register_blueprint(dashboard_bp)
 
-def render_graph_as_image():
-    from process_sim.layout_parser import load_layout
-
-    # Load the graph from the JSON layout
-    graph = load_layout("Process_sim.json")
-
-    # Create a matplotlib figure
-    fig, ax = plt.subplots(figsize=(10, 6))
-    render_process_graph(graph, show_labels=True)
-
-    # Save the figure to a BytesIO buffer
-    buf = io.BytesIO()
-    plt.savefig(buf, format="png")
-    buf.seek(0)
-    plt.close(fig)
-
-    # Encode the image as a base64 string
-    return base64.b64encode(buf.getvalue()).decode("utf-8")
+    return app
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app = create_app()
+    app.run(debug=True, port=5000)
