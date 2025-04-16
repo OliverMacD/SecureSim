@@ -1,3 +1,8 @@
+# Add the root directory of the project to the Python path
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from flask import Flask, render_template
 import io
 import base64

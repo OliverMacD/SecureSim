@@ -1,3 +1,17 @@
+"""
+Process Layout Parser and Graph Builder
+
+This module parses a JSON layout definition and constructs a simulation graph
+of interconnected components including tanks, pumps, splitters, and lines.
+It also initializes MQTT interfaces and binds Modbus/SCADA control paths.
+
+Classes:
+    ProcessGraph - Container for simulation nodes and lines with update/publish hooks.
+
+Functions:
+    load_layout - Loads and parses a JSON layout file to construct a ProcessGraph.
+"""
+
 import json
 from process_sim.tank import Tank
 from process_sim.pump import Pump
@@ -7,19 +21,26 @@ from process_sim.interfaces.mqtt_interface import MQTTInterface
 
 
 class ProcessGraph:
+    """
+    Holds all process components (nodes) and connections (lines) in the simulation.
+    Handles update and publish cycles for the entire graph.
+    """
+
     def __init__(self):
-        self.nodes = {}
-        self.lines = {}
-        self.plc_configs = []
-        self.scada_config = None
+        self.nodes = {}         # node_id -> component instance
+        self.lines = {}         # line_id -> Line instance
+        self.plc_configs = []   # List of PLC configurations
+        self.scada_config = None  # SCADA configuration dictionary
 
     def update(self):
+        """Runs the update logic for all nodes and lines in the graph."""
         for node in self.nodes.values():
             node.update()
         for line in self.lines.values():
             line.update()
 
     def publish(self):
+        """Triggers data publication for all nodes and lines."""
         for node in self.nodes.values():
             try:
                 node.publish()
@@ -34,6 +55,21 @@ class ProcessGraph:
 
 
 def load_layout(json_path):
+    """
+    Loads a process layout from a JSON file and constructs a ProcessGraph.
+
+    The JSON file must include:
+      - nodes: list of component definitions (Tanks, Pumps, Splitters)
+      - edges: list of connections between components
+      - plcs: (optional) list of PLC configuration dictionaries
+      - scada: (optional) SCADA configuration dictionary
+
+    Args:
+        json_path (str): Path to the layout JSON file.
+
+    Returns:
+        ProcessGraph: The fully constructed and connected graph.
+    """
     with open(json_path, 'r') as f:
         layout = json.load(f)
 
@@ -104,10 +140,8 @@ def load_layout(json_path):
             if source_node:
                 node.source = source_node
 
-    # Load PLC configurations
+    # Load optional controller configurations
     graph.plc_configs = layout.get("plcs", [])
-
-    # Load SCADA configuration
     graph.scada_config = layout.get("scada", {})
 
     return graph

@@ -1,24 +1,44 @@
-# process_sim/graph_visualizer.py
+"""
+Process Graph Visualization
+
+This module provides static and live visualizations of a process simulation graph
+using NetworkX and matplotlib. It supports rendering node connections, names, and
+live data such as rates, volumes, and state.
+
+Functions:
+    render_process_graph - Displays a labeled, static process graph layout.
+    render_live_graph - Continuously updates the graph with live simulation values.
+"""
 
 import networkx as nx
 import matplotlib.pyplot as plt
 
 def render_process_graph(graph, show_labels=True):
+    """
+    Render a static diagram of the simulation graph using node names and edge labels.
+
+    Args:
+        graph (ProcessGraph): The simulation graph containing nodes and lines.
+        show_labels (bool): Whether to show node names.
+    """
     G = nx.DiGraph()
     pos = {}
 
+    # Add nodes and record positions
     for node_id, node in graph.nodes.items():
         G.add_node(node_id, label=node.name)
         if hasattr(node, "position"):
             pos[node_id] = tuple(node.position)
 
+    # Add edges
     for line_id, line in graph.lines.items():
         G.add_edge(line.source.id, line.target.id, label=line.name)
 
-    # Fallback to spring layout if any position is missing
+    # Use spring layout if positions are missing
     if len(pos) < len(graph.nodes):
         pos = nx.spring_layout(G, seed=42)
 
+    # Draw the graph
     plt.figure(figsize=(10, 6))
     nx.draw(G, pos, with_labels=show_labels, node_size=1500,
             node_color="lightblue", arrows=True)
@@ -30,8 +50,12 @@ def render_process_graph(graph, show_labels=True):
 
 def render_live_graph(graph, interval=1.0):
     """
-    Continuously update the process graph with live simulation values.
-    Node labels show dynamic data like tank volume, pump rate, etc.
+    Continuously update and display the graph showing live simulation data
+    such as tank volumes, pump rates, and open/closed states.
+
+    Args:
+        graph (ProcessGraph): The simulation graph to monitor.
+        interval (float): Time delay (in seconds) between graph updates.
     """
     plt.ion()
     fig, ax = plt.subplots(figsize=(10, 6))
@@ -43,6 +67,7 @@ def render_live_graph(graph, interval=1.0):
         labels = {}
         pos = {}
 
+        # Build node data with dynamic labels
         for node_id, node in graph.nodes.items():
             G.add_node(node_id)
             label = f"{node.name}\n"
@@ -59,10 +84,10 @@ def render_live_graph(graph, interval=1.0):
             if hasattr(node, "position"):
                 pos[node_id] = tuple(node.position)
 
+        # Add edges
         for line_id, line in graph.lines.items():
             G.add_edge(line.source.id, line.target.id)
 
-        # Fallback layout
         if len(pos) < len(graph.nodes):
             pos = nx.spring_layout(G, seed=42)
 

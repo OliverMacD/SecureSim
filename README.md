@@ -10,7 +10,7 @@
 - ⚙️ **PLCs & SCADA** — Custom logic via register-based rules and Modbus
 - 📡 **MQTT + Modbus** — Realistic communication stack for sensors and control
 - 🛡️ **Attack & Defense** — Built-in support for replay, DoS, and FDI attacks
-- 🖥️ **Streamlit UI** — Real-time system monitoring and security toggles (Probably will be Flask as streamlit is struggling)
+- 🖥️ **Flask UI** — Real-time system monitoring and security toggles
 - 📈 **Graph Visualization** — Live network view of the entire system
 
 ---
@@ -37,7 +37,7 @@ secure-sim/
 │   ├── mqtt_server.py
 │   └── modbus_server.py
 │
-├── scada_ui/                 # Streamlit dashboard
+├── scada_ui/                 # Flask dashboard
 ├── attacks/                  # Attack modules
 ├── defenses/                 # Logging, auth, detection
 ├── tests/                    # MQTT + pump test scripts
@@ -51,7 +51,7 @@ secure-sim/
 
 ## 📚 Documentation
 
-Full system documentation is built with **Sphinx**.
+Full system documentation is built with **Sphinx** and can be accessed at [https://olivermacd.github.io/SecureSim/](https://olivermacd.github.io/SecureSim/).
 
 ### 🔧 Build it manually:
 
@@ -80,7 +80,7 @@ python main.py
 
 ### 3. Open the Dashboard
 
-Visit: [http://localhost:8501](http://localhost:8501)
+Visit: [http://localhost:8501](http://localhost:5000)
 
 ---
 
@@ -142,6 +142,6 @@ You can easily add new:
 - Python 3.9+
 - gmqtt
 - Sphinx
-- Streamlit (Again, TBD)
+- Flask
 - networkx + matplotlib
 - Custom Modbus server

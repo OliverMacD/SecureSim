@@ -1,28 +1,62 @@
-# process_sim/pump.py
+"""
+Pump Component
+
+Represents a controllable pump in the simulation. Transfers fluid from a source tank
+to a connected line. Supports MQTT for setting and reporting state and rate.
+
+Classes:
+    Pump - Handles input/output flow, remote control, and MQTT publishing.
+"""
 
 from process_sim.base import ProcessComponent
 from process_sim.interfaces.mqtt_interface import MQTTInterface
 
 class Pump(ProcessComponent):
+    """
+    A pump that transfers fluid at a fixed rate from a source tank to a target line.
+    The pump can be remotely opened or closed and configured via MQTT.
+    """
+
     def __init__(self, id, name, rate, mqtt_interface: MQTTInterface, is_open=True):
+        """
+        Args:
+            id (str): Unique identifier.
+            name (str): Human-readable name.
+            rate (float): Flow rate (units per tick).
+            mqtt_interface (MQTTInterface): Communication interface.
+            is_open (bool): Initial state of the pump (True if open).
+        """
         super().__init__(id, name)
         self.rate = rate
         self.source = None
         self.target = None
         self.is_open = is_open
-        self.mqtt = mqtt_interface  # Injected instance of MQTTInterface
+        self.mqtt = mqtt_interface
 
-        # MQTT subscriptions
+        # Listen for external control messages
         self.mqtt.subscribe(f"set/pump/{self.id}/rate", self.handle_set_rate)
         self.mqtt.subscribe(f"set/pump/{self.id}/state", self.handle_set_state)
 
     def handle_set_rate(self, msg):
+        """
+        Handles incoming MQTT message to change pump rate.
+
+        Args:
+            msg (str): New rate value (float as string).
+        """
         try:
             self.rate = float(msg)
+            print(f"[Pump {self.id}] Rate set to: {self.rate}")
         except ValueError:
             print(f"[Pump {self.id}] Invalid rate value: {msg}")
 
     def handle_set_state(self, msg):
+        """
+        Handles MQTT message to open or close the pump.
+
+        Args:
+            msg (str): Expected to be 'open' or 'closed'.
+        """
         print(f"[Pump {self.id}] Received set_state command: {msg}")
         if msg.lower() == "open":
             self.is_open = True
@@ -32,39 +66,56 @@ class Pump(ProcessComponent):
             print(f"[Pump {self.id}] Invalid state: {msg}")
             return
 
-        # Confirm new state over MQTT
         self.mqtt.publish(f"state/pump/{self.id}/state", "open" if self.is_open else "closed")
-        print(f"[Pump {self.id}] State set to {self.is_open}")
+        print(f"[Pump {self.id}] State set to {'open' if self.is_open else 'closed'}")
 
-    # Graph connection
     def set_connection(self, source_tank, line):
-        self.source = source_tank
-        self.target = line
+        """
+        Defines the source and target connections for the pump.
 
-    # Logic loop
+        Args:
+            source_tank (Tank): Source tank supplying fluid.
+            line (Line): Output line where fluid is transferred.
+        """
+        self.source = source_tank
+        self.target = target_tank
+
     def update(self):
+        """
+        Transfers fluid from the source tank to the target line if the pump is open.
+        """
         if self.is_open and self.source and self.source.current_volume >= self.rate:
             self.source.current_volume -= self.rate
             self.target.transfer(self.rate)
         elif self.is_open and self.source and self.source.current_volume > 0:
             # Transfer remaining volume if less than rate
-            self.target.transfer(self.source.current_volume)
+            transfer_amount = self.source.current_volume
             self.source.current_volume = 0
+            self.target.receive(transfer_amount)
+            print(f"[Pump {self.id}] Transferred remaining {transfer_amount} units from {self.source.id} to {self.target.id}.")
+        else:
+            print(f"[Pump {self.id}] No transfer occurred. Either pump is closed or source/target is not set.")
 
     def publish(self):
+        """
+        Publishes current rate and state to MQTT topics.
+        """
         self.mqtt.publish(f"pump/{self.id}/rate", self.rate)
         self.mqtt.publish(f"pump/{self.id}/state", "open" if self.is_open else "closed")
         print(f"[Pump {self.id}] Published rate: {self.rate}, state: {'open' if self.is_open else 'closed'}")
 
-    # Optional local API
     def get_rate(self):
+        """Returns the current flow rate."""
         return self.rate
 
     def set_rate(self, new_rate):
+        """Sets a new flow rate."""
         self.rate = new_rate
 
     def get_state(self):
+        """Returns the current state of the pump ('open' or 'closed')."""
         return "open" if self.is_open else "closed"
 
     def set_state(self, state: str):
+        """Sets the state of the pump ('open' or 'closed')."""
         self.is_open = state.lower() == "open"
