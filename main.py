@@ -20,6 +20,8 @@ import logging
 import socket
 import subprocess
 import threading
+import argparse
+from attacks.Replay import capture_and_replay
 
 def launch_flask():
     """
@@ -99,6 +101,16 @@ def main():
         logging.error("[MAIN] Failed to connect to MQTT broker. Exiting.")
         mqtt_process.terminate()
         return
+    
+    # REPLAY ATTACK
+    # Currently uses capture_and_replay command, see attacks/Replay.py for the other two
+    # I think switching this to use the two separate commands would be better
+    # since if there is captured data already (from previous process simulation run),
+    # then that data can simply be used
+    replay_enabled = True
+    if replay_enabled:
+        logging.info("[MAIN] Starting replay attack...")
+        threading.Thread(target=capture_and_replay, daemon=True).start()
 
     # Step 3: Load layout and start simulation
     print("[MAIN] Loading layout...")
