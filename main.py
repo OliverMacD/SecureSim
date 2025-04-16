@@ -10,6 +10,18 @@ import threading
 import argparse
 from attacks.Replay import capture_and_replay
 
+"""
+    Parses command-line arguments using argparse library
+"""
+def parse_arguments():
+    parser = argparse.ArgumentParser(prog="Main", description="Executes the SecureSim simulation")
+
+    parser.add_argument("-r", "--replay", action="store_true", help="Enable replay attack") # Replay attack
+    parser.add_argument("--replay-time", type=int, default=10, help="Sets the replay attack's duration (ONLY USE WITH REPLAY ARGUMENT)")
+    parser.add_argument("-d", "--debug", action="store_true", help="Enables debug mode")
+
+    return parser.parse_args()
+
 def launch_streamlit():
     """Launch the Streamlit Dashboard in a separate subprocess."""
     dashboard_path = os.path.join(os.path.dirname(__file__), "scada_ui", "Dashboard.py")
@@ -46,8 +58,12 @@ def wait_for_broker(host="127.0.0.1", port=1883, timeout=5.0):
     logging.error("[MAIN] MQTT broker did not respond in time.")
     return False
 
-def main():
-    logging.basicConfig(level=logging.INFO)
+def main(args):
+    # Debug level
+    if args.debug:
+        logging.basicConfig(level=logging.DEBUG)
+    else:
+        logging.basicConfig(level=logging.INFO)
 
     # Step 1: Start MQTT Broker subprocess
     mqtt_process = start_mqtt_server()
@@ -67,10 +83,9 @@ def main():
     # I think switching this to use the two separate commands would be better
     # since if there is captured data already (from previous process simulation run),
     # then that data can simply be used
-    replay_enabled = True
-    if replay_enabled:
+    if args.replay:
         logging.info("[MAIN] Starting replay attack...")
-        threading.Thread(target=capture_and_replay, daemon=True).start()
+        threading.Thread(target=lambda: capture_and_replay(capture_time=args.replay_time), daemon=True).start()
 
     # Step 4: Load layout and start simulation
     print("[MAIN] Loading layout...")
@@ -100,4 +115,5 @@ def main():
         logging.info("[MAIN] MQTT broker stopped.")
 
 if __name__ == "__main__":
-    main()
+    args = parse_arguments()
+    main(args)
