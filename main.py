@@ -21,6 +21,25 @@ import logging
 import socket
 import subprocess
 import threading
+import argparse
+from attacks.Replay import capture_and_replay
+
+
+"""
+    Parses command-line arguments using argparse library
+"""
+def parse_arguments():
+    parser = argparse.ArgumentParser(prog="Main", description="Executes the SecureSim simulation")
+
+    parser.add_argument("-r", "--replay", action="store_true", help="Enable replay attack") # Replay attack
+    parser.add_argument("--replay-time", type=int, default=10, help="Sets the replay attack's duration (ONLY USE WITH REPLAY ARGUMENT)")
+    parser.add_argument("-d", "--debug", action="store_true", help="Enables debug mode")
+
+    return parser.parse_args()
+
+def launch_streamlit():
+    """Launch the Streamlit Dashboard in a separate subprocess."""
+    dashboard_path = os.path.join(os.path.dirname(__file__), "scada_ui", "Dashboard.py")
 
 def launch_flask():
     """
@@ -28,6 +47,7 @@ def launch_flask():
 
     Assumes Flask app is located at `scada_ui/app.py`.
     """
+
     subprocess.Popen(
         ["python", "scada_ui/app.py"],
         stdout=subprocess.DEVNULL,
@@ -76,7 +96,8 @@ def wait_for_broker(host="127.0.0.1", port=1883, timeout=5.0):
     logging.error("[MAIN] MQTT broker did not respond in time.")
     return False
 
-def main():
+
+def main(args):
     """
     Main simulation launcher. This function:
       1. Starts the MQTT broker
@@ -86,7 +107,12 @@ def main():
       5. Launches the Flask dashboard
       6. Waits for keyboard interrupt to shut down
     """
-    logging.basicConfig(level=logging.INFO)
+  
+    # Debug level
+    if args.debug:
+        logging.basicConfig(level=logging.DEBUG)
+    else:
+        logging.basicConfig(level=logging.INFO)
 
     # Step 1: Start MQTT Broker subprocess
     mqtt_process = start_mqtt_server()
@@ -100,6 +126,15 @@ def main():
         logging.error("[MAIN] Failed to connect to MQTT broker. Exiting.")
         mqtt_process.terminate()
         return
+    
+    # REPLAY ATTACK
+    # Currently uses capture_and_replay command, see attacks/Replay.py for the other two
+    # I think switching this to use the two separate commands would be better
+    # since if there is captured data already (from previous process simulation run),
+    # then that data can simply be used
+    if args.replay:
+        logging.info("[MAIN] Starting replay attack...")
+        threading.Thread(target=lambda: capture_and_replay(capture_time=args.replay_time), daemon=True).start()
 
     # Step 3: Load layout and start simulation
     print("[MAIN] Loading layout...")
@@ -131,4 +166,5 @@ def main():
         logging.info("[MAIN] MQTT broker stopped.")
 
 if __name__ == "__main__":
-    main()
+    args = parse_arguments()
+    main(args)
