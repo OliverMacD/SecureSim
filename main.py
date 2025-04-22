@@ -13,6 +13,7 @@ Functions:
 
 from process_sim.layout_parser import load_layout
 from process_sim.simulation_runner import SimulationThread
+from scada_ui.services import sim_ref
 import os
 import sys
 import time
@@ -139,13 +140,14 @@ def main(args):
     print("[MAIN] Loading layout...")
     try:
         graph = load_layout("Process_sim.json")
+        sim_ref.graph = graph  # Connect live simulation graph to UI
     except Exception as e:
         logging.error(f"[MAIN] Failed to load layout: {e}")
         mqtt_process.terminate()
         return
 
     print("[MAIN] Starting simulation...")
-    sim_thread = SimulationThread(graph, interval=1.0, debug=True)
+    sim_thread = SimulationThread(graph, interval=1.0, debug=False)
     sim_thread.start()
 
     # Step 4: Launch Flask dashboard

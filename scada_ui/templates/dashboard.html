@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/jpeg" href="/static/img/SecureSim.jpg">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        .sidebar {
+            width: 220px;
+            background-color: #2f3542;
+            color: white;
+            height: 100vh;
+            padding: 20px 10px;
+        }
+        .sidebar h2 {
+            color: #70a1ff;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .sidebar a:hover {
+            background-color: #57606f;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        #graph-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 90%;
+            border: 1px solid #ccc;
+        }
+    </style>
+
+<script>
+    async function fetchData() {
+        const res = await fetch('/api/state');
+        const data = await res.json();
+        const pumpTable = document.getElementById("pump-table-body");
+        const tankTable = document.getElementById("tank-table-body");
+        pumpTable.innerHTML = "";
+        tankTable.innerHTML = "";
+        for (const [id, info] of Object.entries(data)) {
+            if (id.startsWith("pump")) {
+                const row = document.createElement("tr");
+                row.innerHTML = `<td>${id}</td><td>${info.name}</td><td>${info.state}</td><td>${info.rate}</td>`;
+                pumpTable.appendChild(row);
+            } else if (id.startsWith("tank")) {
+                const row = document.createElement("tr");
+                row.innerHTML = `<td>${id}</td><td>${info.name}</td><td>${info.volume}</td>`;
+                tankTable.appendChild(row);
+            }
+        }
+    }
+    setInterval(fetchData, 2000);
+    window.onload = fetchData;
+</script>
+</head>
+<body>
+
+    <div class="sidebar">
+        <img src="/static/img/SecureSim.jpg" alt="SecureSim Logo" style="width: 90%; height: auto; border-radius: 12px; margin: 0 auto 15px auto; display: block;">
+        <h2>SecureSim</h2>
+        <a href="/">Dashboard</a>
+        <a href="/logs">Temp Logs</a>
+        <a href="/controls">Controls</a>
+        <a href="/components">Components</a>
+    </div>
+
+    <div class="main-content">
+        <h1>SCADA Live Dashboard</h1>
+        <div class="dashboard-container" style="display: flex; gap: 20px;">
+            <table>
+                <thead><tr><th>Pump ID</th><th>Name</th><th>State</th><th>Rate</th></tr></thead>
+                <tbody id="pump-table-body"></tbody>
+            </table>
+            <table>
+                <thead><tr><th>Tank ID</th><th>Name</th><th>Volume</th></tr></thead>
+                <tbody id="tank-table-body"></tbody>
+            </table>
+        </div>
+        <h2 style="text-align:center;">System Layout</h2>
+        <img id="graph-image" src="/static/graph.png" alt="Graph Layout">
+    </div>
+</body>
+</html>
