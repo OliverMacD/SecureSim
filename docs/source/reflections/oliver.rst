@@ -4,37 +4,27 @@ Reflection: Oliver MacDonald
 
 Project Role & Responsibilities
 -------------------------------
-Briefly describe your role in the project. What were your primary responsibilities?
-Example: 
-- Developed tank/pump simulation
-- Wrote attack scripts for replay and FDI
-- Created visualizations and assisted with demo
+In this project, I focused primarily on developing the core process simulation and building out the user interface. My contributions included implementing the simulation framework for tanks, pumps, and flow lines, as well as designing and connecting the Flask-based SCADA dashboard. I was also responsible for integrating MQTT and Modbus communication layers and setting up the Sphinx documentation pipeline used to publish the project's technical resources.
 
 Skills Developed
 ----------------
-Reflect on what **technical** and **soft skills** you developed:
-- Python libraries used (threading, logging, matplotlib, etc.)
-- Control logic design or ICS security understanding
-- Collaboration or version control (e.g., Git)
+Through SecureSim, I deepened my understanding of Python-based communication protocols and web interfaces for industrial systems. I gained practical experience with:
+
+- MQTT in Python for real-time telemetry
+- Implementing a custom Modbus server for control logic
+- Using Python’s `logging` module for auditing
+- Building protected web dashboards using Flask
+
+Beyond technical development, I also improved my skills in documentation management and project structuring through Sphinx and GitHub Actions.
 
 Challenges Faced
 ----------------
-What were some challenges you encountered? How did you overcome them?
-Could include debugging attacks, timing sync issues, or SCADA UI development.
+A key challenge in this project was achieving reliable synchronization between MQTT messages and Modbus register updates, especially under high communication loads. Additionally, ensuring that the UI remained responsive while live data streamed in from multiple sources required careful threading and design considerations.
 
 Lessons Learned
 ---------------
-What key insights did you take away from this project?
-Focus on:
-- ICS vulnerability awareness
-- Value of layered defenses
-- Importance of simulation/testing
-- Real-world relevance of your implementation
+This project significantly expanded my understanding of both ICS architecture and cybersecurity best practices. I saw firsthand how lightweight attacks can bypass naive defenses, and how layered strategies, like authentication, logging, and rate limiting, can mitigate their impact. It reinforced the importance of simulation and structured testing in developing resilient control systems. Most importantly, I developed a more nuanced awareness of the security trade-offs inherent in designing real-time interfaces for industrial systems.
 
 Future Applications
 -------------------
-How could you apply what you learned?
-Ideas:
-- Academic research in cyber-physical systems
-- Internships or careers in security/controls
-- Building more resilient interfaces or protocols
+The skills and insights gained through SecureSim are already being applied in my own work. I run a company building SaaS platforms, and I now approach platform architecture with a stronger focus on secure communication, auditing, and failure tolerance. Beyond that, this project has laid the foundation for my future research in cyber-physical security and human-centered interfaces for industrial systems.
