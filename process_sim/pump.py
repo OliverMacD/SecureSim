@@ -10,6 +10,8 @@ Classes:
 
 from process_sim.base import ProcessComponent
 from process_sim.interfaces.mqtt_interface import MQTTInterface
+from process_sim.splitter import Splitter
+from process_sim.tank import Tank 
 
 class Pump(ProcessComponent):
     """
@@ -69,12 +71,13 @@ class Pump(ProcessComponent):
         self.mqtt.publish(f"state/pump/{self.id}/state", "open" if self.is_open else "closed")
         print(f"[Pump {self.id}] State set to {'open' if self.is_open else 'closed'}")
 
-    def set_connection(self, source_tank, line):
+    def set_connection(self, source_tank, target_tank, line):
         """
         Defines the source and target connections for the pump.
 
         Args:
             source_tank (Tank): Source tank supplying fluid.
+            target_tank (Tank): Target tank receiving fluid.
             line (Line): Output line where fluid is transferred.
         """
         self.source = source_tank
@@ -82,19 +85,29 @@ class Pump(ProcessComponent):
 
     def update(self):
         """
-        Transfers fluid from the source tank to the target line if the pump is open.
+        Transfers fluid from the source tank to the target if the pump is open.
+        Handles both Tank and Splitter as targets.
         """
         if self.is_open and self.source and self.source.current_volume >= self.rate:
             self.source.current_volume -= self.rate
-            self.target.transfer(self.rate)
+
+            if isinstance(self.target, Tank):
+                self.target.transfer(self.rate)
+            elif isinstance(self.target, Splitter):
+                self.target.distribute(self.rate)  # Call the distribute method for Splitter
+            else:
+                print(f"[Pump {self.id}] Warning: Unsupported target type {type(self.target)}")
         elif self.is_open and self.source and self.source.current_volume > 0:
             # Transfer remaining volume if less than rate
             transfer_amount = self.source.current_volume
             self.source.current_volume = 0
-            self.target.receive(transfer_amount)
-            print(f"[Pump {self.id}] Transferred remaining {transfer_amount} units from {self.source.id} to {self.target.id}.")
-        else:
-            print(f"[Pump {self.id}] No transfer occurred. Either pump is closed or source/target is not set.")
+
+            if isinstance(self.target, Tank):
+                self.target.transfer(transfer_amount)
+            elif isinstance(self.target, Splitter):
+                self.target.distribute(transfer_amount)
+            else:
+                print(f"[Pump {self.id}] Warning: Unsupported target type {type(self.target)}")
 
     def publish(self):
         """

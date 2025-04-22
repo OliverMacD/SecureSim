@@ -6,10 +6,7 @@
       "name": "Waste Water",
       "max_capacity": 1000,
       "initial_capacity": 1000,
-      "position": [
-        0,
-        16
-      ]
+      "position": [0, 16]
     },
     {
       "id": "tank2",
@@ -17,10 +14,7 @@
       "name": "Mixing Tank",
       "max_capacity": 1000,
       "initial_capacity": 0,
-      "position": [
-        8,
-        8
-      ]
+      "position": [8, 8]
     },
     {
       "id": "tank3",
@@ -28,10 +22,7 @@
       "name": "Chemical B",
       "max_capacity": 1000,
       "initial_capacity": 1000,
-      "position": [
-        0,
-        0
-      ]
+      "position": [0, 0]
     },
     {
       "id": "tank4",
@@ -39,10 +30,7 @@
       "name": "Chemical A",
       "max_capacity": 1000,
       "initial_capacity": 1000,
-      "position": [
-        16,
-        0
-      ]
+      "position": [16, 0]
     },
     {
       "id": "tank5",
@@ -50,10 +38,7 @@
       "name": "Storage Tank 1",
       "max_capacity": 1000,
       "initial_capacity": 300,
-      "position": [
-        20,
-        14
-      ]
+      "position": [20, 14]
     },
     {
       "id": "tank6",
@@ -61,10 +46,7 @@
       "name": "Storage Tank 2",
       "max_capacity": 1000,
       "initial_capacity": 300,
-      "position": [
-        15,
-        12
-      ]
+      "position": [15, 12]
     },
     {
       "id": "pump1",
@@ -72,10 +54,8 @@
       "name": "Waste Water Pump",
       "flow_rate": 50,
       "source": "tank1",
-      "position": [
-        0,
-        8
-      ],
+      "target": "tank2",
+      "position": [0, 8],
       "is_open": false
     },
     {
@@ -84,10 +64,8 @@
       "name": "Chemical A Pump",
       "flow_rate": 50,
       "source": "tank3",
-      "position": [
-        4,
-        4
-      ],
+      "target": "tank2",
+      "position": [4, 4],
       "is_open": false
     },
     {
@@ -96,10 +74,8 @@
       "name": "Chemical B Pump",
       "flow_rate": 50,
       "source": "tank4",
-      "position": [
-        12,
-        4
-      ],
+      "target": "tank2",
+      "position": [12, 4],
       "is_open": false
     },
     {
@@ -108,10 +84,8 @@
       "name": "Mixer Pump",
       "flow_rate": 1000,
       "source": "tank2",
-      "position": [
-        16,
-        8
-      ],
+      "target": "splitter1",
+      "position": [16, 8],
       "is_open": false
     },
     {
@@ -120,10 +94,8 @@
       "name": "Storage 1 Pump",
       "flow_rate": 50,
       "source": "tank5",
-      "position": [
-        13,
-        14
-      ],
+      "target": "tank1",
+      "position": [13, 14],
       "is_open": false
     },
     {
@@ -132,20 +104,15 @@
       "name": "Storage 2 Pump",
       "flow_rate": 50,
       "source": "tank6",
-      "position": [
-        8,
-        12
-      ],
+      "target": "tank1",
+      "position": [8, 12],
       "is_open": false
     },
     {
       "id": "splitter1",
       "type": "Splitter",
       "name": "Splitter A",
-      "position": [
-        24,
-        8
-      ]
+      "position": [24, 8]
     }
   ],
   "edges": [

@@ -69,6 +69,20 @@ class Tank(ProcessComponent):
             # Log overflow event
             self.mqtt.publish(f"tank/{self.id}/overflow", overflow)
             print(f"[Tank {self.id}] Overflow detected: {overflow} units lost.")
+    
+    def transfer(self, amount):
+        """
+        Adds fluid to the tank, ensuring it does not exceed max_capacity.
+
+        Args:
+            amount (float): The amount of fluid to transfer.
+        """
+        if amount < 0:
+            raise ValueError("Transfer amount cannot be negative.")
+        
+        self.current_volume = min(self.current_volume + amount, self.max_capacity)
+        print(f"[Tank {self.id}] Transferred {amount} units. Current volume: {self.current_volume}")
+        
 
     def output(self):
         """

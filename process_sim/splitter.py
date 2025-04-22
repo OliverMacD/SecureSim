@@ -22,7 +22,7 @@ class Splitter(ProcessComponent):
             name (str): Human-readable name.
         """
         super().__init__(id, name)
-        self.outputs = []
+        self.outputs = []  # List of output lines connected to the splitter
 
     def add_output(self, line):
         """
@@ -33,27 +33,34 @@ class Splitter(ProcessComponent):
         """
         self.outputs.append(line)
 
-    def receive(self, amount):
+    def distribute(self, amount):
         """
-        Receives a volume of fluid and distributes it equally to all outputs.
+        Distributes a volume of fluid equally to all connected outputs.
 
         Args:
             amount (float): The volume of fluid to distribute.
         """
         if not self.outputs:
+            print(f"[Splitter {self.id}] Warning: No outputs to distribute to.")
             return
+
+        # Calculate the amount to send to each output
         split_amount = amount / len(self.outputs)
-        for out in self.outputs:
-            out.transfer(split_amount)
+        for line in self.outputs:
+            if line.target:
+                line.target.transfer(split_amount)
+                print(f"[Splitter {self.id}] Transferred {split_amount} units to {line.target.id}")
 
     def update(self):
         """
-        No internal state to update. Method exists for interface consistency.
+        Updates the splitter's state. No internal state to update, but method exists
+        for interface consistency.
         """
         pass
 
     def publish(self):
         """
-        No active state to publish. Method exists for interface consistency.
+        Publishes the splitter's state. No active state to publish, but method exists
+        for interface consistency.
         """
         pass
