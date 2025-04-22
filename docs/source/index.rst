@@ -25,3 +25,15 @@ Developer API Reference
    api/process_sim
    api/servers
    api/control_logic
+
+Individual Reflections & Project Report
+=======================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 🧪 API Reference
+
+   reflections/project_report
+   reflections/saxton
+   reflections/stephen
+   reflections/oliver
