@@ -1,28 +1,23 @@
 from scada_ui.services.mqtt_interface import MQTTInterface
 
-# Assuming MQTTInterface is used for communication with Modbus
 mqtt = MQTTInterface()
+latest_values = {}
+
+def handle_mqtt_message(topic, message):
+    if message is not None:
+        latest_values[topic] = message  # Cache latest non-null message
+
+# Subscribe to all known process topics at startup
+topics_to_subscribe = [
+    "pump/pump1/state", "pump/pump2/state", "pump/pump3/state",
+    "pump/pump4/state", "pump/pump5/state", "pump/pump6/state",
+    "tank/tank1/volume", "tank/tank2/volume", "tank/tank3/volume",
+    "tank/tank4/volume", "tank/tank5/volume", "tank/tank6/volume"
+]
+
+for topic in topics_to_subscribe:
+    mqtt.subscribe(topic, lambda msg, t=topic: handle_mqtt_message(t, msg))
 
 def get_modbus_state(topic):
-    """
-    Fetches the state for a given topic via MQTT (Modbus).
-    This function should handle subscribing to the topic and returning the state.
-    """
-    # Placeholder: Replace with actual Modbus MQTT interaction
-    # Example: Use the MQTTInterface to get the state for a particular topic
-    result = None
-
-    def handle_message(msg):
-        nonlocal result
-        result = msg  # Capture the message in the result variable
-    
-    mqtt.subscribe(topic, handle_message)  # Subscribe to the topic
-    
-    # Give some time for the message to arrive before returning the result
-    import time
-    time.sleep(1)  # Adjust this sleep time based on your system's response time
-    
-    if result is None:
-        print(f"[ERROR] No data received for topic {topic}")
-    
-    return result
+    # Return cached value or "unknown" if not yet received
+    return latest_values.get(topic, "unknown")

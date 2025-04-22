@@ -37,10 +37,6 @@ def parse_arguments():
 
     return parser.parse_args()
 
-def launch_streamlit():
-    """Launch the Streamlit Dashboard in a separate subprocess."""
-    dashboard_path = os.path.join(os.path.dirname(__file__), "scada_ui", "Dashboard.py")
-
 def launch_flask():
     """
     Launch the Flask dashboard UI in a background subprocess.
