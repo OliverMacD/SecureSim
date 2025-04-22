@@ -1,0 +1,1793 @@
+2025-04-22 16:32:52,878 [INFO] Logger initialized successfully
+2025-04-22 16:32:52,884 [INFO] [MAIN] MQTT broker starting...
+2025-04-22 16:32:53,390 [INFO] [MAIN] MQTT broker is ready.
+2025-04-22 16:32:53,392 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank1/max_capacity
+2025-04-22 16:32:53,392 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,392 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,394 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank1
+2025-04-22 16:32:53,395 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank2/max_capacity
+2025-04-22 16:32:53,395 [INFO] [SEND SUB] 1 [b'set/tank/tank1/max_capacity']
+2025-04-22 16:32:53,395 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,395 [INFO] [SUBACK] 1 (0,)
+2025-04-22 16:32:53,395 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,395 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,397 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank2
+2025-04-22 16:32:53,397 [INFO] [SEND SUB] 2 [b'set/tank/tank2/max_capacity']
+2025-04-22 16:32:53,397 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank3/max_capacity
+2025-04-22 16:32:53,397 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,398 [INFO] [SUBACK] 2 (0,)
+2025-04-22 16:32:53,398 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,398 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,398 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank3
+2025-04-22 16:32:53,398 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank4/max_capacity
+2025-04-22 16:32:53,398 [INFO] [SEND SUB] 3 [b'set/tank/tank3/max_capacity']
+2025-04-22 16:32:53,399 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,399 [INFO] [SUBACK] 3 (0,)
+2025-04-22 16:32:53,399 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,399 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,399 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank5/max_capacity
+2025-04-22 16:32:53,400 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank4
+2025-04-22 16:32:53,400 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,400 [INFO] [SEND SUB] 4 [b'set/tank/tank4/max_capacity']
+2025-04-22 16:32:53,400 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,400 [INFO] [SUBACK] 4 (0,)
+2025-04-22 16:32:53,400 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank6/max_capacity
+2025-04-22 16:32:53,400 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank5
+2025-04-22 16:32:53,400 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,402 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,402 [INFO] [SEND SUB] 5 [b'set/tank/tank5/max_capacity']
+2025-04-22 16:32:53,402 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,403 [INFO] [SUBACK] 5 (0,)
+2025-04-22 16:32:53,403 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank6
+2025-04-22 16:32:53,403 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump1/rate
+2025-04-22 16:32:53,403 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,403 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,404 [INFO] [SEND SUB] 6 [b'set/tank/tank6/max_capacity']
+2025-04-22 16:32:53,404 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump1/state
+2025-04-22 16:32:53,406 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,406 [INFO] [SUBACK] 6 (0,)
+2025-04-22 16:32:53,406 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump1
+2025-04-22 16:32:53,406 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,406 [INFO] [SEND SUB] 7 [b'set/pump/pump1/rate']
+2025-04-22 16:32:53,406 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump2/rate
+2025-04-22 16:32:53,406 [INFO] [SEND SUB] 8 [b'set/pump/pump1/state']
+2025-04-22 16:32:53,406 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,407 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump2/state
+2025-04-22 16:32:53,407 [INFO] [SUBACK] 7 (0,)
+2025-04-22 16:32:53,407 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,407 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,407 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump2
+2025-04-22 16:32:53,407 [INFO] [SUBACK] 8 (0,)
+2025-04-22 16:32:53,407 [INFO] [SEND SUB] 9 [b'set/pump/pump2/rate']
+2025-04-22 16:32:53,408 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,408 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump3/rate
+2025-04-22 16:32:53,408 [INFO] [SEND SUB] 10 [b'set/pump/pump2/state']
+2025-04-22 16:32:53,408 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump3/state
+2025-04-22 16:32:53,408 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,408 [INFO] [SUBACK] 9 (0,)
+2025-04-22 16:32:53,410 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,410 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,411 [INFO] [SUBACK] 10 (0,)
+2025-04-22 16:32:53,411 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,411 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump3
+2025-04-22 16:32:53,411 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump4/rate
+2025-04-22 16:32:53,411 [INFO] [SEND SUB] 11 [b'set/pump/pump3/rate']
+2025-04-22 16:32:53,412 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump4/state
+2025-04-22 16:32:53,412 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,412 [INFO] [SEND SUB] 12 [b'set/pump/pump3/state']
+2025-04-22 16:32:53,412 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,413 [INFO] [SUBACK] 11 (0,)
+2025-04-22 16:32:53,413 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump4
+2025-04-22 16:32:53,413 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,413 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump5/rate
+2025-04-22 16:32:53,413 [INFO] [SEND SUB] 13 [b'set/pump/pump4/rate']
+2025-04-22 16:32:53,413 [INFO] [SUBACK] 12 (0,)
+2025-04-22 16:32:53,413 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,413 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump5/state
+2025-04-22 16:32:53,415 [INFO] [SEND SUB] 14 [b'set/pump/pump4/state']
+2025-04-22 16:32:53,415 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,415 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,415 [INFO] [SUBACK] 13 (0,)
+2025-04-22 16:32:53,415 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump5
+2025-04-22 16:32:53,415 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,416 [INFO] [SEND SUB] 15 [b'set/pump/pump5/rate']
+2025-04-22 16:32:53,416 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump6/rate
+2025-04-22 16:32:53,417 [INFO] [SUBACK] 14 (0,)
+2025-04-22 16:32:53,417 [INFO] [SEND SUB] 16 [b'set/pump/pump5/state']
+2025-04-22 16:32:53,417 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump6/state
+2025-04-22 16:32:53,418 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,418 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,418 [INFO] [SUBACK] 15 (0,)
+2025-04-22 16:32:53,419 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,419 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,419 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump6
+2025-04-22 16:32:53,419 [INFO] [SUBACK] 16 (0,)
+2025-04-22 16:32:53,419 [INFO] [SEND SUB] 17 [b'set/pump/pump6/rate']
+2025-04-22 16:32:53,420 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,420 [INFO] [SEND SUB] 18 [b'set/pump/pump6/state']
+2025-04-22 16:32:53,420 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,421 [INFO] [SUBACK] 17 (0,)
+2025-04-22 16:32:53,421 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,422 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,422 [INFO] [MODBUS] Starting Modbus TCP server on 127.0.0.1:5100
+2025-04-22 16:32:53,422 [INFO] [SUBACK] 18 (0,)
+2025-04-22 16:32:53,423 [INFO] [MODBUS] Modbus server launched.
+2025-04-22 16:32:53,423 [INFO] [MQTT] Connected to 127.0.0.1:1883 as splitter_splitter1
+2025-04-22 16:32:53,423 [INFO] [CONNECTION MADE]
+2025-04-22 16:32:53,423 [INFO] [MQTT] Subscribed successfully
+2025-04-22 16:32:53,424 [INFO] [MODBUS] Starting Modbus TCP server on 127.0.0.1:5101
+2025-04-22 16:32:53,424 [INFO] [MODBUS] Modbus server launched.
+2025-04-22 16:32:53,424 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 16:32:53,424 [INFO] [MQTT] Connected to 127.0.0.1:1883 as sim_control
+2025-04-22 16:32:53,424 [INFO] [MODBUS] Starting Modbus TCP server on 127.0.0.1:5103
+2025-04-22 16:32:53,424 [INFO] [MODBUS] Modbus server launched.
+2025-04-22 16:32:53,425 [INFO] [MODBUS] Starting Modbus TCP server on 127.0.0.1:5200
+2025-04-22 16:32:53,425 [INFO] [MODBUS] Modbus server launched.
+2025-04-22 16:32:53,425 [INFO] [SIM] Starting simulation loop...
+2025-04-22 16:32:53,426 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:32:53,426 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 1000
+2025-04-22 16:32:53,426 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:32:53,426 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:32:53,426 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 1000
+2025-04-22 16:32:53,426 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 1000
+2025-04-22 16:32:53,426 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:32:53,427 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:32:53,427 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 0
+2025-04-22 16:32:53,427 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:32:53,427 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:32:53,427 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:32:53,427 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:32:53,427 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 300
+2025-04-22 16:32:53,427 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 300
+2025-04-22 16:32:53,427 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:32:53,427 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:32:53,427 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:32:53,428 [INFO] [Tank tank2] Transferred 50 units. Current volume: 50.0
+2025-04-22 16:32:53,429 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 950.0
+2025-04-22 16:32:53,429 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:32:53,429 [INFO] [Tank tank1] Published volume: 950.0, max_capacity: 1000
+2025-04-22 16:32:53,429 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 50.0
+2025-04-22 16:32:53,429 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:32:53,430 [INFO] [Tank tank2] Published volume: 50.0, max_capacity: 1000
+2025-04-22 16:32:53,430 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 1000.0
+2025-04-22 16:32:53,430 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:32:53,431 [INFO] [Tank tank3] Published volume: 1000.0, max_capacity: 1000
+2025-04-22 16:32:53,431 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 1000.0
+2025-04-22 16:32:53,431 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:32:53,431 [INFO] [Tank tank4] Published volume: 1000.0, max_capacity: 1000
+2025-04-22 16:32:53,431 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 300.0
+2025-04-22 16:32:53,432 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:32:53,432 [INFO] [Tank tank5] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:53,432 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 300.0
+2025-04-22 16:32:53,432 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:32:53,433 [INFO] [Tank tank6] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:53,433 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:32:53,433 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:32:53,433 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:32:53,433 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:32:53,433 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:32:53,433 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:32:53,433 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:32:53,433 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:32:53,434 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:32:53,434 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:32:53,434 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:32:53,435 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:32:53,435 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:32:53,435 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:32:53,435 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:32:53,436 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:32:53,436 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:32:53,436 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:32:54,426 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 950
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:32:54,426 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 1000
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 1000
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 50
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:32:54,426 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:32:54,426 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 300
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 300
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:32:54,426 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:32:54,426 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:32:54,426 [INFO] [Tank tank2] Transferred 50 units. Current volume: 100.0
+2025-04-22 16:32:54,426 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 900.0
+2025-04-22 16:32:54,426 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:32:54,426 [INFO] [Tank tank1] Published volume: 900.0, max_capacity: 1000
+2025-04-22 16:32:54,426 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:32:54,429 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:32:54,429 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:32:54,429 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 1000.0
+2025-04-22 16:32:54,429 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:32:54,430 [INFO] [Tank tank3] Published volume: 1000.0, max_capacity: 1000
+2025-04-22 16:32:54,430 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 1000.0
+2025-04-22 16:32:54,430 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:32:54,430 [INFO] [Tank tank4] Published volume: 1000.0, max_capacity: 1000
+2025-04-22 16:32:54,430 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 300.0
+2025-04-22 16:32:54,431 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:32:54,431 [INFO] [Tank tank5] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:54,431 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 300.0
+2025-04-22 16:32:54,431 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:32:54,431 [INFO] [Tank tank6] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:54,431 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:32:54,432 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:32:54,432 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:32:54,432 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:32:54,432 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:32:54,432 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:32:54,432 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:32:54,432 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:32:54,432 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:32:54,432 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:32:54,433 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:32:54,433 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:32:54,433 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:32:54,433 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:32:54,433 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:32:54,433 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:32:54,433 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:32:54,433 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:32:55,427 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:32:55,427 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 900
+2025-04-22 16:32:55,427 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:32:55,427 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:32:55,427 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 1000
+2025-04-22 16:32:55,427 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 1000
+2025-04-22 16:32:55,427 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:32:55,427 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:32:55,429 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:32:55,429 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:32:55,429 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:32:55,429 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:32:55,429 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:32:55,429 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 300
+2025-04-22 16:32:55,429 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 300
+2025-04-22 16:32:55,429 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:32:55,429 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:32:55,429 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:32:55,429 [INFO] [Tank tank2] Transferred 50 units. Current volume: 150.0
+2025-04-22 16:32:55,429 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 850.0
+2025-04-22 16:32:55,429 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:32:55,429 [INFO] [Tank tank1] Published volume: 850.0, max_capacity: 1000
+2025-04-22 16:32:55,429 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 150.0
+2025-04-22 16:32:55,429 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:32:55,429 [INFO] [Tank tank2] Published volume: 150.0, max_capacity: 1000
+2025-04-22 16:32:55,429 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 1000.0
+2025-04-22 16:32:55,429 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:32:55,429 [INFO] [Tank tank3] Published volume: 1000.0, max_capacity: 1000
+2025-04-22 16:32:55,429 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 1000.0
+2025-04-22 16:32:55,429 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:32:55,429 [INFO] [Tank tank4] Published volume: 1000.0, max_capacity: 1000
+2025-04-22 16:32:55,432 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 300.0
+2025-04-22 16:32:55,432 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:32:55,432 [INFO] [Tank tank5] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:55,432 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 300.0
+2025-04-22 16:32:55,432 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:32:55,433 [INFO] [Tank tank6] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:55,433 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:32:55,433 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:32:55,433 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:32:55,433 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:32:55,433 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:32:55,435 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:32:55,435 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:32:55,435 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:32:55,435 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:32:55,435 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:32:55,436 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:32:55,436 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:32:55,436 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:32:55,436 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:32:55,436 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:32:55,436 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:32:55,436 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:32:55,436 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:32:56,428 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:32:56,428 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 850
+2025-04-22 16:32:56,428 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:32:56,429 [INFO] [ENGINE] Set state of pump2 to open
+2025-04-22 16:32:56,429 [INFO] [ENGINE] Set state of pump3 to open
+2025-04-22 16:32:56,429 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 1000
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 1000
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 1
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 1
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 150
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:32:56,429 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:32:56,429 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 300
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 300
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:32:56,429 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:32:56,429 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:32:56,429 [INFO] [Tank tank2] Transferred 50 units. Current volume: 200.0
+2025-04-22 16:32:56,429 [INFO] [Tank tank2] Transferred 50 units. Current volume: 250.0
+2025-04-22 16:32:56,429 [INFO] [Tank tank2] Transferred 50 units. Current volume: 300.0
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 800.0
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:32:56,429 [INFO] [Tank tank1] Published volume: 800.0, max_capacity: 1000
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 300.0
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:32:56,429 [INFO] [Tank tank2] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 950.0
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:32:56,429 [INFO] [Tank tank3] Published volume: 950.0, max_capacity: 1000
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 950.0
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:32:56,429 [INFO] [Tank tank4] Published volume: 950.0, max_capacity: 1000
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 300.0
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:32:56,429 [INFO] [Tank tank5] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:56,429 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 300.0
+2025-04-22 16:32:56,434 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:32:56,434 [INFO] [Tank tank6] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:56,434 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:32:56,435 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:32:56,435 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:32:56,435 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:32:56,435 [INFO] [MQTT-PUB] Published to pump/pump2/state: open
+2025-04-22 16:32:56,435 [INFO] [Pump pump2] Published rate: 50, state: open
+2025-04-22 16:32:56,436 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:32:56,436 [INFO] [MQTT-PUB] Published to pump/pump3/state: open
+2025-04-22 16:32:56,436 [INFO] [Pump pump3] Published rate: 50, state: open
+2025-04-22 16:32:56,436 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:32:56,436 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:32:56,437 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:32:56,437 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:32:56,437 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:32:56,437 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:32:56,437 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:32:56,437 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:32:56,437 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:32:57,430 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:32:57,430 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 800
+2025-04-22 16:32:57,430 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:32:57,430 [INFO] [ENGINE] Set state of pump2 to open
+2025-04-22 16:32:57,430 [INFO] [ENGINE] Set state of pump3 to open
+2025-04-22 16:32:57,430 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 950
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 950
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 1
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 1
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 300
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:32:57,431 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:32:57,431 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 300
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 300
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:32:57,431 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:32:57,431 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:32:57,433 [INFO] [Tank tank2] Transferred 50 units. Current volume: 350.0
+2025-04-22 16:32:57,433 [INFO] [Tank tank2] Transferred 50 units. Current volume: 400.0
+2025-04-22 16:32:57,433 [INFO] [Tank tank2] Transferred 50 units. Current volume: 450.0
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 750.0
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:32:57,433 [INFO] [Tank tank1] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 450.0
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:32:57,433 [INFO] [Tank tank2] Published volume: 450.0, max_capacity: 1000
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 900.0
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:32:57,433 [INFO] [Tank tank3] Published volume: 900.0, max_capacity: 1000
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 900.0
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:32:57,433 [INFO] [Tank tank4] Published volume: 900.0, max_capacity: 1000
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 300.0
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:32:57,433 [INFO] [Tank tank5] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:57,433 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 300.0
+2025-04-22 16:32:57,436 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:32:57,436 [INFO] [Tank tank6] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:57,436 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:32:57,436 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:32:57,436 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:32:57,437 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:32:57,437 [INFO] [MQTT-PUB] Published to pump/pump2/state: open
+2025-04-22 16:32:57,437 [INFO] [Pump pump2] Published rate: 50, state: open
+2025-04-22 16:32:57,437 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:32:57,437 [INFO] [MQTT-PUB] Published to pump/pump3/state: open
+2025-04-22 16:32:57,437 [INFO] [Pump pump3] Published rate: 50, state: open
+2025-04-22 16:32:57,438 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:32:57,438 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:32:57,438 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:32:57,438 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:32:57,438 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:32:57,438 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:32:57,438 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:32:57,439 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:32:57,439 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:32:58,430 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:32:58,430 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 750
+2025-04-22 16:32:58,430 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:32:58,430 [INFO] [ENGINE] Set state of pump2 to open
+2025-04-22 16:32:58,430 [INFO] [ENGINE] Set state of pump3 to open
+2025-04-22 16:32:58,430 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:32:58,430 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 900
+2025-04-22 16:32:58,430 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 900
+2025-04-22 16:32:58,430 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 1
+2025-04-22 16:32:58,430 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 1
+2025-04-22 16:32:58,430 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 450
+2025-04-22 16:32:58,430 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:32:58,430 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:32:58,430 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:32:58,430 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:32:58,433 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 300
+2025-04-22 16:32:58,433 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 300
+2025-04-22 16:32:58,433 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:32:58,433 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:32:58,433 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:32:58,433 [INFO] [Tank tank2] Transferred 50 units. Current volume: 500.0
+2025-04-22 16:32:58,433 [INFO] [Tank tank2] Transferred 50 units. Current volume: 550.0
+2025-04-22 16:32:58,433 [INFO] [Tank tank2] Transferred 50 units. Current volume: 600.0
+2025-04-22 16:32:58,433 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 700.0
+2025-04-22 16:32:58,433 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:32:58,433 [INFO] [Tank tank1] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:32:58,433 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 600.0
+2025-04-22 16:32:58,433 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:32:58,433 [INFO] [Tank tank2] Published volume: 600.0, max_capacity: 1000
+2025-04-22 16:32:58,433 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 850.0
+2025-04-22 16:32:58,433 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:32:58,433 [INFO] [Tank tank3] Published volume: 850.0, max_capacity: 1000
+2025-04-22 16:32:58,433 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 850.0
+2025-04-22 16:32:58,433 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:32:58,433 [INFO] [Tank tank4] Published volume: 850.0, max_capacity: 1000
+2025-04-22 16:32:58,433 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 300.0
+2025-04-22 16:32:58,433 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:32:58,433 [INFO] [Tank tank5] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:58,437 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 300.0
+2025-04-22 16:32:58,437 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:32:58,437 [INFO] [Tank tank6] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:58,437 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:32:58,438 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:32:58,438 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:32:58,438 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:32:58,438 [INFO] [MQTT-PUB] Published to pump/pump2/state: open
+2025-04-22 16:32:58,438 [INFO] [Pump pump2] Published rate: 50, state: open
+2025-04-22 16:32:58,438 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:32:58,439 [INFO] [MQTT-PUB] Published to pump/pump3/state: open
+2025-04-22 16:32:58,439 [INFO] [Pump pump3] Published rate: 50, state: open
+2025-04-22 16:32:58,439 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:32:58,439 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:32:58,439 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:32:58,439 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:32:58,440 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:32:58,440 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:32:58,440 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:32:58,440 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:32:58,440 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:32:59,432 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 700
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:32:59,432 [INFO] [ENGINE] Set state of pump2 to open
+2025-04-22 16:32:59,432 [INFO] [ENGINE] Set state of pump3 to open
+2025-04-22 16:32:59,432 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 850
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 850
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 1
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 1
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 600
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:32:59,432 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:32:59,432 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 300
+2025-04-22 16:32:59,432 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 300
+2025-04-22 16:32:59,435 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:32:59,435 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:32:59,435 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:32:59,435 [INFO] [Tank tank2] Transferred 50 units. Current volume: 650.0
+2025-04-22 16:32:59,435 [INFO] [Tank tank2] Transferred 50 units. Current volume: 700.0
+2025-04-22 16:32:59,435 [INFO] [Tank tank2] Transferred 50 units. Current volume: 750.0
+2025-04-22 16:32:59,436 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 650.0
+2025-04-22 16:32:59,436 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:32:59,436 [INFO] [Tank tank1] Published volume: 650.0, max_capacity: 1000
+2025-04-22 16:32:59,436 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 750.0
+2025-04-22 16:32:59,436 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:32:59,436 [INFO] [Tank tank2] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:32:59,436 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 800.0
+2025-04-22 16:32:59,436 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:32:59,436 [INFO] [Tank tank3] Published volume: 800.0, max_capacity: 1000
+2025-04-22 16:32:59,436 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 800.0
+2025-04-22 16:32:59,436 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:32:59,438 [INFO] [Tank tank4] Published volume: 800.0, max_capacity: 1000
+2025-04-22 16:32:59,438 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 300.0
+2025-04-22 16:32:59,438 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:32:59,438 [INFO] [Tank tank5] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:59,438 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 300.0
+2025-04-22 16:32:59,438 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:32:59,438 [INFO] [Tank tank6] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:32:59,439 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:32:59,439 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:32:59,439 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:32:59,439 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:32:59,439 [INFO] [MQTT-PUB] Published to pump/pump2/state: open
+2025-04-22 16:32:59,439 [INFO] [Pump pump2] Published rate: 50, state: open
+2025-04-22 16:32:59,440 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:32:59,440 [INFO] [MQTT-PUB] Published to pump/pump3/state: open
+2025-04-22 16:32:59,440 [INFO] [Pump pump3] Published rate: 50, state: open
+2025-04-22 16:32:59,440 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:32:59,440 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:32:59,440 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:32:59,440 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:32:59,442 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:32:59,442 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:32:59,442 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:32:59,442 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:32:59,442 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:00,433 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:33:00,433 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 650
+2025-04-22 16:33:00,433 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:33:00,433 [INFO] [ENGINE] Set state of pump2 to open
+2025-04-22 16:33:00,433 [INFO] [ENGINE] Set state of pump3 to open
+2025-04-22 16:33:00,433 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 800
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 800
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 1
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 1
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 750
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:00,435 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:00,435 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 300
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 300
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:00,435 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:00,435 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:00,435 [INFO] [Tank tank2] Transferred 50 units. Current volume: 800.0
+2025-04-22 16:33:00,435 [INFO] [Tank tank2] Transferred 50 units. Current volume: 850.0
+2025-04-22 16:33:00,435 [INFO] [Tank tank2] Transferred 50 units. Current volume: 900.0
+2025-04-22 16:33:00,435 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 600.0
+2025-04-22 16:33:00,435 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:00,435 [INFO] [Tank tank1] Published volume: 600.0, max_capacity: 1000
+2025-04-22 16:33:00,435 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 900.0
+2025-04-22 16:33:00,435 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:00,435 [INFO] [Tank tank2] Published volume: 900.0, max_capacity: 1000
+2025-04-22 16:33:00,435 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 750.0
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:00,441 [INFO] [Tank tank3] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 750.0
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:00,441 [INFO] [Tank tank4] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 300.0
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:00,441 [INFO] [Tank tank5] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 300.0
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:00,441 [INFO] [Tank tank6] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:33:00,441 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:00,441 [INFO] [MQTT-PUB] Published to pump/pump2/state: open
+2025-04-22 16:33:00,448 [INFO] [Pump pump2] Published rate: 50, state: open
+2025-04-22 16:33:00,448 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:00,448 [INFO] [MQTT-PUB] Published to pump/pump3/state: open
+2025-04-22 16:33:00,448 [INFO] [Pump pump3] Published rate: 50, state: open
+2025-04-22 16:33:00,448 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:00,448 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:00,451 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:00,451 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:00,451 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:00,451 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:00,451 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:00,451 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:00,451 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:01,437 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 600
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:33:01,437 [INFO] [ENGINE] Set state of pump2 to open
+2025-04-22 16:33:01,437 [INFO] [ENGINE] Set state of pump3 to open
+2025-04-22 16:33:01,437 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 750
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 750
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 1
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 1
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 900
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:01,437 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:01,437 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 300
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 300
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:01,437 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:01,437 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:01,437 [INFO] [Tank tank2] Transferred 50 units. Current volume: 950.0
+2025-04-22 16:33:01,437 [INFO] [Tank tank2] Transferred 50 units. Current volume: 1000.0
+2025-04-22 16:33:01,437 [INFO] [Tank tank2] Transferred 50 units. Current volume: 1000
+2025-04-22 16:33:01,437 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 550.0
+2025-04-22 16:33:01,437 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:01,437 [INFO] [Tank tank1] Published volume: 550.0, max_capacity: 1000
+2025-04-22 16:33:01,437 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 1000
+2025-04-22 16:33:01,437 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:01,437 [INFO] [Tank tank2] Published volume: 1000, max_capacity: 1000
+2025-04-22 16:33:01,444 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:01,444 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:01,444 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:01,444 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:01,444 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:01,444 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:01,444 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 300.0
+2025-04-22 16:33:01,444 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:01,444 [INFO] [Tank tank5] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 300.0
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:01,446 [INFO] [Tank tank6] Published volume: 300.0, max_capacity: 1000
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:33:01,446 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump2/state: open
+2025-04-22 16:33:01,446 [INFO] [Pump pump2] Published rate: 50, state: open
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump3/state: open
+2025-04-22 16:33:01,446 [INFO] [Pump pump3] Published rate: 50, state: open
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:01,446 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:01,446 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:01,446 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:01,452 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:02,438 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 550
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:33:02,438 [INFO] [ENGINE] Set state of pump2 to open
+2025-04-22 16:33:02,438 [INFO] [ENGINE] Set state of pump2 to close
+2025-04-22 16:33:02,438 [INFO] [ENGINE] Set state of pump3 to open
+2025-04-22 16:33:02,438 [INFO] [ENGINE] Set state of pump3 to close
+2025-04-22 16:33:02,438 [INFO] [ENGINE] Set state of pump4 to open
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 1000
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 1
+2025-04-22 16:33:02,438 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:02,438 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 300
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 300
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:02,438 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:02,438 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:02,438 [INFO] [Tank tank2] Transferred 50 units. Current volume: 1000
+2025-04-22 16:33:02,438 [INFO] [Tank tank5] Transferred 500.0 units. Current volume: 800.0
+2025-04-22 16:33:02,438 [INFO] [Tank tank6] Transferred 500.0 units. Current volume: 800.0
+2025-04-22 16:33:02,438 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:02,438 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:02,438 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:02,438 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 0
+2025-04-22 16:33:02,438 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:02,438 [INFO] [Tank tank2] Published volume: 0, max_capacity: 1000
+2025-04-22 16:33:02,446 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:02,446 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:02,446 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:02,446 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:02,447 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 800.0
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:02,447 [INFO] [Tank tank5] Published volume: 800.0, max_capacity: 1000
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 800.0
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:02,447 [INFO] [Tank tank6] Published volume: 800.0, max_capacity: 1000
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:33:02,447 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:02,447 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:02,447 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump4/state: open
+2025-04-22 16:33:02,447 [INFO] [Pump pump4] Published rate: 1000, state: open
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:02,447 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:02,447 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:02,447 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:03,444 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:03,444 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:03,444 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:03,444 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:03,444 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:03,444 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:03,444 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:03,444 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:03,444 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 0
+2025-04-22 16:33:03,444 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:03,444 [INFO] [ENGINE] Set state of pump5 to open
+2025-04-22 16:33:03,444 [INFO] [ENGINE] Set state of pump6 to open
+2025-04-22 16:33:03,444 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:03,447 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 800
+2025-04-22 16:33:03,447 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 800
+2025-04-22 16:33:03,447 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 1
+2025-04-22 16:33:03,447 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 1
+2025-04-22 16:33:03,447 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:03,447 [INFO] [Tank tank1] Transferred 50 units. Current volume: 550.0
+2025-04-22 16:33:03,447 [INFO] [Tank tank1] Transferred 50 units. Current volume: 600.0
+2025-04-22 16:33:03,447 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 600.0
+2025-04-22 16:33:03,447 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:03,447 [INFO] [Tank tank1] Published volume: 600.0, max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 0.0
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [Tank tank2] Published volume: 0.0, max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:03,450 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:03,450 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:03,450 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:03,450 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump5/state: open
+2025-04-22 16:33:03,450 [INFO] [Pump pump5] Published rate: 50, state: open
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:03,450 [INFO] [MQTT-PUB] Published to pump/pump6/state: open
+2025-04-22 16:33:03,450 [INFO] [Pump pump6] Published rate: 50, state: open
+2025-04-22 16:33:04,453 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 600
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:33:04,453 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 0
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:04,453 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:04,453 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:04,453 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:04,453 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:04,453 [INFO] [Tank tank2] Transferred 50 units. Current volume: 50.0
+2025-04-22 16:33:04,453 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 550.0
+2025-04-22 16:33:04,453 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:04,453 [INFO] [Tank tank1] Published volume: 550.0, max_capacity: 1000
+2025-04-22 16:33:04,453 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 50.0
+2025-04-22 16:33:04,453 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:04,453 [INFO] [Tank tank2] Published volume: 50.0, max_capacity: 1000
+2025-04-22 16:33:04,453 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:04,453 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:04,460 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:04,460 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:04,460 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:04,460 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:33:04,460 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:04,460 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:04,460 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:04,460 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:04,460 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:04,466 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:04,466 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:04,466 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:04,466 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:04,466 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:05,455 [INFO] [ENGINE] Set state of pump1 to open
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 550
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 1
+2025-04-22 16:33:05,455 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 50
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:05,455 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:05,455 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:05,455 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:05,455 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:05,458 [INFO] [Tank tank2] Transferred 50 units. Current volume: 100.0
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump1/state: open
+2025-04-22 16:33:05,458 [INFO] [Pump pump1] Published rate: 50, state: open
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:05,458 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:05,458 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:05,458 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:05,458 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:05,458 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:05,458 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:06,466 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:06,466 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:06,466 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:06,466 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:06,466 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:06,466 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:06,466 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:06,471 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:06,471 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:06,471 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:06,471 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:06,471 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:06,471 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:06,473 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:06,473 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:06,473 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:06,473 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:06,473 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:06,473 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:06,473 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:06,473 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:06,473 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:06,473 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:06,482 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:07,467 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:07,467 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:07,467 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:07,467 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:07,467 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:07,467 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:07,467 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:07,467 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:07,467 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:07,467 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:07,467 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:07,467 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:07,467 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:07,470 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:07,470 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:07,470 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:07,470 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:07,470 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:07,470 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:07,476 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:07,476 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:07,476 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:07,476 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:07,476 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:07,476 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:07,476 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:08,472 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:08,472 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:08,472 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:08,472 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:08,472 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:08,472 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:08,472 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:08,472 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:08,472 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:08,472 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:08,472 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:08,472 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:08,480 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:08,480 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:08,480 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:08,480 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:08,480 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:08,480 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:08,480 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:08,480 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:08,480 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:08,480 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:08,480 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:08,480 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:08,484 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:08,484 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:08,484 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:08,484 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:08,484 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:08,484 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:08,484 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:08,484 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:09,474 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:09,474 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:09,474 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:09,474 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:09,474 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:09,474 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:09,474 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:09,474 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:09,479 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:09,479 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:09,485 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:09,485 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:09,485 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:09,485 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:09,485 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:09,485 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:09,485 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:09,485 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:09,485 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:09,485 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:09,485 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:09,485 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:09,485 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:09,485 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:09,489 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:10,475 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:10,475 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:10,475 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:10,475 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:10,475 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:10,475 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:10,475 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:10,475 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:10,475 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:10,475 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:10,475 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:10,481 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:10,481 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:10,481 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:10,481 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:10,481 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:10,481 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:10,481 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:10,481 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:10,481 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:10,481 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:10,481 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:10,490 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:10,490 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:10,490 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:11,477 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:11,477 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:11,477 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:11,477 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:11,477 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:11,477 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:11,477 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:11,477 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:11,477 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:11,477 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:11,477 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:11,477 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:11,477 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:11,477 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:11,480 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:11,480 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:11,480 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:11,480 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:11,480 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:11,480 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:11,480 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:11,480 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:11,480 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:11,480 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:11,480 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:12,489 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:12,489 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:12,489 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:12,489 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:12,489 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:12,489 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:12,489 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:12,489 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:12,489 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:12,489 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:12,489 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:12,489 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:12,489 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:12,489 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:12,489 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:12,489 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:12,489 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:12,489 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:12,489 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:12,489 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:12,489 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:12,497 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:12,497 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:12,497 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:12,497 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:12,498 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:12,498 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:12,498 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:12,498 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:12,498 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:12,498 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:12,498 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:13,494 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:13,494 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:13,494 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:13,494 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:13,494 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:13,499 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:13,499 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:13,499 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:13,499 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:13,499 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:13,499 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:13,499 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:13,499 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:13,499 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:13,499 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:13,499 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:13,499 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:13,499 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:13,503 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:13,503 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:13,503 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:13,503 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:13,503 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:13,503 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:13,503 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:13,503 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:13,503 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:13,503 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:14,504 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:14,504 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:14,504 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:14,504 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:14,504 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:14,507 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:14,508 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:14,508 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:14,508 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:14,509 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:14,509 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:14,510 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:14,510 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:14,510 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:14,510 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:14,510 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:14,510 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:14,510 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:14,510 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:14,510 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:14,510 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:14,510 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:14,510 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:15,512 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:15,512 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:15,512 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:15,512 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:15,512 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:15,512 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:15,512 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:15,513 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:15,513 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:15,513 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:15,513 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:15,513 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:15,513 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:15,513 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:15,513 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:15,513 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:15,513 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:15,513 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:15,513 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:15,513 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:15,513 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:15,513 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:15,513 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:15,513 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:15,513 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:16,525 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:16,525 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:16,525 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:16,525 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:16,525 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:16,525 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:16,525 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:16,535 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:16,535 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:16,535 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:16,535 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:16,535 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:16,535 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:16,535 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:17,531 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:17,531 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:17,531 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:17,531 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:17,531 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:17,531 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:17,531 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:17,535 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:17,535 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:17,535 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:17,535 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:17,535 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:17,535 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:17,535 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:18,542 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:18,542 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:18,542 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:18,542 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:18,542 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:18,542 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:18,542 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:18,551 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:18,551 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:18,551 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:18,552 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:18,552 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:18,552 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:18,552 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:18,552 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:18,552 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:18,552 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:18,552 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:18,552 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:18,552 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:18,552 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:18,552 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:18,552 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:19,545 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:19,545 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:19,545 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:19,545 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:19,546 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:19,546 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:19,546 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:19,546 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:19,546 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:19,546 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:19,555 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:19,555 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:19,555 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:19,555 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:19,555 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:19,555 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:19,555 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:19,555 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:19,555 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:19,555 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:19,555 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:19,555 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:19,555 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:19,555 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:19,555 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:20,550 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:20,550 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:20,550 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:20,550 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:20,550 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:20,550 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:20,550 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:20,550 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:20,550 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:20,550 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:20,550 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:20,550 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:20,550 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:20,550 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:20,555 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:20,555 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:20,555 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:20,555 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:20,555 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:20,555 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:20,555 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:20,555 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:20,562 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:20,562 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:20,562 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:20,562 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:20,562 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:20,562 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:20,562 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:20,562 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:21,552 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:21,552 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:21,552 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:21,552 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:21,552 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:21,552 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:21,552 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:21,552 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:21,552 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:21,552 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:21,552 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:21,552 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:21,552 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:21,552 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:21,552 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:21,552 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:21,552 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:21,552 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:21,552 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:21,552 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:21,552 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:21,560 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:21,560 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:21,560 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:21,560 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:21,560 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:21,560 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:21,560 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:21,560 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:22,560 [INFO] [ENGINE] Set state of pump1 to close
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote tank1 at register 0 with value 500
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote pump1 at register 1 with value 0
+2025-04-22 16:33:22,560 [INFO] [ENGINE] Set state of pump4 to close
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote tank3 at register 0 with value 700
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote tank4 at register 1 with value 700
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote pump2 at register 2 with value 0
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote pump3 at register 3 with value 0
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote tank2 at register 4 with value 100
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote pump4 at register 5 with value 0
+2025-04-22 16:33:22,560 [INFO] [ENGINE] Set state of pump5 to close
+2025-04-22 16:33:22,560 [INFO] [ENGINE] Set state of pump6 to close
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote splitter1 at register 0 with value 0
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote tank5 at register 1 with value 750
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote tank6 at register 2 with value 750
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote pump5 at register 3 with value 0
+2025-04-22 16:33:22,560 [INFO] [MODBUS-PLC] Overwrote pump6 at register 4 with value 0
+2025-04-22 16:33:22,560 [INFO] [ENGINE] No device found for register 99
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank1/volume: 500.0
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank1/max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [Tank tank1] Published volume: 500.0, max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank2/volume: 100.0
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank2/max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [Tank tank2] Published volume: 100.0, max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank3/volume: 700.0
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank3/max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [Tank tank3] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank4/volume: 700.0
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank4/max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [Tank tank4] Published volume: 700.0, max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank5/volume: 750.0
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank5/max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [Tank tank5] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank6/volume: 750.0
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to tank/tank6/max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [Tank tank6] Published volume: 750.0, max_capacity: 1000
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to pump/pump1/rate: 50
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to pump/pump1/state: closed
+2025-04-22 16:33:22,560 [INFO] [Pump pump1] Published rate: 50, state: closed
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to pump/pump2/rate: 50
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to pump/pump2/state: closed
+2025-04-22 16:33:22,560 [INFO] [Pump pump2] Published rate: 50, state: closed
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to pump/pump3/rate: 50
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to pump/pump3/state: closed
+2025-04-22 16:33:22,560 [INFO] [Pump pump3] Published rate: 50, state: closed
+2025-04-22 16:33:22,560 [INFO] [MQTT-PUB] Published to pump/pump4/rate: 1000
+2025-04-22 16:33:22,572 [INFO] [MQTT-PUB] Published to pump/pump4/state: closed
+2025-04-22 16:33:22,572 [INFO] [Pump pump4] Published rate: 1000, state: closed
+2025-04-22 16:33:22,572 [INFO] [MQTT-PUB] Published to pump/pump5/rate: 50
+2025-04-22 16:33:22,572 [INFO] [MQTT-PUB] Published to pump/pump5/state: closed
+2025-04-22 16:33:22,572 [INFO] [Pump pump5] Published rate: 50, state: closed
+2025-04-22 16:33:22,572 [INFO] [MQTT-PUB] Published to pump/pump6/rate: 50
+2025-04-22 16:33:22,572 [INFO] [MQTT-PUB] Published to pump/pump6/state: closed
+2025-04-22 16:33:22,572 [INFO] [Pump pump6] Published rate: 50, state: closed
+2025-04-22 16:33:22,794 [INFO] [MAIN] Stopping simulation...
+2025-04-22 16:33:22,810 [INFO] [SIM] Stopping simulation loop...
+2025-04-22 16:33:23,562 [INFO] [MAIN] MQTT broker stopped.

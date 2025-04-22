@@ -58,7 +58,7 @@
 
 <script>
     setInterval(() => {
-        fetch('/static/logs.txt')
+        fetch('/logs/live')
             .then(res => res.text())
             .then(data => document.getElementById("log-content").innerText = data);
     }, 2000);
@@ -70,8 +70,7 @@
         <img src="/static/img/SecureSim.jpg" alt="SecureSim Logo" style="width: 90%; height: auto; border-radius: 12px; margin: 0 auto 15px auto; display: block;">
         <h2>SecureSim</h2>
         <a href="/">Dashboard</a>
-        <a href="/logs">Temp Logs</a>
-        <a href="/controls">Controls</a>
+        <a href="/logs">Logs</a>
         <a href="/components">Components</a>
     </div>
 

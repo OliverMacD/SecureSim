@@ -10,11 +10,35 @@ Classes:
 
 import asyncio
 import threading
-import time
+import logging
 import os
 from gmqtt import Client as MQTTClient
 from defences.rate_limiter import RateLimiter
 
+# Ensure the 'data' directory exists
+log_dir = os.path.join(os.path.dirname(__file__), "data")
+os.makedirs(log_dir, exist_ok=True)
+
+# Set full path to log file inside data/
+log_path = os.path.join(log_dir, "logs.txt")
+
+# Reset logging if needed
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+# Setup logging to file
+logging.basicConfig(
+    level=logging.INFO,
+    filename=log_path,
+    filemode="w",
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
+
+# Optional: Console output to debug
+console = logging.StreamHandler()
+console.setLevel(logging.DEBUG)
+console.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+logging.getLogger().addHandler(console)
 
 class MQTTInterface:
     """
@@ -73,11 +97,11 @@ class MQTTInterface:
         try:
             await self._client.connect(self._broker, self._port)
             self._connected = True
-            print(f"[MQTT] Connected to {self._broker}:{self._port} as {self._client_id}")
+            logging.info(f"[MQTT] Connected to {self._broker}:{self._port} as {self._client_id}")
             while True:
                 await asyncio.sleep(1)
         except Exception as e:
-            print(f"[MQTT-ERR] Failed to connect or lost connection: {e}")
+            logging.info(f"[MQTT-ERR] Failed to connect or lost connection: {e}")
             self._connected = False
 
     def publish(self, topic, message, qos=0, retain=False):
@@ -92,14 +116,14 @@ class MQTTInterface:
         """
         # Toggle rate limiting
         if not self.rate_limiter.allow_message():
-            print(f"[MQTT-PUB] Rate limit exceeded. Dropping message to {topic}: {message}")
+            logging.info(f"[MQTT-PUB] Rate limit exceeded. Dropping message to {topic}: {message}")
             return
 
         if self._connected:
             self._client.publish(topic, message, qos, retain)
-            print(f"[MQTT-PUB] Published to {topic}: {message}")
+            logging.info(f"[MQTT-PUB] Published to {topic}: {message}")
         else:
-            print("[MQTT-PUB] Cannot publish, client not connected.")
+            logging.info("[MQTT-PUB] Cannot publish, client not connected.")
 
     def subscribe(self, topic, callback):
         """
@@ -112,22 +136,22 @@ class MQTTInterface:
         self._subscribers[topic] = callback
         if self._connected:
             self._loop.call_soon_threadsafe(self._client.subscribe, topic)
-        print(f"[MQTT-SUB] Subscribed to: {topic}")
+        logging.info(f"[MQTT-SUB] Subscribed to: {topic}")
 
     def _on_connect(self, client, flags, rc, properties):
         """Handler triggered when the client connects to the broker."""
-        print(f"[MQTT] Connected with flags: {flags}, rc: {rc}")
+        logging.info(f"[MQTT] Connected with flags: {flags}, rc: {rc}")
         for topic in self._subscribers:
             self._loop.call_soon_threadsafe(client.subscribe, topic)
 
     def _on_disconnect(self, client, packet, exc=None):
         """Handler triggered when the client disconnects from the broker."""
         self._connected = False
-        print(f"[MQTT] Disconnected")
+        logging.info(f"[MQTT] Disconnected")
 
     def _on_subscribe(self, client, mid, qos, properties):
         """Handler triggered after a successful subscription."""
-        print(f"[MQTT] Subscribed successfully")
+        logging.info(f"[MQTT] Subscribed successfully")
 
     def _on_message(self, client, topic, payload, qos, properties):
         """
@@ -138,14 +162,14 @@ class MQTTInterface:
             payload (bytes or str): Message content.
         """
         message = payload.decode() if isinstance(payload, bytes) else payload
-        print(f"[MQTT-RX] {topic}: {message}")
+        logging.info(f"[MQTT-RX] {topic}: {message}")
         if topic in self._subscribers:
             try:
                 self._subscribers[topic](message)
             except Exception as e:
-                print(f"[MQTT-ERR] Error in subscriber callback: {e}")
+                logging.info(f"[MQTT-ERR] Error in subscriber callback: {e}")
         else:
-            print(f"[MQTT-WARN] No subscriber for topic: {topic}")
+            logging.info(f"[MQTT-WARN] No subscriber for topic: {topic}")
 
     def simulate_message(self, topic, payload):
         """
@@ -156,8 +180,8 @@ class MQTTInterface:
             topic (str): Target topic.
             payload (str): Simulated payload.
         """
-        print(f"[MQTT-SIM] {topic}: {payload}")
+        logging.info(f"[MQTT-SIM] {topic}: {payload}")
         if topic in self._subscribers:
             self._subscribers[topic](payload)
         else:
-            print(f"[MQTT-SIM-WARN] No subscriber for topic: {topic}")
+            logging.info(f"[MQTT-SIM-WARN] No subscriber for topic: {topic}")

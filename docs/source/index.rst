@@ -5,7 +5,7 @@ Welcome to SecureSim's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: 📘 User Guide
+   :caption: User Guide
 
    overview
    running_sim
@@ -18,7 +18,7 @@ Developer API Reference
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🧪 API Reference
+   :caption: API Reference
 
    api/main
    api/modules
@@ -31,7 +31,7 @@ Individual Reflections & Project Report
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🧪 API Reference
+   :caption: Project Report & Individual Reflections
 
    reflections/project_report
    reflections/saxton

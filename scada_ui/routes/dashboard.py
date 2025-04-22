@@ -1,14 +1,17 @@
 import json
 from flask import Blueprint, render_template, jsonify
 from scada_ui.services.graph_state import get_modbus_state
+from scada_ui.auth import auth
 
 dashboard_bp = Blueprint('dashboard', __name__)
 
 @dashboard_bp.route("/")
+@auth.login_required
 def dashboard():
     return render_template("dashboard.html")
 
 @dashboard_bp.route("/api/state")
+@auth.login_required
 def api_state():
     # Poll the Process_sim.json to understand how many pumps and tanks exist
     with open('Process_sim.json', 'r') as f:

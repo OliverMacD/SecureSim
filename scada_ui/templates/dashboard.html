@@ -76,8 +76,14 @@
             }
         }
     }
+
     setInterval(fetchData, 2000);
     window.onload = fetchData;
+
+    setInterval(() => {
+        const img = document.getElementById("graph-image");
+        img.src = "/static/img/graph.png?t=" + new Date().getTime();  // force refresh
+    }, 1000);
 </script>
 </head>
 <body>
@@ -86,8 +92,7 @@
         <img src="/static/img/SecureSim.jpg" alt="SecureSim Logo" style="width: 90%; height: auto; border-radius: 12px; margin: 0 auto 15px auto; display: block;">
         <h2>SecureSim</h2>
         <a href="/">Dashboard</a>
-        <a href="/logs">Temp Logs</a>
-        <a href="/controls">Controls</a>
+        <a href="/logs">Logs</a>
         <a href="/components">Components</a>
     </div>
 
@@ -104,7 +109,7 @@
             </table>
         </div>
         <h2 style="text-align:center;">System Layout</h2>
-        <img id="graph-image" src="/static/graph.png" alt="Graph Layout">
+        <img id="graph-image" src="/static/img/graph.png" alt="Graph Layout">
     </div>
 </body>
 </html>

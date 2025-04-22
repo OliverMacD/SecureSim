@@ -8,6 +8,34 @@ Classes:
     ActionEngine - Executes logical actions using device states and a rule-based engine.
 """
 
+import logging
+import os
+
+# Ensure the 'data' directory exists
+log_dir = os.path.join(os.path.dirname(__file__), "data")
+os.makedirs(log_dir, exist_ok=True)
+
+# Set full path to log file inside data/
+log_path = os.path.join(log_dir, "logs.txt")
+
+# Reset logging if needed
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+# Setup logging to file
+logging.basicConfig(
+    level=logging.INFO,
+    filename=log_path,
+    filemode="w",
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
+
+# Optional: Console output to debug
+console = logging.StreamHandler()
+console.setLevel(logging.DEBUG)
+console.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+logging.getLogger().addHandler(console)
+
 class ActionEngine:
     """
     A rule evaluation engine that enables PLC or SCADA systems to trigger actions
@@ -55,7 +83,7 @@ class ActionEngine:
         device = self.graph.nodes.get(device_id)
 
         if not device:
-            print(f"[ENGINE] No device found for register {reg}")
+            logging.info(f"[ENGINE] No device found for register {reg}")
             return
 
         current_val = self._get_value_from_device(device)
@@ -125,7 +153,7 @@ class ActionEngine:
             elif cond == "<=":
                 return actual <= expected
         except Exception as e:
-            print(f"[ENGINE] Condition error: {e}")
+            logging.info(f"[ENGINE] Condition error: {e}")
         return False
 
     def _execute_effect(self, effect):
@@ -141,15 +169,15 @@ class ActionEngine:
 
         for target_id in targets:
             if target_id == "scada":
-                print(f"[SCADA ALERT]: {effect.get('message')}")
+                logging.info(f"[SCADA ALERT]: {effect.get('message')}")
                 continue
 
             node = self.graph.nodes.get(target_id)
             if not node:
-                print(f"[ENGINE] No target found for {target_id}")
+                logging.info(f"[ENGINE] No target found for {target_id}")
                 continue
 
             action = effect.get("action")
             if hasattr(node, "set_state") and action in ["open", "close"]:
                 node.set_state("open" if action == "open" else "closed")
-                print(f"[ENGINE] Set state of {target_id} to {action}")
+                logging.info(f"[ENGINE] Set state of {target_id} to {action}")

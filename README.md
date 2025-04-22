@@ -39,7 +39,7 @@ secure-sim/
 │
 ├── scada_ui/                 # Flask dashboard
 ├── attacks/                  # Attack modules
-├── defenses/                 # Logging, auth, detection
+├── defenses/                 # Logging, auth, rate limiting
 ├── tests/                    # MQTT + pump test scripts
 ├── docs/                     # Sphinx documentation source
 ├── data/                     # Logging and system outputs
@@ -105,14 +105,13 @@ The system models a **water treatment plant**:
 | Attack                 | Description                             |
 |------------------------|-----------------------------------------|
 | Replay Attack          | Repeats recorded data to mask changes   |
-| False Data Injection   | Modifies sensor or control values       |
 | Denial of Service      | Overloads communication channels        |
 
 | Defense                | Description                             |
 |------------------------|-----------------------------------------|
-| Anomaly Detection      | Flags abnormal behavior patterns        |
+| Anomaly Detection      | Rate limiters to prevent DoS Attacks    |
 | Logging & Auditing     | System events saved to `/data`          |
-| Command Authentication | Verifies actions before execution       |
+| UI Authentication      | Verifies user before providing access   |
 
 ---
 
