@@ -8,8 +8,35 @@ Classes:
     Tank - Manages fluid input, capacity constraints, and MQTT interactions.
 """
 
+import logging
+import os
 from process_sim.base import ProcessComponent
 from process_sim.interfaces.mqtt_interface import MQTTInterface
+
+# Ensure the 'data' directory exists
+log_dir = os.path.join(os.path.dirname(__file__), "data")
+os.makedirs(log_dir, exist_ok=True)
+
+# Set full path to log file inside data/
+log_path = os.path.join(log_dir, "logs.txt")
+
+# Reset logging if needed
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+# Setup logging to file
+logging.basicConfig(
+    level=logging.INFO,
+    filename=log_path,
+    filemode="w",
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
+
+# Optional: Console output to debug
+console = logging.StreamHandler()
+console.setLevel(logging.DEBUG)
+console.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+logging.getLogger().addHandler(console)
 
 class Tank(ProcessComponent):
     """
@@ -45,7 +72,7 @@ class Tank(ProcessComponent):
         try:
             self.max_capacity = float(msg)
         except ValueError:
-            print(f"[Tank {self.id}] Invalid max_capacity: {msg}")
+            logging.info(f"[Tank {self.id}] Invalid max_capacity: {msg}")
 
     def add_input(self, line):
         """Registers an incoming connection line."""
@@ -68,7 +95,7 @@ class Tank(ProcessComponent):
         if overflow > 0:
             # Log overflow event
             self.mqtt.publish(f"tank/{self.id}/overflow", overflow)
-            print(f"[Tank {self.id}] Overflow detected: {overflow} units lost.")
+            logging.info(f"[Tank {self.id}] Overflow detected: {overflow} units lost.")
     
     def transfer(self, amount):
         """
@@ -81,7 +108,7 @@ class Tank(ProcessComponent):
             raise ValueError("Transfer amount cannot be negative.")
         
         self.current_volume = min(self.current_volume + amount, self.max_capacity)
-        print(f"[Tank {self.id}] Transferred {amount} units. Current volume: {self.current_volume}")
+        logging.info(f"[Tank {self.id}] Transferred {amount} units. Current volume: {self.current_volume}")
         
 
     def output(self):
@@ -103,4 +130,4 @@ class Tank(ProcessComponent):
         """
         self.mqtt.publish(f"tank/{self.id}/volume", self.current_volume)
         self.mqtt.publish(f"tank/{self.id}/max_capacity", self.max_capacity)
-        print(f"[Tank {self.id}] Published volume: {self.current_volume}, max_capacity: {self.max_capacity}")
+        logging.info(f"[Tank {self.id}] Published volume: {self.current_volume}, max_capacity: {self.max_capacity}")

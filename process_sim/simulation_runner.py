@@ -22,6 +22,30 @@ from control_logic.plc_modbus import ModbusPLC
 from control_logic.scada_modbus import ModbusSCADA
 from process_sim.interfaces.mqtt_interface import MQTTInterface
 
+# Ensure the 'data' directory exists
+log_dir = os.path.join(os.path.dirname(__file__), "data")
+os.makedirs(log_dir, exist_ok=True)
+
+# Set full path to log file inside data/
+log_path = os.path.join(log_dir, "logs.txt")
+
+# Reset logging if needed
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+# Setup logging to file
+logging.basicConfig(
+    level=logging.INFO,
+    filename=log_path,
+    filemode="w",
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
+
+# Optional: Console output to debug
+console = logging.StreamHandler()
+console.setLevel(logging.DEBUG)
+console.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+logging.getLogger().addHandler(console)
 
 class SimulationThread(threading.Thread):
     """

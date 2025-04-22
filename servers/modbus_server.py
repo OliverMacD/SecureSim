@@ -13,6 +13,7 @@ Classes:
 
 import logging
 import threading
+import os
 from modbus_tcp_server.network import ModbusTCPServer
 from modbus_tcp_server.data_source import BaseDataSource
 
@@ -20,6 +21,33 @@ logging.basicConfig()
 logger = logging.getLogger("modbus_server")
 logger.setLevel(logging.INFO)
 
+# Ensure the 'data' directory exists
+log_dir = os.path.join(os.path.dirname(__file__), "data")
+os.makedirs(log_dir, exist_ok=True)
+
+# Set full path to log file inside data/
+log_path = os.path.join(log_dir, "logs.txt")
+
+# Reset logging if needed
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+# Setup logging to file
+logging.basicConfig(
+    level=logging.INFO,
+    filename=log_path,
+    filemode="w",
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
+
+# Optional: Console output to debug
+console = logging.StreamHandler()
+console.setLevel(logging.DEBUG)
+console.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+logging.getLogger().addHandler(console)
+
+# Test logging
+logging.info("Logger initialized successfully")
 
 class CustomDataSource(BaseDataSource):
     """

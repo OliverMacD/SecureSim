@@ -8,6 +8,8 @@ Classes:
     ModbusPLC - A PLC that exposes device states via a Modbus TCP server.
 """
 
+import logging
+
 # Add the root directory of the project to the Python path
 import sys
 import os
@@ -16,6 +18,30 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from control_logic.plc import PLC
 from servers.modbus_server import ModbusServerWrapper
 
+# Ensure the 'data' directory exists
+log_dir = os.path.join(os.path.dirname(__file__), "data")
+os.makedirs(log_dir, exist_ok=True)
+
+# Set full path to log file inside data/
+log_path = os.path.join(log_dir, "logs.txt")
+
+# Reset logging if needed
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+# Setup logging to file
+logging.basicConfig(
+    level=logging.INFO,
+    filename=log_path,
+    filemode="w",
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
+
+# Optional: Console output to debug
+console = logging.StreamHandler()
+console.setLevel(logging.DEBUG)
+console.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+logging.getLogger().addHandler(console)
 
 class ModbusPLC(PLC):
     """
@@ -104,4 +130,4 @@ class ModbusPLC(PLC):
                 elif hasattr(sim_obj, "max_capacity"):
                     sim_obj.max_capacity = float(value)
 
-                print(f"[MODBUS-PLC] Overwrote {dev_id} at register {address} with value {value}")
+                logging.info(f"[MODBUS-PLC] Overwrote {dev_id} at register {address} with value {value}")

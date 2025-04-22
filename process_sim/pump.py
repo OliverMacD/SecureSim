@@ -8,10 +8,37 @@ Classes:
     Pump - Handles input/output flow, remote control, and MQTT publishing.
 """
 
+import logging
+import os
 from process_sim.base import ProcessComponent
 from process_sim.interfaces.mqtt_interface import MQTTInterface
 from process_sim.splitter import Splitter
 from process_sim.tank import Tank 
+
+# Ensure the 'data' directory exists
+log_dir = os.path.join(os.path.dirname(__file__), "data")
+os.makedirs(log_dir, exist_ok=True)
+
+# Set full path to log file inside data/
+log_path = os.path.join(log_dir, "logs.txt")
+
+# Reset logging if needed
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+# Setup logging to file
+logging.basicConfig(
+    level=logging.INFO,
+    filename=log_path,
+    filemode="w",
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
+
+# Optional: Console output to debug
+console = logging.StreamHandler()
+console.setLevel(logging.DEBUG)
+console.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+logging.getLogger().addHandler(console)
 
 class Pump(ProcessComponent):
     """
@@ -48,9 +75,9 @@ class Pump(ProcessComponent):
         """
         try:
             self.rate = float(msg)
-            print(f"[Pump {self.id}] Rate set to: {self.rate}")
+            logging.info(f"[Pump {self.id}] Rate set to: {self.rate}")
         except ValueError:
-            print(f"[Pump {self.id}] Invalid rate value: {msg}")
+            logging.info(f"[Pump {self.id}] Invalid rate value: {msg}")
 
     def handle_set_state(self, msg):
         """
@@ -59,17 +86,17 @@ class Pump(ProcessComponent):
         Args:
             msg (str): Expected to be 'open' or 'closed'.
         """
-        print(f"[Pump {self.id}] Received set_state command: {msg}")
+        logging.info(f"[Pump {self.id}] Received set_state command: {msg}")
         if msg.lower() == "open":
             self.is_open = True
         elif msg.lower() == "closed":
             self.is_open = False
         else:
-            print(f"[Pump {self.id}] Invalid state: {msg}")
+            logging.info(f"[Pump {self.id}] Invalid state: {msg}")
             return
 
         self.mqtt.publish(f"state/pump/{self.id}/state", "open" if self.is_open else "closed")
-        print(f"[Pump {self.id}] State set to {'open' if self.is_open else 'closed'}")
+        logging.info(f"[Pump {self.id}] State set to {'open' if self.is_open else 'closed'}")
 
     def set_connection(self, source_tank, target_tank, line):
         """
@@ -96,7 +123,7 @@ class Pump(ProcessComponent):
             elif isinstance(self.target, Splitter):
                 self.target.distribute(self.rate)  # Call the distribute method for Splitter
             else:
-                print(f"[Pump {self.id}] Warning: Unsupported target type {type(self.target)}")
+                logging.info(f"[Pump {self.id}] Warning: Unsupported target type {type(self.target)}")
         elif self.is_open and self.source and self.source.current_volume > 0:
             # Transfer remaining volume if less than rate
             transfer_amount = self.source.current_volume
@@ -107,7 +134,7 @@ class Pump(ProcessComponent):
             elif isinstance(self.target, Splitter):
                 self.target.distribute(transfer_amount)
             else:
-                print(f"[Pump {self.id}] Warning: Unsupported target type {type(self.target)}")
+                logging.info(f"[Pump {self.id}] Warning: Unsupported target type {type(self.target)}")
 
     def publish(self):
         """
@@ -115,7 +142,7 @@ class Pump(ProcessComponent):
         """
         self.mqtt.publish(f"pump/{self.id}/rate", self.rate)
         self.mqtt.publish(f"pump/{self.id}/state", "open" if self.is_open else "closed")
-        print(f"[Pump {self.id}] Published rate: {self.rate}, state: {'open' if self.is_open else 'closed'}")
+        logging.info(f"[Pump {self.id}] Published rate: {self.rate}, state: {'open' if self.is_open else 'closed'}")
 
     def get_rate(self):
         """Returns the current flow rate."""

@@ -24,6 +24,33 @@ import threading
 import argparse
 from attacks.Replay import capture_and_replay
 
+# Ensure the 'data' directory exists
+log_dir = os.path.join(os.path.dirname(__file__), "data")
+os.makedirs(log_dir, exist_ok=True)
+
+# Set full path to log file inside data/
+log_path = os.path.join(log_dir, "logs.txt")
+
+# Reset logging if needed
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+# Setup logging to file
+logging.basicConfig(
+    level=logging.INFO,
+    filename=log_path,
+    filemode="w",
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
+
+# Optional: Console output to debug
+console = logging.StreamHandler()
+console.setLevel(logging.DEBUG)
+console.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+logging.getLogger().addHandler(console)
+
+# Test logging
+logging.info("Logger initialized successfully")
 
 """
     Parses command-line arguments using argparse library
@@ -106,9 +133,7 @@ def main(args):
   
     # Debug level
     if args.debug:
-        logging.basicConfig(level=logging.DEBUG)
-    else:
-        logging.basicConfig(level=logging.INFO)
+        logging.getLogger().setLevel(logging.DEBUG)
 
     # Step 1: Start MQTT Broker subprocess
     mqtt_process = start_mqtt_server()
