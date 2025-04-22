@@ -98,6 +98,7 @@ def load_layout(json_path):
             is_open = node.get("is_open", True)
             pump = Pump(node_id, name, flow_rate, mqtt_interface=mqtt_interface, is_open=is_open)
             pump.source_id = node.get("source")
+            pump.target_id = node.get("target")  # Add target tank ID
             if position:
                 pump.position = position
             graph.nodes[node_id] = pump
@@ -126,19 +127,30 @@ def load_layout(json_path):
         if isinstance(source, Tank):
             source.add_output(line)
         elif isinstance(source, Pump):
-            source.set_connection(None, line)
+            # Pass the line argument to set_connection
+            source.set_connection(None, None, line)
         elif isinstance(source, Splitter):
             source.add_output(line)
 
         if isinstance(target, Tank):
             target.add_input(line)
 
-    # Third pass: resolve pump sources
+    # Third pass: resolve pump sources and targets
     for node in graph.nodes.values():
-        if isinstance(node, Pump) and hasattr(node, "source_id"):
+        if isinstance(node, Pump):
+            # Resolve source tank
             source_node = graph.nodes.get(node.source_id)
             if source_node:
                 node.source = source_node
+
+            # Resolve target tank
+            target_node = graph.nodes.get(node.target_id)
+            if target_node:
+                node.target = target_node
+
+            # Update the pump's connections
+            if node.source and node.target:
+                node.set_connection(node.source, node.target, None)
 
     # Load optional controller configurations
     graph.plc_configs = layout.get("plcs", [])

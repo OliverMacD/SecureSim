@@ -13,6 +13,7 @@ import threading
 import time
 import os
 from gmqtt import Client as MQTTClient
+from defences.rate_limiter import RateLimiter
 
 
 class MQTTInterface:
@@ -36,6 +37,7 @@ class MQTTInterface:
             client_id (str): Unique client identifier.
             token (str): Optional token for authentication.
         """
+        self.rate_limiter = RateLimiter(max_messages_per_second=10)
         self._broker = broker
         self._port = port
         self._client_id = client_id
@@ -78,19 +80,26 @@ class MQTTInterface:
             print(f"[MQTT-ERR] Failed to connect or lost connection: {e}")
             self._connected = False
 
-    def publish(self, topic, data, qos=0):
+    def publish(self, topic, message, qos=0, retain=False):
         """
-        Publishes data to a specific MQTT topic.
+        Publishes a message to the specified MQTT topic.
 
         Args:
-            topic (str): Topic to publish to.
-            data (str or float): Message payload.
+            topic (str): The topic to publish to.
+            message (str): The message to publish.
             qos (int): Quality of Service level (default: 0).
+            retain (bool): Whether to retain the message (default: False).
         """
+        # Toggle rate limiting
+        if not self.rate_limiter.allow_message():
+            print(f"[MQTT-PUB] Rate limit exceeded. Dropping message to {topic}: {message}")
+            return
+
         if self._connected:
-            self._loop.call_soon_threadsafe(self._client.publish, topic, str(data), qos)
+            self._client.publish(topic, message, qos, retain)
+            print(f"[MQTT-PUB] Published to {topic}: {message}")
         else:
-            print(f"[MQTT-ERR] Not connected. Failed to publish to {topic}")
+            print("[MQTT-PUB] Cannot publish, client not connected.")
 
     def subscribe(self, topic, callback):
         """
