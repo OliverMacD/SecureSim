@@ -1,0 +1,129 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Times-Roman /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+5 0 obj
+<<
+/PageLabels 9 0 R /PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
+endobj
+6 0 obj
+<<
+/Author () /CreationDate (D:20250422232626-06'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20250422232626-06'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title (Reflection: Stephen Buchinskiy) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Length 2693
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 57.02362 741.0236 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL 113.3942 0 Td (Reflection: Stephen Buchinskiy) Tj T* -113.3942 0 Td ET
+Q
+Q
+q
+1 0 0 1 57.02362 657.0236 cm
+q
+BT 1 0 0 1 0 38 Tm .469168 Tw 12 TL /F1 10 Tf 0 0 0 rg (In this project, I implemented the replay attack module and added command-line argument optionality when) Tj T* 0 Tw 2.557565 Tw (executing the main program. Although the command-line arguments are limited, they do feature three) Tj T* 0 Tw .204207 Tw (commands: one to turn debug mode on, one to turn the replay attack on, and the last one to control the time) Tj T* 0 Tw (for the replay attack.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 591.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 50 Tm /F1 10 Tf 12 TL .087686 Tw (In this project, I was able to implement my own attack and develop skills on how to penetrate communication) Tj T* 0 Tw 2.430642 Tw (protocols by intercepting message transmissions and use them to disrupt an actively running process.) Tj T* 0 Tw .077417 Tw (Although I didn\222t work too much on the plc and scada systems, I was able to look at the implementations that) Tj T* 0 Tw 1.662844 Tw (my teammates made and see how a basic model is implemented in python. I also improved my python) Tj T* 0 Tw (scripting skills and documentation skills.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 549.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL 1.073797 Tw (A challenge I encountered in this project was getting the replay attack to correctly connect to the client to) Tj T* 0 Tw 1.476575 Tw (retrieve messages by subscribing to topics. On top of this, once I was able to get the message retrieval) Tj T* 0 Tw (working, I slightly struggled to get the replay timing correct to disrupt the client.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 495.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 38 Tm /F1 10 Tf 12 TL 1.746027 Tw (This project deepened my understanding of ICS architecture and cybersecurity principles. I learned how) Tj T* 0 Tw .167397 Tw (simple attacks like the replay attack can bypass basic defenses and how multiple defenses help reduce their) Tj T* 0 Tw 1.046019 Tw (impact. This also taught me how important it is to secure control systems from attacks as the attacks can) Tj T* 0 Tw (leave devastating impacts to the system.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 453.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL 1.665522 Tw (The skills I learned from this project will help me implement more complex attacks against more secure) Tj T* 0 Tw .389903 Tw (systems in the future. This project will also help me build my own test environments that simulate real-world) Tj T* 0 Tw (processes.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+9 0 obj
+<<
+/Nums [ 0 10 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/S /D /St 1
+>>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000073 00000 n 
+0000000114 00000 n 
+0000000221 00000 n 
+0000000330 00000 n 
+0000000533 00000 n 
+0000000619 00000 n 
+0000000906 00000 n 
+0000000965 00000 n 
+0000003709 00000 n 
+0000003749 00000 n 
+trailer
+<<
+/ID 
+[<bb36d757d2158627af93a440d78ac723><bb36d757d2158627af93a440d78ac723>]
+% ReportLab generated PDF document -- digest (http://www.reportlab.com)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 11
+>>
+startxref
+3783
+%%EOF
