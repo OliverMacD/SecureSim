@@ -80,10 +80,6 @@
     setInterval(fetchData, 2000);
     window.onload = fetchData;
 
-    setInterval(() => {
-        const img = document.getElementById("graph-image");
-        img.src = "/static/img/graph.png?t=" + new Date().getTime();  // force refresh
-    }, 1000);
 </script>
 </head>
 <body>

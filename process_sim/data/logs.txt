@@ -1,146 +1,422 @@
-2025-04-22 16:32:56,332 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank1/max_capacity
-2025-04-22 16:32:56,334 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,334 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank2/max_capacity
-2025-04-22 16:32:56,334 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,334 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank1
-2025-04-22 16:32:56,334 [INFO] [SEND SUB] 13 [b'set/tank/tank1/max_capacity']
-2025-04-22 16:32:56,334 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,334 [INFO] [SUBACK] 13 (0,)
-2025-04-22 16:32:56,334 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,334 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,337 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank2
-2025-04-22 16:32:56,337 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank3/max_capacity
-2025-04-22 16:32:56,337 [INFO] [SEND SUB] 14 [b'set/tank/tank2/max_capacity']
-2025-04-22 16:32:56,338 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,338 [INFO] [SUBACK] 14 (0,)
-2025-04-22 16:32:56,338 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,338 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,338 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank3
-2025-04-22 16:32:56,338 [INFO] [SEND SUB] 15 [b'set/tank/tank3/max_capacity']
-2025-04-22 16:32:56,338 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank4/max_capacity
-2025-04-22 16:32:56,338 [INFO] [SUBACK] 15 (0,)
-2025-04-22 16:32:56,338 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,338 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,338 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,338 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank5/max_capacity
-2025-04-22 16:32:56,338 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank4
-2025-04-22 16:32:56,338 [INFO] [SEND SUB] 16 [b'set/tank/tank4/max_capacity']
-2025-04-22 16:32:56,338 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,344 [INFO] [SUBACK] 16 (0,)
-2025-04-22 16:32:56,344 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,344 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,344 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank5
-2025-04-22 16:32:56,344 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank6/max_capacity
-2025-04-22 16:32:56,344 [INFO] [SEND SUB] 17 [b'set/tank/tank5/max_capacity']
-2025-04-22 16:32:56,344 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,344 [INFO] [SUBACK] 17 (0,)
-2025-04-22 16:32:56,344 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,344 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,344 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank6
-2025-04-22 16:32:56,344 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump1/rate
-2025-04-22 16:32:56,344 [INFO] [SEND SUB] 18 [b'set/tank/tank6/max_capacity']
-2025-04-22 16:32:56,344 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,344 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump1/state
-2025-04-22 16:32:56,344 [INFO] [SUBACK] 18 (0,)
-2025-04-22 16:32:56,344 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,344 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,344 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump1
-2025-04-22 16:32:56,344 [INFO] [SEND SUB] 19 [b'set/pump/pump1/rate']
-2025-04-22 16:32:56,344 [INFO] [SEND SUB] 20 [b'set/pump/pump1/state']
-2025-04-22 16:32:56,344 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump2/rate
-2025-04-22 16:32:56,344 [INFO] [SUBACK] 19 (0,)
-2025-04-22 16:32:56,350 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump2/state
-2025-04-22 16:32:56,350 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,350 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,350 [INFO] [SUBACK] 20 (0,)
-2025-04-22 16:32:56,350 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,350 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,350 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump2
-2025-04-22 16:32:56,352 [INFO] [SEND SUB] 21 [b'set/pump/pump2/rate']
-2025-04-22 16:32:56,352 [INFO] [SEND SUB] 22 [b'set/pump/pump2/state']
-2025-04-22 16:32:56,352 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump3/rate
-2025-04-22 16:32:56,352 [INFO] [SUBACK] 21 (0,)
-2025-04-22 16:32:56,352 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump3/state
-2025-04-22 16:32:56,352 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,353 [INFO] [SUBACK] 22 (0,)
-2025-04-22 16:32:56,353 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,353 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,353 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,353 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump3
-2025-04-22 16:32:56,353 [INFO] [SEND SUB] 23 [b'set/pump/pump3/rate']
-2025-04-22 16:32:56,353 [INFO] [SEND SUB] 24 [b'set/pump/pump3/state']
-2025-04-22 16:32:56,353 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump4/rate
-2025-04-22 16:32:56,353 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,353 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump4/state
-2025-04-22 16:32:56,353 [INFO] [SUBACK] 23 (0,)
-2025-04-22 16:32:56,353 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,353 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,356 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump4
-2025-04-22 16:32:56,356 [INFO] [SEND SUB] 25 [b'set/pump/pump4/rate']
-2025-04-22 16:32:56,356 [INFO] [SUBACK] 24 (0,)
-2025-04-22 16:32:56,356 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,357 [INFO] [SEND SUB] 26 [b'set/pump/pump4/state']
-2025-04-22 16:32:56,357 [INFO] [SUBACK] 25 (0,)
-2025-04-22 16:32:56,357 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,357 [INFO] [SUBACK] 26 (0,)
-2025-04-22 16:32:56,357 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,357 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump5/rate
-2025-04-22 16:32:56,357 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump5/state
-2025-04-22 16:32:56,357 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,357 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,357 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump5
-2025-04-22 16:32:56,357 [INFO] [SEND SUB] 27 [b'set/pump/pump5/rate']
-2025-04-22 16:32:56,357 [INFO] [SEND SUB] 28 [b'set/pump/pump5/state']
-2025-04-22 16:32:56,357 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump6/rate
-2025-04-22 16:32:56,357 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump6/state
-2025-04-22 16:32:56,357 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,357 [INFO] [SUBACK] 27 (0,)
-2025-04-22 16:32:56,357 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,357 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,357 [INFO] [SUBACK] 28 (0,)
-2025-04-22 16:32:56,357 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump6
-2025-04-22 16:32:56,357 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,357 [INFO] [SEND SUB] 29 [b'set/pump/pump6/rate']
-2025-04-22 16:32:56,362 [INFO] [SEND SUB] 30 [b'set/pump/pump6/state']
-2025-04-22 16:32:56,362 [INFO] [CONNECTION MADE]
-2025-04-22 16:32:56,362 [INFO] [SUBACK] 29 (0,)
-2025-04-22 16:32:56,362 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,362 [INFO] [MQTT] Connected with flags: 0, rc: 0
-2025-04-22 16:32:56,362 [INFO] [SUBACK] 30 (0,)
-2025-04-22 16:32:56,362 [INFO] [MQTT] Connected to 127.0.0.1:1883 as splitter_splitter1
-2025-04-22 16:32:56,362 [INFO] [MQTT] Subscribed successfully
-2025-04-22 16:32:56,417 [WARNING]  * Debugger is active!
-2025-04-22 16:32:56,423 [INFO]  * Debugger PIN: 192-023-346
-2025-04-22 16:32:56,574 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:56] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:32:56,574 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:56] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:32:56,574 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:56] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:32:56,574 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:56] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:32:56,809 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:56] "GET / HTTP/1.1" 200 -
-2025-04-22 16:32:56,873 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:56] "GET /static/img/graph.png HTTP/1.1" 200 -
-2025-04-22 16:32:56,887 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:56] "[36mGET /static/img/SecureSim.jpg HTTP/1.1[0m" 304 -
-2025-04-22 16:32:56,970 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:56] "GET /api/state HTTP/1.1" 200 -
-2025-04-22 16:32:57,853 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:57] "GET /static/img/graph.png?t=1745361177854 HTTP/1.1" 200 -
-2025-04-22 16:32:58,947 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:58] "GET /static/img/graph.png?t=1745361178948 HTTP/1.1" 200 -
-2025-04-22 16:32:59,029 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:59] "GET /api/state HTTP/1.1" 200 -
-2025-04-22 16:32:59,969 [INFO] 127.0.0.1 - - [22/Apr/2025 16:32:59] "GET /static/img/graph.png?t=1745361179956 HTTP/1.1" 200 -
-2025-04-22 16:33:01,075 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:01] "GET /static/img/graph.png?t=1745361181037 HTTP/1.1" 200 -
-2025-04-22 16:33:01,115 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:01] "GET /api/state HTTP/1.1" 200 -
-2025-04-22 16:33:02,056 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:02] "GET /static/img/graph.png?t=1745361182051 HTTP/1.1" 200 -
-2025-04-22 16:33:03,055 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:03] "GET /logs HTTP/1.1" 200 -
-2025-04-22 16:33:03,068 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:03] "GET /static/img/graph.png?t=1745361183053 HTTP/1.1" 200 -
-2025-04-22 16:33:03,084 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:03] "[36mGET /static/img/SecureSim.jpg HTTP/1.1[0m" 304 -
-2025-04-22 16:33:03,178 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:03] "GET /api/state HTTP/1.1" 200 -
-2025-04-22 16:33:05,254 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:05] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:33:07,343 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:07] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:33:09,323 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:09] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:33:11,338 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:11] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:33:13,407 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:13] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:33:15,371 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:15] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:33:17,384 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:17] "GET /logs/live HTTP/1.1" 200 -
-2025-04-22 16:33:17,928 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:17] "GET /components HTTP/1.1" 200 -
-2025-04-22 16:33:17,959 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:17] "GET /static/img/SecureSim.jpg HTTP/1.1" 200 -
-2025-04-22 16:33:19,160 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:19] "GET / HTTP/1.1" 200 -
-2025-04-22 16:33:19,187 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:19] "GET /static/img/SecureSim.jpg HTTP/1.1" 200 -
-2025-04-22 16:33:19,197 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:19] "GET /static/img/graph.png HTTP/1.1" 200 -
-2025-04-22 16:33:19,332 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:19] "GET /api/state HTTP/1.1" 200 -
-2025-04-22 16:33:20,263 [INFO] 127.0.0.1 - - [22/Apr/2025 16:33:20] "GET /static/img/graph.png?t=1745361200261 HTTP/1.1" 200 -
+2025-04-22 21:18:16,383 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank1/max_capacity
+2025-04-22 21:18:16,383 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,383 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,385 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank1
+2025-04-22 21:18:16,385 [INFO] [SEND SUB] 13 [b'set/tank/tank1/max_capacity']
+2025-04-22 21:18:16,385 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank2/max_capacity
+2025-04-22 21:18:16,385 [INFO] [SUBACK] 13 (0,)
+2025-04-22 21:18:16,385 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,385 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,385 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,387 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank2
+2025-04-22 21:18:16,387 [INFO] [SEND SUB] 14 [b'set/tank/tank2/max_capacity']
+2025-04-22 21:18:16,387 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank3/max_capacity
+2025-04-22 21:18:16,387 [INFO] [SUBACK] 14 (0,)
+2025-04-22 21:18:16,387 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,387 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,390 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,390 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank3
+2025-04-22 21:18:16,390 [INFO] [SEND SUB] 15 [b'set/tank/tank3/max_capacity']
+2025-04-22 21:18:16,392 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank4/max_capacity
+2025-04-22 21:18:16,392 [INFO] [SUBACK] 15 (0,)
+2025-04-22 21:18:16,392 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,392 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,392 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,392 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank4
+2025-04-22 21:18:16,392 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank5/max_capacity
+2025-04-22 21:18:16,392 [INFO] [SEND SUB] 16 [b'set/tank/tank4/max_capacity']
+2025-04-22 21:18:16,392 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,397 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,397 [INFO] [SUBACK] 16 (0,)
+2025-04-22 21:18:16,397 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank5
+2025-04-22 21:18:16,397 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,397 [INFO] [SEND SUB] 17 [b'set/tank/tank5/max_capacity']
+2025-04-22 21:18:16,397 [INFO] [MQTT-SUB] Subscribed to: set/tank/tank6/max_capacity
+2025-04-22 21:18:16,399 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,399 [INFO] [SUBACK] 17 (0,)
+2025-04-22 21:18:16,399 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,399 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,399 [INFO] [MQTT] Connected to 127.0.0.1:1883 as tank_tank6
+2025-04-22 21:18:16,399 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump1/rate
+2025-04-22 21:18:16,399 [INFO] [SEND SUB] 18 [b'set/tank/tank6/max_capacity']
+2025-04-22 21:18:16,399 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump1/state
+2025-04-22 21:18:16,399 [INFO] [SUBACK] 18 (0,)
+2025-04-22 21:18:16,399 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,399 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,399 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,399 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump2/rate
+2025-04-22 21:18:16,399 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump1
+2025-04-22 21:18:16,399 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump2/state
+2025-04-22 21:18:16,399 [INFO] [SEND SUB] 19 [b'set/pump/pump1/rate']
+2025-04-22 21:18:16,399 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,399 [INFO] [SEND SUB] 20 [b'set/pump/pump1/state']
+2025-04-22 21:18:16,399 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,399 [INFO] [SUBACK] 19 (0,)
+2025-04-22 21:18:16,399 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump3/rate
+2025-04-22 21:18:16,399 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,408 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump2
+2025-04-22 21:18:16,408 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump3/state
+2025-04-22 21:18:16,408 [INFO] [SUBACK] 20 (0,)
+2025-04-22 21:18:16,408 [INFO] [SEND SUB] 21 [b'set/pump/pump2/rate']
+2025-04-22 21:18:16,408 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,408 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,408 [INFO] [SEND SUB] 22 [b'set/pump/pump2/state']
+2025-04-22 21:18:16,412 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,412 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump3
+2025-04-22 21:18:16,413 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump4/rate
+2025-04-22 21:18:16,413 [INFO] [SEND SUB] 23 [b'set/pump/pump3/rate']
+2025-04-22 21:18:16,413 [INFO] [SUBACK] 21 (0,)
+2025-04-22 21:18:16,413 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump4/state
+2025-04-22 21:18:16,413 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,413 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,413 [INFO] [SEND SUB] 24 [b'set/pump/pump3/state']
+2025-04-22 21:18:16,413 [INFO] [SUBACK] 22 (0,)
+2025-04-22 21:18:16,413 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,413 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,413 [INFO] [SUBACK] 23 (0,)
+2025-04-22 21:18:16,413 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,413 [INFO] [SUBACK] 24 (0,)
+2025-04-22 21:18:16,413 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump4
+2025-04-22 21:18:16,413 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,413 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump5/rate
+2025-04-22 21:18:16,413 [INFO] [SEND SUB] 25 [b'set/pump/pump4/rate']
+2025-04-22 21:18:16,413 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump5/state
+2025-04-22 21:18:16,413 [INFO] [SEND SUB] 26 [b'set/pump/pump4/state']
+2025-04-22 21:18:16,413 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,413 [INFO] [SUBACK] 25 (0,)
+2025-04-22 21:18:16,413 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,413 [INFO] [SUBACK] 26 (0,)
+2025-04-22 21:18:16,421 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,421 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,421 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump5
+2025-04-22 21:18:16,421 [INFO] [SEND SUB] 27 [b'set/pump/pump5/rate']
+2025-04-22 21:18:16,421 [INFO] [SEND SUB] 28 [b'set/pump/pump5/state']
+2025-04-22 21:18:16,421 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump6/rate
+2025-04-22 21:18:16,421 [INFO] [MQTT-SUB] Subscribed to: set/pump/pump6/state
+2025-04-22 21:18:16,424 [INFO] [SUBACK] 27 (0,)
+2025-04-22 21:18:16,424 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,424 [INFO] [SUBACK] 28 (0,)
+2025-04-22 21:18:16,424 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,424 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,424 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,424 [INFO] [MQTT] Connected to 127.0.0.1:1883 as pump_pump6
+2025-04-22 21:18:16,424 [INFO] [SEND SUB] 29 [b'set/pump/pump6/rate']
+2025-04-22 21:18:16,424 [INFO] [CONNECTION MADE]
+2025-04-22 21:18:16,424 [INFO] [SEND SUB] 30 [b'set/pump/pump6/state']
+2025-04-22 21:18:16,433 [INFO] [MQTT] Connected with flags: 0, rc: 0
+2025-04-22 21:18:16,434 [INFO] [MQTT] Connected to 127.0.0.1:1883 as splitter_splitter1
+2025-04-22 21:18:16,434 [INFO] [SUBACK] 29 (0,)
+2025-04-22 21:18:16,434 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,434 [INFO] [SUBACK] 30 (0,)
+2025-04-22 21:18:16,434 [INFO] [MQTT] Subscribed successfully
+2025-04-22 21:18:16,444 [WARNING]  * Debugger is active!
+2025-04-22 21:18:16,471 [INFO]  * Debugger PIN: 192-023-346
+2025-04-22 21:18:18,056 [INFO] 127.0.0.1 - - [22/Apr/2025 21:18:18] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-22 21:18:28,007 [INFO] 127.0.0.1 - - [22/Apr/2025 21:18:28] "GET / HTTP/1.1" 200 -
+2025-04-22 21:18:28,2025-04-22 21:19:57,498 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,513 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,498 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,498 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,498 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,500 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,500 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,500 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,500 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,500 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,520 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,500 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,521 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,521 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,498 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,513 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,514 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,515 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,516 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,517 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,517 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,518 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,519 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,500 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,525 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,525 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,523 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,500 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,523 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,500 [WARNING] [EXC: CONN LOST]
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 494, in finish_recv
+    return ov.getresult()
+           ^^^^^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+             ^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 846, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Niama\anaconda3\Lib\asyncio\windows_events.py", line 498, in finish_recv
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] The specified network name is no longer available
+2025-04-22 21:19:57,523 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,523 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,524 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,524 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,524 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,524 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,525 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,520 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,522 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,527 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,527 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,528 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,529 [INFO] [MQTT] Disconnected
+2025-04-22 21:19:57,529 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,529 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,529 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,529 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,529 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,530 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,530 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,530 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,531 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,531 [WARNING] [TRYING WRITE TO CLOSED SOCKET]
+2025-04-22 21:19:57,532 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
+2025-04-22 21:19:57,532 [INFO] [RECONNECT] ignored error while disconnecting, trying to reconnect anyway
