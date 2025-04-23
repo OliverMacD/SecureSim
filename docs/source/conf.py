@@ -10,8 +10,7 @@ extensions = ['recommonmark',
             'sphinx_rtd_theme', 
             'sphinx.ext.autodoc',
             'sphinx.ext.napoleon',  # for Google-style or NumPy-style docstrings
-            'sphinx.ext.viewcode', # adds links to source code
-            'rst2pdf.pdfbuilder' # for PDF generation
+            'sphinx.ext.viewcode' # adds links to source code
             ]
 templates_path = ['_templates']
 exclude_patterns = []
@@ -23,5 +22,3 @@ html_theme_options = {
     'titles_only': False          # Show full sidebar titles
 }
 html_static_path = ['_static']
-
-pdf_documents = [('index', u'CS424524_FinalProject_Report', u'CS 424\/524 Final Project Report', u'Oliver MacDonald, Stephen Buchinskiy, and Saxton Dees'),]
