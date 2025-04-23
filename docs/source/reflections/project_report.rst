@@ -73,7 +73,7 @@ This attack is especially effective in systems that rely heavily on periodic upd
 **Denial of Service (DoS) Attack**
 ----------------------------------
 
-The DoS attack targets system availability by overwhelming the MQTT communication layer with a flood of high-frequency, irrelevant messages. The attacker publishes a large number of randomized payloads to one or more MQTT topics, some of which may be valid, and others purely noise. This deluge saturates the broker, resulting in delayed or dropped messages that prevent the UI, PLCs, and SCADA from receiving timely updates.
+The DoS attack targets system availability by overwhelming the MQTT communication layer with a flood of high-frequency, irrelevant messages. The attacker publishes a large number of randomized payloads to one or more MQTT topics, some of which may be valid, and others are purely noise. This deluge saturates the broker, resulting in delayed or dropped messages that prevent the UI, PLCs, and SCADA from receiving timely updates.
 
 As the system becomes overloaded, real sensor data cannot propagate through the message queue effectively, leading to outdated visualizations, missed emergency conditions, and reduced control accuracy. In SecureSim, this attack rendered the Flask dashboard partially unresponsive and prevented PLC logic from executing at normal cadence, demonstrating the fragility of unprotected real-time systems.
 
@@ -83,7 +83,7 @@ Defense Mechanisms
 **Logging & Auditing**
 ----------------------
 
-SecureSim implements a robust logging and auditing framework that continuously records all MQTT traffic and control commands issued within the simulation. This data is persistently stored in the `/data/logs.txt` file, which provides a comprehensive, timestamped history of system activity. These logs are invaluable for both real-time monitoring and post-event forensic analysis, allowing operators to detect irregularities such as message delays, missing updates, or unusual control behavior indicative of r...
+SecureSim implements a robust logging and auditing framework that continuously records all MQTT traffic and control commands issued within the simulation. This data is persistently stored in the `/data/logs.txt` file, which provides a comprehensive, timestamped history of system activity. These logs are invaluable for both real-time monitoring and post-event forensic analysis, allowing operators to detect irregularities such as message delays, missing updates, or unusual control behavior indicative of attacks.
 
 **UI Authentication**
 ---------------------
@@ -93,7 +93,7 @@ To prevent unauthorized access and safeguard critical control features, SecureSi
 **Rate Limiting**
 -----------------
 
-In order to counteract brute-force and flooding attacks, a rate limiting mechanism has been implemented on the Modbus communication layer. Specifically, write operations to Modbus registers are throttled to prevent attackers from executing rapid-fire command injections that could destabilize the system. This defense is particularly effective against DoS-style attacks that attempt to overwhelm control components with a high volume of updates. By enforcing a cap on how frequently a component's state can b...
+In order to counteract brute-force and flooding attacks, a rate-limiting mechanism has been implemented on the Modbus communication layer. Specifically, write operations to Modbus registers are throttled to prevent attackers from executing rapid-fire command injections that could destabilize the system. This defense is particularly effective against DoS-style attacks that attempt to overwhelm control components with a high volume of updates. By enforcing a cap on how frequently a component's state can be updated.
 
 
 Evaluation & Results
@@ -104,9 +104,14 @@ Evidence of Attack Effects
 
 - **Replay Attack**: During the replay period, the system failed to respond to real-time changes in tank volume, as outdated MQTT messages were injected with the same timing and payloads as the original data. The log files revealed repeated volume values and misleading state transitions. This behavior caused SCADA logic to misinterpret system status, allowing potentially dangerous conditions to go unaddressed.
 
+.. image:: ./replay.png
+   :alt: Replay Attack
+   :align: center
+   :width: 90%
+
 - **DoS Attack**: The Denial of Service attack overwhelmed the MQTT broker with rapid message bursts, effectively clogging communication channels. As a result, critical updates to the SCADA and PLCs were dropped or delayed. This led to gaps in the Flask UI, unresponsive component indicators, and failures in control logic that relied on timely feedback.
 
-.. image:: ../img/tank_levels.png
+.. image:: ./dos.png
    :alt: Tank Levels Graph
    :align: center
    :width: 90%
@@ -115,6 +120,7 @@ UI-Based Defense Demonstrations
 -------------------------------
 
 **Rate Limiting:**  
+
 The system’s rate limiter was implemented on Modbus register interactions to prevent excessive write attempts. When attackers attempted to override PLC decisions rapidly through scripted writes, only a limited number of those writes were allowed per second. This throttling effectively neutralized attempts to execute DoS-like logic injection on critical components.
 
 .. image:: ./rate_limiting.png
@@ -123,6 +129,7 @@ The system’s rate limiter was implemented on Modbus register interactions to p
    :width: 90%
 
 **Login Screen (UI Authentication):**  
+
 To protect the SCADA interface from unauthorized access, a password layer was added to the Flask dashboard. This ensures that attackers or unprivileged users cannot trigger defenses, execute shutdowns, or tamper with logs or PLC overrides.
 
 .. image:: ./password.png
@@ -131,7 +138,8 @@ To protect the SCADA interface from unauthorized access, a password layer was ad
    :width: 90%
 
 **Log View Page:**  
-The SecureSim UI includes a dedicated logging panel that continuously displays system events, MQTT messages, control decisions, and Modbus register interactions. This was crucial for identifying both the replay and DoS attack patterns after the fact. The logs showed repeated values, missing states, and time offsets that clearly revealed anomalies in system behavior.
+
+The SecureSim UI includes a dedicated logging panel that continuously displays system events, MQTT messages, control decisions, and Modbus register interactions. This was crucial for identifying both the replay and DoS attack patterns after the fact. The logs showed repeated values, missing states, and time offsets that revealed anomalies in system behavior.
 
 .. image:: ./logs.png
    :alt: Live Logs Page
@@ -142,16 +150,19 @@ Performance Metrics
 -------------------
 
 - **Replay Attack**
+
   - Evasion success: 100% (under static threshold logic)
   - Detection: Identified only during post-attack log review
-  - Impact: Prevented SCADA from acting on real-time state
+  - Impact: Prevented SCADA from acting on the real-time state
 
 - **DoS Attack**
+
   - Saturation observed after ~500 messages/sec
   - PLC and UI components began missing state updates
   - SCADA failed to apply emergency rules consistently
 
 - **Defenses**
+
   - **Logging**: Captured all control traffic and anomalies in `/data/logs.txt`
   - **Rate Limiting**: Prevented attackers from writing rapid override loops
   - **Login Layer**: Prevented unauthorized UI manipulation and attack toggling
@@ -170,4 +181,3 @@ Conclusions & Future Work
 =========================
 
 The project demonstrated that ICS environments, even in simulated form, are highly susceptible to lightweight cyberattacks such as DoS and replay injection. However, even simple mitigation techniques, such as logging, access control, and rate limiting, proved effective in detecting and slowing down malicious activity.
-

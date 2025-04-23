@@ -36,6 +36,8 @@ Setup Instructions
    .. code-block::
 
        http://localhost:8501
+       User Name: `admin`
+       Password: `securepassword123`
 
    The dashboard displays real-time information:
 

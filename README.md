@@ -81,6 +81,8 @@ python main.py
 ### 3. Open the Dashboard
 
 Visit: [http://localhost:8501](http://localhost:5000)
+User Name: `admin`
+Password: `securepassword123`
 
 ---
 
