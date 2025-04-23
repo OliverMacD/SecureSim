@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Interfaces &mdash; SecureSim 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Control Logic" href="control_logic.html" />
+    <link rel="prev" title="JSON Structure" href="json_structure.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SecureSim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">System Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#folder-structure">Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#simulation-overview">Simulation Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#security-features">Security Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#testing-tools">Testing Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#extendability">Extendability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="running_sim.html">Running the Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="running_sim.html#setup-instructions">Setup Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="running_sim.html#simulation-files">Simulation Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="running_sim.html#stopping-the-simulation">Stopping the Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="running_sim.html#optional-build-sphinx-documentation">Optional: Build Sphinx Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="process_components.html">Process Simulation Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="process_components.html#core-components">Core Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_components.html#update-and-publish-cycle">Update and Publish Cycle</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="process_components.html#interfaces">Interfaces</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="json_structure.html">JSON Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="json_structure.html#top-level-structure">Top-Level Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json_structure.html#nodes">Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json_structure.html#edges">Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json_structure.html#plcs">PLCs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json_structure.html#scada">SCADA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json_structure.html#design-tips">Design Tips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json_structure.html#usage-in-code">Usage in Code</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Communication Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mqtt">MQTT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modbus-tcp">Modbus TCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#design-notes">Design Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="control_logic.html">Control Logic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="control_logic.html#plc-controllers">PLC Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_logic.html#scada-system">SCADA System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_logic.html#action-engine">Action Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_logic.html#design-considerations">Design Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_logic.html#debugging-logic">Debugging Logic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="process_overview.html">Simulated Process System Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="process_overview.html#system-summary">System Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_overview.html#physical-layout">Physical Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_overview.html#process-flow">Process Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_overview.html#scada-emergency-logic">SCADA Emergency Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_overview.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_overview.html#system-diagram">System Diagram</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/main.html">Main Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">process_sim</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html">process_sim package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#module-process_sim.base">process_sim.base module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/process_sim.html#process_sim.base.ProcessComponent"><code class="docutils literal notranslate"><span class="pre">ProcessComponent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#process-sim-graph-visualizer-module">process_sim.graph_visualizer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#process-sim-layout-parser-module">process_sim.layout_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#process-sim-line-module">process_sim.line module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#process-sim-pump-module">process_sim.pump module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#process-sim-simulation-runner-module">process_sim.simulation_runner module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#process-sim-splitter-module">process_sim.splitter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#process-sim-tank-module">process_sim.tank module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/process_sim.html">process_sim package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html#module-process_sim.base">process_sim.base module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/process_sim.html#process_sim.base.ProcessComponent"><code class="docutils literal notranslate"><span class="pre">ProcessComponent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/process_sim.html#process_sim.base.ProcessComponent.publish"><code class="docutils literal notranslate"><span class="pre">ProcessComponent.publish()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/process_sim.html#process_sim.base.ProcessComponent.update"><code class="docutils literal notranslate"><span class="pre">ProcessComponent.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html#process-sim-graph-visualizer-module">process_sim.graph_visualizer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html#process-sim-layout-parser-module">process_sim.layout_parser module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html#process-sim-line-module">process_sim.line module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html#process-sim-pump-module">process_sim.pump module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html#process-sim-simulation-runner-module">process_sim.simulation_runner module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html#process-sim-splitter-module">process_sim.splitter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html#process-sim-tank-module">process_sim.tank module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/process_sim.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/servers.html">servers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/servers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/servers.html#servers-modbus-server-module">servers.modbus_server module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/servers.html#servers-mqtt-server-module">servers.mqtt_server module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/servers.html#module-servers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/control_logic.html">control_logic package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/control_logic.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/control_logic.html#module-control_logic.action_engine">control_logic.action_engine module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/control_logic.html#control_logic.action_engine.ActionEngine"><code class="docutils literal notranslate"><span class="pre">ActionEngine</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.action_engine.ActionEngine.register_map"><code class="docutils literal notranslate"><span class="pre">ActionEngine.register_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.action_engine.ActionEngine.graph"><code class="docutils literal notranslate"><span class="pre">ActionEngine.graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.action_engine.ActionEngine.mqtt"><code class="docutils literal notranslate"><span class="pre">ActionEngine.mqtt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.action_engine.ActionEngine.evaluate_and_execute"><code class="docutils literal notranslate"><span class="pre">ActionEngine.evaluate_and_execute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/control_logic.html#module-control_logic.plc">control_logic.plc module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/control_logic.html#control_logic.plc.PLC"><code class="docutils literal notranslate"><span class="pre">PLC</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.plc.PLC.id"><code class="docutils literal notranslate"><span class="pre">PLC.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.plc.PLC.ip"><code class="docutils literal notranslate"><span class="pre">PLC.ip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.plc.PLC.port"><code class="docutils literal notranslate"><span class="pre">PLC.port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.plc.PLC.devices"><code class="docutils literal notranslate"><span class="pre">PLC.devices</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.plc.PLC.actions"><code class="docutils literal notranslate"><span class="pre">PLC.actions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.plc.PLC.graph"><code class="docutils literal notranslate"><span class="pre">PLC.graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.plc.PLC.engine"><code class="docutils literal notranslate"><span class="pre">PLC.engine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.plc.PLC.update"><code class="docutils literal notranslate"><span class="pre">PLC.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/control_logic.html#control-logic-plc-modbus-module">control_logic.plc_modbus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/control_logic.html#module-control_logic.scada">control_logic.scada module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/control_logic.html#control_logic.scada.SCADA"><code class="docutils literal notranslate"><span class="pre">SCADA</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.scada.SCADA.ip"><code class="docutils literal notranslate"><span class="pre">SCADA.ip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.scada.SCADA.port"><code class="docutils literal notranslate"><span class="pre">SCADA.port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.scada.SCADA.register_map"><code class="docutils literal notranslate"><span class="pre">SCADA.register_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.scada.SCADA.actions"><code class="docutils literal notranslate"><span class="pre">SCADA.actions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.scada.SCADA.engine"><code class="docutils literal notranslate"><span class="pre">SCADA.engine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/control_logic.html#control_logic.scada.SCADA.update"><code class="docutils literal notranslate"><span class="pre">SCADA.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/control_logic.html#control-logic-scada-modbus-module">control_logic.scada_modbus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/control_logic.html#module-control_logic">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project Report &amp; Individual Reflections</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reflections/project_report.html">SecureSim Final Project Report</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reflections/project_report.html#project-overview">Project Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/project_report.html#system-architecture">System Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/project_report.html#process-modeling">Process Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/project_report.html#control-logic">Control Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/project_report.html#attack-implementation">Attack Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reflections/project_report.html#replay-attack"><strong>Replay Attack</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reflections/project_report.html#denial-of-service-dos-attack"><strong>Denial of Service (DoS) Attack</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/project_report.html#defense-mechanisms">Defense Mechanisms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reflections/project_report.html#logging-auditing"><strong>Logging &amp; Auditing</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reflections/project_report.html#ui-authentication"><strong>UI Authentication</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reflections/project_report.html#rate-limiting"><strong>Rate Limiting</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/project_report.html#evaluation-results">Evaluation &amp; Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reflections/project_report.html#evidence-of-attack-effects">Evidence of Attack Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reflections/project_report.html#ui-based-defense-demonstrations">UI-Based Defense Demonstrations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reflections/project_report.html#performance-metrics">Performance Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/project_report.html#team-collaboration">Team Collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/project_report.html#challenges-limitations">Challenges &amp; Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/project_report.html#conclusions-future-work">Conclusions &amp; Future Work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reflections/saxton.html">Reflection: Saxton Dees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflections/stephen.html">Reflection: Stephen Buchinskiy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflections/oliver.html">Reflection: Oliver MacDonald</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reflections/oliver.html#project-role-responsibilities">Project Role &amp; Responsibilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/oliver.html#skills-developed">Skills Developed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/oliver.html#challenges-faced">Challenges Faced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/oliver.html#lessons-learned">Lessons Learned</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflections/oliver.html#future-applications">Future Applications</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SecureSim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="process_components.html">Process Simulation Components</a></li>
+      <li class="breadcrumb-item active">Communication Interfaces</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/comms.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="communication-interfaces">
+<h1>Communication Interfaces<a class="headerlink" href="#communication-interfaces" title="Link to this heading"></a></h1>
+<p>SecureSim uses two industrial communication protocols:</p>
+<ol class="arabic simple">
+<li><p><strong>MQTT</strong> – For telemetry and component-level control</p></li>
+<li><p><strong>Modbus TCP</strong> – For PLC and SCADA communication</p></li>
+</ol>
+<section id="mqtt">
+<h2>MQTT<a class="headerlink" href="#mqtt" title="Link to this heading"></a></h2>
+<p>MQTT is used for real-time publish/subscribe messaging between components, PLCs, and the UI.</p>
+<p>Each component publishes and subscribes to its own set of MQTT topics.</p>
+<p>### Topic Structure</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tank/{id}/volume</span></code></p></td>
+<td><p>Publishes current volume of a tank</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tank/{id}/max_capacity</span></code></p></td>
+<td><p>Publishes configured max capacity</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pump/{id}/state</span></code></p></td>
+<td><p>Publishes if a pump is open or closed</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pump/{id}/rate</span></code></p></td>
+<td><p>Publishes current flow rate of a pump</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set/tank/{id}/max_capacity</span></code></p></td>
+<td><p>Subscribes to override tank capacity</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">set/pump/{id}/state</span></code></p></td>
+<td><p>Subscribes to open/close pump</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set/pump/{id}/rate</span></code></p></td>
+<td><p>Subscribes to update pump rate</p></td>
+</tr>
+</tbody>
+</table>
+<p>### MQTT Backend</p>
+<ul class="simple">
+<li><p>Broker address: <code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code></p></li>
+<li><p>Port: <code class="docutils literal notranslate"><span class="pre">1883</span></code></p></li>
+<li><p>Handled by: <code class="docutils literal notranslate"><span class="pre">servers/mqtt_server.py</span></code></p></li>
+<li><p>Uses <cite>gmqtt</cite> for async communication</p></li>
+</ul>
+</section>
+<section id="modbus-tcp">
+<h2>Modbus TCP<a class="headerlink" href="#modbus-tcp" title="Link to this heading"></a></h2>
+<p>Used by all <strong>PLCs</strong> and the <strong>SCADA</strong> system for:</p>
+<ul class="simple">
+<li><p>Monitoring system state</p></li>
+<li><p>Writing control commands to simulation components</p></li>
+<li><p>Performing overrides and emergency shutdowns</p></li>
+</ul>
+<p>### Modbus Servers</p>
+<p>Each PLC and the SCADA system runs its own Modbus TCP server.</p>
+<ul class="simple">
+<li><p><strong>PLC Ports</strong>: <cite>5100</cite>, <cite>5101</cite>, …</p></li>
+<li><p><strong>SCADA Port</strong>: <cite>5200</cite></p></li>
+<li><p>Registers mapped to devices like tanks and pumps</p></li>
+</ul>
+<p>### Register Mapping</p>
+<p>Registers represent real device attributes:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Device Attribute</p></th>
+<th class="head"><p>Register Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tank.current_volume</span></code></p></td>
+<td><p>Integer approximation</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pump.state</span></code></p></td>
+<td><p>0 = closed, 1 = open</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pump.rate</span></code></p></td>
+<td><p>Integer flow rate</p></td>
+</tr>
+</tbody>
+</table>
+<p>### Modbus Override Behavior</p>
+<p>When a value is written to a register:
+- The system locates the target device
+- Calls an appropriate setter like <cite>set_state()</cite> or <cite>set_rate()</cite>
+- Overwrites the simulation state</p>
+<p>### Implementation</p>
+<ul class="simple">
+<li><p>Custom server: <code class="docutils literal notranslate"><span class="pre">servers/modbus_server.py</span></code></p></li>
+<li><p>Wraps a register array and update hook</p></li>
+<li><p>Linked to logic in <code class="docutils literal notranslate"><span class="pre">plc_modbus.py</span></code> and <code class="docutils literal notranslate"><span class="pre">scada_modbus.py</span></code></p></li>
+</ul>
+</section>
+<section id="design-notes">
+<h2>Design Notes<a class="headerlink" href="#design-notes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use MQTT for frequent, real-time updates (volume, state)</p></li>
+<li><p>Use Modbus for secure/controlled writes or HMI emulation</p></li>
+<li><p>SCADA and PLCs can use both interfaces simultaneously</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="json_structure.html" class="btn btn-neutral float-left" title="JSON Structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="control_logic.html" class="btn btn-neutral float-right" title="Control Logic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

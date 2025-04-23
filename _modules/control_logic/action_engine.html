@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>control_logic.action_engine &mdash; SecureSim 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SecureSim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">System Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#folder-structure">Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#simulation-overview">Simulation Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#security-features">Security Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#testing-tools">Testing Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#extendability">Extendability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../running_sim.html">Running the Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../running_sim.html#setup-instructions">Setup Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../running_sim.html#simulation-files">Simulation Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../running_sim.html#stopping-the-simulation">Stopping the Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../running_sim.html#optional-build-sphinx-documentation">Optional: Build Sphinx Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../process_components.html">Process Simulation Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../process_components.html#core-components">Core Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../process_components.html#update-and-publish-cycle">Update and Publish Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../process_components.html#interfaces">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../json_structure.html">JSON Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../json_structure.html#top-level-structure">Top-Level Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../json_structure.html#nodes">Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../json_structure.html#edges">Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../json_structure.html#plcs">PLCs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../json_structure.html#scada">SCADA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../json_structure.html#design-tips">Design Tips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../json_structure.html#usage-in-code">Usage in Code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../comms.html">Communication Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../comms.html#mqtt">MQTT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../comms.html#modbus-tcp">Modbus TCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../comms.html#design-notes">Design Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../control_logic.html">Control Logic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../control_logic.html#plc-controllers">PLC Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../control_logic.html#scada-system">SCADA System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../control_logic.html#action-engine">Action Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../control_logic.html#design-considerations">Design Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../control_logic.html#debugging-logic">Debugging Logic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../process_overview.html">Simulated Process System Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../process_overview.html#system-summary">System Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../process_overview.html#physical-layout">Physical Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../process_overview.html#process-flow">Process Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../process_overview.html#scada-emergency-logic">SCADA Emergency Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../process_overview.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../process_overview.html#system-diagram">System Diagram</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/main.html">Main Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/modules.html">process_sim</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html">process_sim package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#module-process_sim.base">process_sim.base module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/process_sim.html#process_sim.base.ProcessComponent"><code class="docutils literal notranslate"><span class="pre">ProcessComponent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#process-sim-graph-visualizer-module">process_sim.graph_visualizer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#process-sim-layout-parser-module">process_sim.layout_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#process-sim-line-module">process_sim.line module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#process-sim-pump-module">process_sim.pump module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#process-sim-simulation-runner-module">process_sim.simulation_runner module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#process-sim-splitter-module">process_sim.splitter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#process-sim-tank-module">process_sim.tank module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/process_sim.html">process_sim package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html#module-process_sim.base">process_sim.base module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/process_sim.html#process_sim.base.ProcessComponent"><code class="docutils literal notranslate"><span class="pre">ProcessComponent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/process_sim.html#process_sim.base.ProcessComponent.publish"><code class="docutils literal notranslate"><span class="pre">ProcessComponent.publish()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/process_sim.html#process_sim.base.ProcessComponent.update"><code class="docutils literal notranslate"><span class="pre">ProcessComponent.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html#process-sim-graph-visualizer-module">process_sim.graph_visualizer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html#process-sim-layout-parser-module">process_sim.layout_parser module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html#process-sim-line-module">process_sim.line module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html#process-sim-pump-module">process_sim.pump module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html#process-sim-simulation-runner-module">process_sim.simulation_runner module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html#process-sim-splitter-module">process_sim.splitter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html#process-sim-tank-module">process_sim.tank module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/process_sim.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/servers.html">servers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/servers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/servers.html#servers-modbus-server-module">servers.modbus_server module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/servers.html#servers-mqtt-server-module">servers.mqtt_server module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/servers.html#module-servers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/control_logic.html">control_logic package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/control_logic.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/control_logic.html#module-control_logic.action_engine">control_logic.action_engine module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/control_logic.html#control_logic.action_engine.ActionEngine"><code class="docutils literal notranslate"><span class="pre">ActionEngine</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.action_engine.ActionEngine.register_map"><code class="docutils literal notranslate"><span class="pre">ActionEngine.register_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.action_engine.ActionEngine.graph"><code class="docutils literal notranslate"><span class="pre">ActionEngine.graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.action_engine.ActionEngine.mqtt"><code class="docutils literal notranslate"><span class="pre">ActionEngine.mqtt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.action_engine.ActionEngine.evaluate_and_execute"><code class="docutils literal notranslate"><span class="pre">ActionEngine.evaluate_and_execute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/control_logic.html#module-control_logic.plc">control_logic.plc module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/control_logic.html#control_logic.plc.PLC"><code class="docutils literal notranslate"><span class="pre">PLC</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.plc.PLC.id"><code class="docutils literal notranslate"><span class="pre">PLC.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.plc.PLC.ip"><code class="docutils literal notranslate"><span class="pre">PLC.ip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.plc.PLC.port"><code class="docutils literal notranslate"><span class="pre">PLC.port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.plc.PLC.devices"><code class="docutils literal notranslate"><span class="pre">PLC.devices</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.plc.PLC.actions"><code class="docutils literal notranslate"><span class="pre">PLC.actions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.plc.PLC.graph"><code class="docutils literal notranslate"><span class="pre">PLC.graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.plc.PLC.engine"><code class="docutils literal notranslate"><span class="pre">PLC.engine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.plc.PLC.update"><code class="docutils literal notranslate"><span class="pre">PLC.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/control_logic.html#control-logic-plc-modbus-module">control_logic.plc_modbus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/control_logic.html#module-control_logic.scada">control_logic.scada module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/control_logic.html#control_logic.scada.SCADA"><code class="docutils literal notranslate"><span class="pre">SCADA</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.scada.SCADA.ip"><code class="docutils literal notranslate"><span class="pre">SCADA.ip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.scada.SCADA.port"><code class="docutils literal notranslate"><span class="pre">SCADA.port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.scada.SCADA.register_map"><code class="docutils literal notranslate"><span class="pre">SCADA.register_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.scada.SCADA.actions"><code class="docutils literal notranslate"><span class="pre">SCADA.actions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.scada.SCADA.engine"><code class="docutils literal notranslate"><span class="pre">SCADA.engine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/control_logic.html#control_logic.scada.SCADA.update"><code class="docutils literal notranslate"><span class="pre">SCADA.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/control_logic.html#control-logic-scada-modbus-module">control_logic.scada_modbus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/control_logic.html#module-control_logic">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project Report &amp; Individual Reflections</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reflections/project_report.html">SecureSim Final Project Report</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/project_report.html#project-overview">Project Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/project_report.html#system-architecture">System Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/project_report.html#process-modeling">Process Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/project_report.html#control-logic">Control Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/project_report.html#attack-implementation">Attack Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../reflections/project_report.html#replay-attack"><strong>Replay Attack</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reflections/project_report.html#denial-of-service-dos-attack"><strong>Denial of Service (DoS) Attack</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/project_report.html#defense-mechanisms">Defense Mechanisms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../reflections/project_report.html#logging-auditing"><strong>Logging &amp; Auditing</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reflections/project_report.html#ui-authentication"><strong>UI Authentication</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reflections/project_report.html#rate-limiting"><strong>Rate Limiting</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/project_report.html#evaluation-results">Evaluation &amp; Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../reflections/project_report.html#evidence-of-attack-effects">Evidence of Attack Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reflections/project_report.html#ui-based-defense-demonstrations">UI-Based Defense Demonstrations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reflections/project_report.html#performance-metrics">Performance Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/project_report.html#team-collaboration">Team Collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/project_report.html#challenges-limitations">Challenges &amp; Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/project_report.html#conclusions-future-work">Conclusions &amp; Future Work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reflections/saxton.html">Reflection: Saxton Dees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reflections/stephen.html">Reflection: Stephen Buchinskiy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reflections/oliver.html">Reflection: Oliver MacDonald</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/oliver.html#project-role-responsibilities">Project Role &amp; Responsibilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/oliver.html#skills-developed">Skills Developed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/oliver.html#challenges-faced">Challenges Faced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/oliver.html#lessons-learned">Lessons Learned</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reflections/oliver.html#future-applications">Future Applications</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SecureSim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">control_logic.action_engine</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for control_logic.action_engine</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Action Engine</span>
+
+<span class="sd">This module defines the ActionEngine class, which evaluates conditional rules (triggers)</span>
+<span class="sd">based on register values and applies control effects to devices in the process graph.</span>
+
+<span class="sd">Classes:</span>
+<span class="sd">    ActionEngine - Executes logical actions using device states and a rule-based engine.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Ensure the &#39;data&#39; directory exists</span>
+<span class="n">log_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;data&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">log_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Set full path to log file inside data/</span>
+<span class="n">log_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">log_dir</span><span class="p">,</span> <span class="s2">&quot;logs.txt&quot;</span><span class="p">)</span>
+
+<span class="c1"># Reset logging if needed</span>
+<span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">logging</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">handlers</span><span class="p">[:]:</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">removeHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+
+<span class="c1"># Setup logging to file</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+    <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
+    <span class="n">filename</span><span class="o">=</span><span class="n">log_path</span><span class="p">,</span>
+    <span class="n">filemode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> [</span><span class="si">%(levelname)s</span><span class="s2">] </span><span class="si">%(message)s</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Optional: Console output to debug</span>
+<span class="n">console</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+<span class="n">console</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="n">console</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> [</span><span class="si">%(levelname)s</span><span class="s2">] </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">console</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ActionEngine">
+<a class="viewcode-back" href="../../api/control_logic.html#control_logic.action_engine.ActionEngine">[docs]</a>
+<span class="k">class</span> <span class="nc">ActionEngine</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A rule evaluation engine that enables PLC or SCADA systems to trigger actions</span>
+<span class="sd">    based on register values mapped to simulation components.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        register_map (dict or list): Mapping between device IDs and register addresses.</span>
+<span class="sd">        graph (ProcessGraph): The simulation graph containing all components.</span>
+<span class="sd">        mqtt (MQTTInterface): Optional communication layer for integration.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">register_map</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">mqtt_interface</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the engine with a register map and graph reference.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            register_map (dict or list): Mapping of register addresses to device IDs.</span>
+<span class="sd">            graph (ProcessGraph): The simulation graph context.</span>
+<span class="sd">            mqtt_interface (MQTTInterface): Interface for messaging (not used directly).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_map</span> <span class="o">=</span> <span class="n">register_map</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span> <span class="o">=</span> <span class="n">graph</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mqtt</span> <span class="o">=</span> <span class="n">mqtt_interface</span>
+
+<div class="viewcode-block" id="ActionEngine.evaluate_and_execute">
+<a class="viewcode-back" href="../../api/control_logic.html#control_logic.action_engine.ActionEngine.evaluate_and_execute">[docs]</a>
+    <span class="k">def</span> <span class="nf">evaluate_and_execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Evaluates a trigger condition and executes an effect if the condition is met.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            action (dict): An action containing a &quot;trigger&quot; and &quot;effect&quot;.</span>
+<span class="sd">                Example:</span>
+<span class="sd">                {</span>
+<span class="sd">                    &quot;trigger&quot;: {&quot;register&quot;: 1, &quot;condition&quot;: &quot;&gt;&quot;, &quot;value&quot;: 50},</span>
+<span class="sd">                    &quot;effect&quot;: {&quot;target&quot;: &quot;pump1&quot;, &quot;action&quot;: &quot;open&quot;}</span>
+<span class="sd">                }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">trigger</span> <span class="o">=</span> <span class="n">action</span><span class="p">[</span><span class="s2">&quot;trigger&quot;</span><span class="p">]</span>
+        <span class="n">effect</span> <span class="o">=</span> <span class="n">action</span><span class="p">[</span><span class="s2">&quot;effect&quot;</span><span class="p">]</span>
+
+        <span class="n">reg</span> <span class="o">=</span> <span class="n">trigger</span><span class="p">[</span><span class="s2">&quot;register&quot;</span><span class="p">]</span>
+        <span class="n">cond</span> <span class="o">=</span> <span class="n">trigger</span><span class="p">[</span><span class="s2">&quot;condition&quot;</span><span class="p">]</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">trigger</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span>
+
+        <span class="n">device_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resolve_device_id</span><span class="p">(</span><span class="n">reg</span><span class="p">)</span>
+        <span class="n">device</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">device_id</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">device</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ENGINE] No device found for register </span><span class="si">{</span><span class="n">reg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">current_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_value_from_device</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_evaluate_condition</span><span class="p">(</span><span class="n">current_val</span><span class="p">,</span> <span class="n">cond</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_execute_effect</span><span class="p">(</span><span class="n">effect</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_resolve_device_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reg</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Resolves the device ID from a given register number.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            reg (int): Register number to match.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str or None: Corresponding device ID or None if not found.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">register_map</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">register_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">reg</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">k</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">register_map</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">register_map</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;plc_input_register&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">reg</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_get_value_from_device</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extracts the current value from a simulation device.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            device (ProcessComponent): A tank, pump, or similar component.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float or int: The current state or reading of the device.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="s2">&quot;current_volume&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">device</span><span class="o">.</span><span class="n">current_volume</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="s2">&quot;get_state&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">device</span><span class="o">.</span><span class="n">get_state</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;open&quot;</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">_evaluate_condition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">actual</span><span class="p">,</span> <span class="n">cond</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compares an actual value to an expected value using a condition operator.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            actual (float or int): Measured value.</span>
+<span class="sd">            cond (str): Comparison operator as a string (e.g., &quot;==&quot;, &quot;&gt;&quot;, &quot;&lt;=&quot;).</span>
+<span class="sd">            expected (float or int): Threshold or value to compare against.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: Result of the condition.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">cond</span> <span class="o">==</span> <span class="s2">&quot;==&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">actual</span> <span class="o">==</span> <span class="n">expected</span>
+            <span class="k">elif</span> <span class="n">cond</span> <span class="o">==</span> <span class="s2">&quot;!=&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">actual</span> <span class="o">!=</span> <span class="n">expected</span>
+            <span class="k">elif</span> <span class="n">cond</span> <span class="o">==</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">actual</span> <span class="o">&gt;</span> <span class="n">expected</span>
+            <span class="k">elif</span> <span class="n">cond</span> <span class="o">==</span> <span class="s2">&quot;&lt;&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">actual</span> <span class="o">&lt;</span> <span class="n">expected</span>
+            <span class="k">elif</span> <span class="n">cond</span> <span class="o">==</span> <span class="s2">&quot;&gt;=&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">actual</span> <span class="o">&gt;=</span> <span class="n">expected</span>
+            <span class="k">elif</span> <span class="n">cond</span> <span class="o">==</span> <span class="s2">&quot;&lt;=&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">actual</span> <span class="o">&lt;=</span> <span class="n">expected</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ENGINE] Condition error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_execute_effect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">effect</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Executes the defined effect on a target or targets.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            effect (dict): Contains &quot;target&quot; (str or list), &quot;action&quot; (e.g., &quot;open&quot;), and optionally &quot;message&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">targets</span> <span class="o">=</span> <span class="n">effect</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">targets</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">targets</span> <span class="o">=</span> <span class="p">[</span><span class="n">targets</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">target_id</span> <span class="ow">in</span> <span class="n">targets</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">target_id</span> <span class="o">==</span> <span class="s2">&quot;scada&quot;</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[SCADA ALERT]: </span><span class="si">{</span><span class="n">effect</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">continue</span>
+
+            <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">target_id</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">node</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ENGINE] No target found for </span><span class="si">{</span><span class="n">target_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">continue</span>
+
+            <span class="n">action</span> <span class="o">=</span> <span class="n">effect</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;action&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">&quot;set_state&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">action</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;open&quot;</span><span class="p">,</span> <span class="s2">&quot;close&quot;</span><span class="p">]:</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="s2">&quot;open&quot;</span> <span class="k">if</span> <span class="n">action</span> <span class="o">==</span> <span class="s2">&quot;open&quot;</span> <span class="k">else</span> <span class="s2">&quot;closed&quot;</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ENGINE] Set state of </span><span class="si">{</span><span class="n">target_id</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">action</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

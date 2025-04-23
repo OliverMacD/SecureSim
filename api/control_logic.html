@@ -1,0 +1,564 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>control_logic package &mdash; SecureSim 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SecureSim Final Project Report" href="../reflections/project_report.html" />
+    <link rel="prev" title="servers package" href="servers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SecureSim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">System Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#folder-structure">Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#simulation-overview">Simulation Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#security-features">Security Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#testing-tools">Testing Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#extendability">Extendability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../running_sim.html">Running the Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../running_sim.html#setup-instructions">Setup Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../running_sim.html#simulation-files">Simulation Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../running_sim.html#stopping-the-simulation">Stopping the Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../running_sim.html#optional-build-sphinx-documentation">Optional: Build Sphinx Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../process_components.html">Process Simulation Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../process_components.html#core-components">Core Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process_components.html#update-and-publish-cycle">Update and Publish Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process_components.html#interfaces">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../json_structure.html">JSON Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../json_structure.html#top-level-structure">Top-Level Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../json_structure.html#nodes">Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../json_structure.html#edges">Edges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../json_structure.html#plcs">PLCs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../json_structure.html#scada">SCADA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../json_structure.html#design-tips">Design Tips</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../json_structure.html#usage-in-code">Usage in Code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../comms.html">Communication Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../comms.html#mqtt">MQTT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../comms.html#modbus-tcp">Modbus TCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../comms.html#design-notes">Design Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../control_logic.html">Control Logic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../control_logic.html#plc-controllers">PLC Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control_logic.html#scada-system">SCADA System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control_logic.html#action-engine">Action Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control_logic.html#design-considerations">Design Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control_logic.html#debugging-logic">Debugging Logic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../process_overview.html">Simulated Process System Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../process_overview.html#system-summary">System Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process_overview.html#physical-layout">Physical Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process_overview.html#process-flow">Process Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process_overview.html#scada-emergency-logic">SCADA Emergency Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process_overview.html#visualization">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../process_overview.html#system-diagram">System Diagram</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Main Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">process_sim</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html">process_sim package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#module-process_sim.base">process_sim.base module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="process_sim.html#process_sim.base.ProcessComponent"><code class="docutils literal notranslate"><span class="pre">ProcessComponent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#process-sim-graph-visualizer-module">process_sim.graph_visualizer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#process-sim-layout-parser-module">process_sim.layout_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#process-sim-line-module">process_sim.line module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#process-sim-pump-module">process_sim.pump module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#process-sim-simulation-runner-module">process_sim.simulation_runner module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#process-sim-splitter-module">process_sim.splitter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#process-sim-tank-module">process_sim.tank module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="process_sim.html">process_sim package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html#module-process_sim.base">process_sim.base module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="process_sim.html#process_sim.base.ProcessComponent"><code class="docutils literal notranslate"><span class="pre">ProcessComponent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="process_sim.html#process_sim.base.ProcessComponent.publish"><code class="docutils literal notranslate"><span class="pre">ProcessComponent.publish()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="process_sim.html#process_sim.base.ProcessComponent.update"><code class="docutils literal notranslate"><span class="pre">ProcessComponent.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html#process-sim-graph-visualizer-module">process_sim.graph_visualizer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html#process-sim-layout-parser-module">process_sim.layout_parser module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html#process-sim-line-module">process_sim.line module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html#process-sim-pump-module">process_sim.pump module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html#process-sim-simulation-runner-module">process_sim.simulation_runner module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html#process-sim-splitter-module">process_sim.splitter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html#process-sim-tank-module">process_sim.tank module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_sim.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="servers.html">servers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="servers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="servers.html#servers-modbus-server-module">servers.modbus_server module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="servers.html#servers-mqtt-server-module">servers.mqtt_server module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="servers.html#module-servers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">control_logic package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-control_logic.action_engine">control_logic.action_engine module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#control_logic.action_engine.ActionEngine"><code class="docutils literal notranslate"><span class="pre">ActionEngine</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.action_engine.ActionEngine.register_map"><code class="docutils literal notranslate"><span class="pre">ActionEngine.register_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.action_engine.ActionEngine.graph"><code class="docutils literal notranslate"><span class="pre">ActionEngine.graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.action_engine.ActionEngine.mqtt"><code class="docutils literal notranslate"><span class="pre">ActionEngine.mqtt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.action_engine.ActionEngine.evaluate_and_execute"><code class="docutils literal notranslate"><span class="pre">ActionEngine.evaluate_and_execute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-control_logic.plc">control_logic.plc module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#control_logic.plc.PLC"><code class="docutils literal notranslate"><span class="pre">PLC</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.plc.PLC.id"><code class="docutils literal notranslate"><span class="pre">PLC.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.plc.PLC.ip"><code class="docutils literal notranslate"><span class="pre">PLC.ip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.plc.PLC.port"><code class="docutils literal notranslate"><span class="pre">PLC.port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.plc.PLC.devices"><code class="docutils literal notranslate"><span class="pre">PLC.devices</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.plc.PLC.actions"><code class="docutils literal notranslate"><span class="pre">PLC.actions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.plc.PLC.graph"><code class="docutils literal notranslate"><span class="pre">PLC.graph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.plc.PLC.engine"><code class="docutils literal notranslate"><span class="pre">PLC.engine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.plc.PLC.update"><code class="docutils literal notranslate"><span class="pre">PLC.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#control-logic-plc-modbus-module">control_logic.plc_modbus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-control_logic.scada">control_logic.scada module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#control_logic.scada.SCADA"><code class="docutils literal notranslate"><span class="pre">SCADA</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.scada.SCADA.ip"><code class="docutils literal notranslate"><span class="pre">SCADA.ip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.scada.SCADA.port"><code class="docutils literal notranslate"><span class="pre">SCADA.port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.scada.SCADA.register_map"><code class="docutils literal notranslate"><span class="pre">SCADA.register_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.scada.SCADA.actions"><code class="docutils literal notranslate"><span class="pre">SCADA.actions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.scada.SCADA.engine"><code class="docutils literal notranslate"><span class="pre">SCADA.engine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control_logic.scada.SCADA.update"><code class="docutils literal notranslate"><span class="pre">SCADA.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#control-logic-scada-modbus-module">control_logic.scada_modbus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-control_logic">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project Report &amp; Individual Reflections</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reflections/project_report.html">SecureSim Final Project Report</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/project_report.html#project-overview">Project Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/project_report.html#system-architecture">System Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/project_report.html#process-modeling">Process Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/project_report.html#control-logic">Control Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/project_report.html#attack-implementation">Attack Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reflections/project_report.html#replay-attack"><strong>Replay Attack</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reflections/project_report.html#denial-of-service-dos-attack"><strong>Denial of Service (DoS) Attack</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/project_report.html#defense-mechanisms">Defense Mechanisms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reflections/project_report.html#logging-auditing"><strong>Logging &amp; Auditing</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reflections/project_report.html#ui-authentication"><strong>UI Authentication</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reflections/project_report.html#rate-limiting"><strong>Rate Limiting</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/project_report.html#evaluation-results">Evaluation &amp; Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reflections/project_report.html#evidence-of-attack-effects">Evidence of Attack Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reflections/project_report.html#ui-based-defense-demonstrations">UI-Based Defense Demonstrations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reflections/project_report.html#performance-metrics">Performance Metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/project_report.html#team-collaboration">Team Collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/project_report.html#challenges-limitations">Challenges &amp; Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/project_report.html#conclusions-future-work">Conclusions &amp; Future Work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reflections/saxton.html">Reflection: Saxton Dees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reflections/stephen.html">Reflection: Stephen Buchinskiy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reflections/oliver.html">Reflection: Oliver MacDonald</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/oliver.html#project-role-responsibilities">Project Role &amp; Responsibilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/oliver.html#skills-developed">Skills Developed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/oliver.html#challenges-faced">Challenges Faced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/oliver.html#lessons-learned">Lessons Learned</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reflections/oliver.html#future-applications">Future Applications</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SecureSim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">control_logic package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/control_logic.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="control-logic-package">
+<h1>control_logic package<a class="headerlink" href="#control-logic-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-control_logic.action_engine">
+<span id="control-logic-action-engine-module"></span><h2>control_logic.action_engine module<a class="headerlink" href="#module-control_logic.action_engine" title="Link to this heading"></a></h2>
+<p>Action Engine</p>
+<p>This module defines the ActionEngine class, which evaluates conditional rules (triggers)
+based on register values and applies control effects to devices in the process graph.</p>
+<dl class="simple">
+<dt>Classes:</dt><dd><p>ActionEngine - Executes logical actions using device states and a rule-based engine.</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="control_logic.action_engine.ActionEngine">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">control_logic.action_engine.</span></span><span class="sig-name descname"><span class="pre">ActionEngine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">register_map</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mqtt_interface</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/control_logic/action_engine.html#ActionEngine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#control_logic.action_engine.ActionEngine" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A rule evaluation engine that enables PLC or SCADA systems to trigger actions
+based on register values mapped to simulation components.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.action_engine.ActionEngine.register_map">
+<span class="sig-name descname"><span class="pre">register_map</span></span><a class="headerlink" href="#control_logic.action_engine.ActionEngine.register_map" title="Link to this definition"></a></dt>
+<dd><p>Mapping between device IDs and register addresses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.action_engine.ActionEngine.graph">
+<span class="sig-name descname"><span class="pre">graph</span></span><a class="headerlink" href="#control_logic.action_engine.ActionEngine.graph" title="Link to this definition"></a></dt>
+<dd><p>The simulation graph containing all components.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ProcessGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.action_engine.ActionEngine.mqtt">
+<span class="sig-name descname"><span class="pre">mqtt</span></span><a class="headerlink" href="#control_logic.action_engine.ActionEngine.mqtt" title="Link to this definition"></a></dt>
+<dd><p>Optional communication layer for integration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>MQTTInterface</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="control_logic.action_engine.ActionEngine.evaluate_and_execute">
+<span class="sig-name descname"><span class="pre">evaluate_and_execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/control_logic/action_engine.html#ActionEngine.evaluate_and_execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#control_logic.action_engine.ActionEngine.evaluate_and_execute" title="Link to this definition"></a></dt>
+<dd><p>Evaluates a trigger condition and executes an effect if the condition is met.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>action</strong> (<em>dict</em>) – <p>An action containing a “trigger” and “effect”.
+Example:
+{</p>
+<blockquote>
+<div><p>”trigger”: {“register”: 1, “condition”: “&gt;”, “value”: 50},
+“effect”: {“target”: “pump1”, “action”: “open”}</p>
+</div></blockquote>
+<p>}</p>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-control_logic.plc">
+<span id="control-logic-plc-module"></span><h2>control_logic.plc module<a class="headerlink" href="#module-control_logic.plc" title="Link to this heading"></a></h2>
+<p>PLC Controller</p>
+<p>This module defines a simple Programmable Logic Controller (PLC) abstraction.
+Each PLC evaluates and executes logic rules over a defined set of devices using the ActionEngine.</p>
+<dl class="simple">
+<dt>Classes:</dt><dd><p>PLC - A control unit that operates over assigned devices using rule-based logic.</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="control_logic.plc.PLC">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">control_logic.plc.</span></span><span class="sig-name descname"><span class="pre">PLC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plc_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mqtt_interface</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/control_logic/plc.html#PLC"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#control_logic.plc.PLC" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Programmable Logic Controller (PLC) for localized control of process devices.</p>
+<p>Evaluates predefined logic actions on associated devices and triggers control operations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.plc.PLC.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#control_logic.plc.PLC.id" title="Link to this definition"></a></dt>
+<dd><p>Unique identifier for the PLC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.plc.PLC.ip">
+<span class="sig-name descname"><span class="pre">ip</span></span><a class="headerlink" href="#control_logic.plc.PLC.ip" title="Link to this definition"></a></dt>
+<dd><p>IP address assigned to the PLC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.plc.PLC.port">
+<span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#control_logic.plc.PLC.port" title="Link to this definition"></a></dt>
+<dd><p>Listening port for the PLC (for simulation context).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.plc.PLC.devices">
+<span class="sig-name descname"><span class="pre">devices</span></span><a class="headerlink" href="#control_logic.plc.PLC.devices" title="Link to this definition"></a></dt>
+<dd><p>List of device IDs under the PLC’s control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.plc.PLC.actions">
+<span class="sig-name descname"><span class="pre">actions</span></span><a class="headerlink" href="#control_logic.plc.PLC.actions" title="Link to this definition"></a></dt>
+<dd><p>Rule-based logic expressions to be evaluated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.plc.PLC.graph">
+<span class="sig-name descname"><span class="pre">graph</span></span><a class="headerlink" href="#control_logic.plc.PLC.graph" title="Link to this definition"></a></dt>
+<dd><p>Reference to the process simulation graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ProcessGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.plc.PLC.engine">
+<span class="sig-name descname"><span class="pre">engine</span></span><a class="headerlink" href="#control_logic.plc.PLC.engine" title="Link to this definition"></a></dt>
+<dd><p>Engine used to evaluate and apply control actions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#control_logic.action_engine.ActionEngine" title="control_logic.action_engine.ActionEngine">ActionEngine</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="control_logic.plc.PLC.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/control_logic/plc.html#PLC.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#control_logic.plc.PLC.update" title="Link to this definition"></a></dt>
+<dd><p>Executes all configured control actions using the action engine.
+Called once per simulation cycle.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="control-logic-plc-modbus-module">
+<h2>control_logic.plc_modbus module<a class="headerlink" href="#control-logic-plc-modbus-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-control_logic.scada">
+<span id="control-logic-scada-module"></span><h2>control_logic.scada module<a class="headerlink" href="#module-control_logic.scada" title="Link to this heading"></a></h2>
+<p>SCADA Interface</p>
+<p>This module defines a lightweight SCADA controller that evaluates and executes
+high-level actions on a process graph based on a predefined register map.</p>
+<dl class="simple">
+<dt>Classes:</dt><dd><p>SCADA - Supervisory control component that manages and applies system-wide logic.</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="control_logic.scada.SCADA">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">control_logic.scada.</span></span><span class="sig-name descname"><span class="pre">SCADA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mqtt_interface</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/control_logic/scada.html#SCADA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#control_logic.scada.SCADA" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Supervisory Control and Data Acquisition (SCADA) class.</p>
+<p>Uses a provided configuration to evaluate and execute actions across
+the process graph using the ActionEngine.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.scada.SCADA.ip">
+<span class="sig-name descname"><span class="pre">ip</span></span><a class="headerlink" href="#control_logic.scada.SCADA.ip" title="Link to this definition"></a></dt>
+<dd><p>Optional IP address for external interfaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.scada.SCADA.port">
+<span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#control_logic.scada.SCADA.port" title="Link to this definition"></a></dt>
+<dd><p>Optional port number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.scada.SCADA.register_map">
+<span class="sig-name descname"><span class="pre">register_map</span></span><a class="headerlink" href="#control_logic.scada.SCADA.register_map" title="Link to this definition"></a></dt>
+<dd><p>Mapping of register names to process components.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.scada.SCADA.actions">
+<span class="sig-name descname"><span class="pre">actions</span></span><a class="headerlink" href="#control_logic.scada.SCADA.actions" title="Link to this definition"></a></dt>
+<dd><p>List of SCADA action rules to evaluate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="control_logic.scada.SCADA.engine">
+<span class="sig-name descname"><span class="pre">engine</span></span><a class="headerlink" href="#control_logic.scada.SCADA.engine" title="Link to this definition"></a></dt>
+<dd><p>Evaluates and executes actions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#control_logic.action_engine.ActionEngine" title="control_logic.action_engine.ActionEngine">ActionEngine</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="control_logic.scada.SCADA.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/control_logic/scada.html#SCADA.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#control_logic.scada.SCADA.update" title="Link to this definition"></a></dt>
+<dd><p>Executes all configured SCADA actions using the action engine.
+Called once per simulation cycle.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="control-logic-scada-modbus-module">
+<h2>control_logic.scada_modbus module<a class="headerlink" href="#control-logic-scada-modbus-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-control_logic">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-control_logic" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="servers.html" class="btn btn-neutral float-left" title="servers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../reflections/project_report.html" class="btn btn-neutral float-right" title="SecureSim Final Project Report" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
