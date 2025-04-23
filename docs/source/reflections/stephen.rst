@@ -2,39 +2,12 @@
 Reflection: Stephen Buchinskiy
 ==============================
 
-Project Role & Responsibilities
--------------------------------
-Briefly describe your role in the project. What were your primary responsibilities?
-Example: 
-- Developed tank/pump simulation
-- Wrote attack scripts for replay and FDI
-- Created visualizations and assisted with demo
+In this project, I implemented the replay attack module and added command-line argument optionality when executing the main program. Although the command-line arguments are limited, they do feature three commands: one to turn debug mode on, one to turn the replay attack on, and the last one to control the time for the replay attack.
 
-Skills Developed
-----------------
-Reflect on what **technical** and **soft skills** you developed:
-- Python libraries used (threading, logging, matplotlib, etc.)
-- Control logic design or ICS security understanding
-- Collaboration or version control (e.g., Git)
+In this project, I was able to implement my own attack and develop skills on how to penetrate communication protocols by intercepting message transmissions and use them to disrupt an actively running process. Although I didn’t work too much on the plc and scada systems, I was able to look at the implementations that my teammates made and see how a basic model is implemented in python. I also improved my python scripting skills and documentation skills.
 
-Challenges Faced
-----------------
-What were some challenges you encountered? How did you overcome them?
-Could include debugging attacks, timing sync issues, or SCADA UI development.
+A challenge I encountered in this project was getting the replay attack to correctly connect to the client to retrieve messages by subscribing to topics. On top of this, once I was able to get the message retrieval working, I slightly struggled to get the replay timing correct to disrupt the client.
 
-Lessons Learned
----------------
-What key insights did you take away from this project?
-Focus on:
-- ICS vulnerability awareness
-- Value of layered defenses
-- Importance of simulation/testing
-- Real-world relevance of your implementation
+This project deepened my understanding of ICS architecture and cybersecurity principles. I learned how simple attacks like the replay attack can bypass basic defenses and how multiple defenses help reduce their impact. This also taught me how important it is to secure control systems from attacks as the attacks can leave devastating impacts to the system.
 
-Future Applications
--------------------
-How could you apply what you learned?
-Ideas:
-- Academic research in cyber-physical systems
-- Internships or careers in security/controls
-- Building more resilient interfaces or protocols
+The skills I learned from this project will help me implement more complex attacks against more secure systems in the future. This project will also help me build my own test environments that simulate real-world processes.
