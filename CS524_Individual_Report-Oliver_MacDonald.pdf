@@ -1,0 +1,324 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 5 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Times-Roman /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+5 0 obj
+<<
+/BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font
+>>
+endobj
+6 0 obj
+<<
+/Contents 16 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 15 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+7 0 obj
+<<
+/Outlines 9 0 R /PageLabels 17 0 R /PageMode /UseNone /Pages 15 0 R /Type /Catalog
+>>
+endobj
+8 0 obj
+<<
+/Author () /CreationDate (D:20250422220304-06'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20250422220304-06'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title (Reflection: Oliver MacDonald) /Trapped /False
+>>
+endobj
+9 0 obj
+<<
+/Count 5 /First 10 0 R /Last 14 0 R /Type /Outlines
+>>
+endobj
+10 0 obj
+<<
+/Dest [ 6 0 R /XYZ 57.02362 705.0236 0 ] /Next 11 0 R /Parent 9 0 R /Title (Project Role & Responsibilities)
+>>
+endobj
+11 0 obj
+<<
+/Dest [ 6 0 R /XYZ 57.02362 606.0236 0 ] /Next 12 0 R /Parent 9 0 R /Prev 10 0 R /Title (Skills Developed)
+>>
+endobj
+12 0 obj
+<<
+/Dest [ 6 0 R /XYZ 57.02362 441.0236 0 ] /Next 13 0 R /Parent 9 0 R /Prev 11 0 R /Title (Challenges Faced)
+>>
+endobj
+13 0 obj
+<<
+/Dest [ 6 0 R /XYZ 57.02362 354.0236 0 ] /Next 14 0 R /Parent 9 0 R /Prev 12 0 R /Title (Lessons Learned)
+>>
+endobj
+14 0 obj
+<<
+/Dest [ 6 0 R /XYZ 57.02362 243.0236 0 ] /Parent 9 0 R /Prev 13 0 R /Title (Future Applications)
+>>
+endobj
+15 0 obj
+<<
+/Count 1 /Kids [ 6 0 R ] /Type /Pages
+>>
+endobj
+16 0 obj
+<<
+/Length 5299
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 57.02362 741.0236 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL 118.4142 0 Td (Reflection: Oliver MacDonald) Tj T* -118.4142 0 Td ET
+Q
+Q
+q
+1 0 0 1 57.02362 684.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf .133333 .133333 .133333 rg (Project Role & Responsibilities) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 618.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 50 Tm /F1 10 Tf 12 TL 2.078022 Tw (In this project, I focused primarily on developing the core process simulation and building out the user) Tj T* 0 Tw .209104 Tw (interface. My contributions included implementing the simulation framework for tanks, pumps, and flow lines,) Tj T* 0 Tw 2.970596 Tw (as well as designing and connecting the Flask-based SCADA dashboard. I was also responsible for) Tj T* 0 Tw .034488 Tw (integrating MQTT and Modbus communication layers and setting up the Sphinx documentation pipeline used) Tj T* 0 Tw (to publish the project's technical resources.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 585.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf .133333 .133333 .133333 rg (Skills Developed) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 555.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.263486 Tw (Through SecureSim, I deepened my understanding of Python-based communication protocols and web) Tj T* 0 Tw (interfaces for industrial systems. I gained practical experience with:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 549.0236 cm
+Q
+q
+1 0 0 1 57.02362 549.0236 cm
+Q
+q
+1 0 0 1 57.02362 537.0236 cm
+q
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL 8 0 Td (\177) Tj T* -8 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (MQTT in Python for real-time telemetry) Tj T* ET
+Q
+Q
+q
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 531.0236 cm
+Q
+q
+1 0 0 1 57.02362 519.0236 cm
+q
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL 8 0 Td (\177) Tj T* -8 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Implementing a custom Modbus server for control logic) Tj T* ET
+Q
+Q
+q
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 513.0236 cm
+Q
+q
+1 0 0 1 57.02362 501.0236 cm
+q
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL 8 0 Td (\177) Tj T* -8 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Using Python\222s ) Tj /F4 10 Tf (logging) Tj /F1 10 Tf ( module for auditing) Tj T* ET
+Q
+Q
+q
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 495.0236 cm
+Q
+q
+1 0 0 1 57.02362 483.0236 cm
+q
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL 8 0 Td (\177) Tj T* -8 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Building protected web dashboards using Flask) Tj T* ET
+Q
+Q
+q
+Q
+Q
+Q
+q
+1 0 0 1 57.02362 483.0236 cm
+Q
+q
+1 0 0 1 57.02362 453.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 3.234862 Tw (Beyond technical development, I also improved my skills in documentation management and project) Tj T* 0 Tw (structuring through Sphinx and GitHub Actions.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 420.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf .133333 .133333 .133333 rg (Challenges Faced) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 366.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 38 Tm /F1 10 Tf 12 TL -0.124404 Tw (A key challenge in this project was achieving reliable synchronization between MQTT messages and Modbus) Tj T* 0 Tw 1.613196 Tw (register updates, especially under high communication loads. Additionally, ensuring that the UI remained) Tj T* 0 Tw 3.54295 Tw (responsive while live data streamed in from multiple sources required careful threading and design) Tj T* 0 Tw (considerations.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 333.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf .133333 .133333 .133333 rg (Lessons Learned) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 255.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 62 Tm /F1 10 Tf 12 TL 2.956529 Tw (This project significantly expanded my understanding of both ICS architecture and cybersecurity best) Tj T* 0 Tw 1.024882 Tw (practices. I saw firsthand how lightweight attacks can bypass naive defenses, and how layered strategies,) Tj T* 0 Tw 2.494168 Tw (like authentication, logging, and rate limiting, can mitigate their impact. It reinforced the importance of) Tj T* 0 Tw 1.661411 Tw (simulation and structured testing in developing resilient control systems. Most importantly, I developed a) Tj T* 0 Tw 1.233719 Tw (more nuanced awareness of the security trade-offs inherent in designing real-time interfaces for industrial) Tj T* 0 Tw (systems.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 222.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf .133333 .133333 .133333 rg (Future Applications) Tj T* ET
+Q
+Q
+q
+1 0 0 1 57.02362 168.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 38 Tm /F1 10 Tf 12 TL -0.097314 Tw (The skills and insights gained through SecureSim are already being applied in my own work. I run a company) Tj T* 0 Tw 3.327739 Tw (building SaaS platforms, and I now approach platform architecture with a stronger focus on secure) Tj T* 0 Tw .13989 Tw (communication, auditing, and failure tolerance. Beyond that, this project has laid the foundation for my future) Tj T* 0 Tw (research in cyber-physical security and human-centered interfaces for industrial systems.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+17 0 obj
+<<
+/Nums [ 0 18 0 R ]
+>>
+endobj
+18 0 obj
+<<
+/S /D /St 1
+>>
+endobj
+xref
+0 19
+0000000000 65535 f 
+0000000073 00000 n 
+0000000134 00000 n 
+0000000241 00000 n 
+0000000350 00000 n 
+0000000455 00000 n 
+0000000570 00000 n 
+0000000775 00000 n 
+0000000879 00000 n 
+0000001164 00000 n 
+0000001237 00000 n 
+0000001368 00000 n 
+0000001497 00000 n 
+0000001626 00000 n 
+0000001754 00000 n 
+0000001873 00000 n 
+0000001933 00000 n 
+0000007284 00000 n 
+0000007325 00000 n 
+trailer
+<<
+/ID 
+[<af432fbca793e2dcd11e1e1f0910c374><af432fbca793e2dcd11e1e1f0910c374>]
+% ReportLab generated PDF document -- digest (http://www.reportlab.com)
+
+/Info 8 0 R
+/Root 7 0 R
+/Size 19
+>>
+startxref
+7359
+%%EOF
