@@ -111,8 +111,13 @@ Evidence of Attack Effects
 
 - **DoS Attack**: The Denial of Service attack overwhelmed the MQTT broker with rapid message bursts, effectively clogging communication channels. As a result, critical updates to the SCADA and PLCs were dropped or delayed. This led to gaps in the Flask UI, unresponsive component indicators, and failures in control logic that relied on timely feedback.
 
-.. image:: ./dos.png
-   :alt: Tank Levels Graph
+.. image:: ./dos1.png
+   :alt: DoS Attack
+   :align: center
+   :width: 90%
+
+.. image:: ./dos2.png
+   :alt: DoS System Response
    :align: center
    :width: 90%
 
